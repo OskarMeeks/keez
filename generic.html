@@ -69,66 +69,7 @@
 				            <button onclick="loadProfile()">Load Profile</button>
 				        </div>
 				    </div>
-				
-				    <script>
-				        // Variable to keep track of the last clicked button for color options
-				        let lastClickedColorButton = null;
-				
-				        function showOptions(optionType, clickedButton) {
-				            // Remove 'active' class from all tab buttons
-				            const tabButtons = document.querySelectorAll('.tab-button');
-				            tabButtons.forEach(button => {
-				                button.classList.remove('active');
-				            });
-				
-				            // Add 'active' class to the clicked button
-				            clickedButton.classList.add('active');
-				
-				            // Hide all option sections
-				            const sections = document.querySelectorAll('.option-section');
-				            sections.forEach(section => {
-				                section.style.display = 'none';
-				            });
-				
-				            // Show the selected option section
-				            // Ensure the ID matches the optionType parameter (e.g., 'keystyle' -> 'keystyleOptions')
-				            document.getElementById(optionType + 'Options').style.display = 'block';
-				        }
-				
-				        function applyColor(color, clickedColorButton) {
-				            // Reset style of the previously clicked color button, if any
-				            if (lastClickedColorButton) {
-				                lastClickedColorButton.style.border = 'none'; // Reset border for the old button
-				            }
-				
-				            // Change the page background color
-				            document.body.style.backgroundColor = color;
-				            console.log(`Background color changed to: ${color}`);
-				            alert(`The page background is now ${color}!`);
-				
-				            // Apply a distinct style to the newly clicked color button
-				            clickedColorButton.style.border = '2px solid black'; // Example: add a black border
-				            lastClickedColorButton = clickedColorButton; // Update the last clicked color button
-				        }
-				
-				        function applyFeel() {
-				            const selectedFeel = document.getElementById('feelSelect').value;
-				            alert(`Applying "${selectedFeel}" feel!`);
-				            // Implement logic to change the page's "feel" (e.g., font, subtle animations, etc.)
-				        }
-				
-				        function loadProfile() {
-				            const selectedProfile = document.getElementById('profileSelect').value;
-				            alert(`Loading ${selectedProfile} settings!`);
-				            // Here you would implement logic to load specific settings based on the selected profile.
-				            // This could involve changing CSS classes, updating content, etc.
-				        }
-				
-				        // Show 'keystyle' options by default and mark its button as active when the page loads
-				        document.addEventListener('DOMContentLoaded', () => {
-				            showOptions('keystyle', document.getElementById('keystyleButton'));
-				        });
-				    </script>
+		
 				
 				    <style>
 				        .tab-button {
@@ -197,6 +138,7 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/keboard.js"></script>
 
 	</body>
 </html>
