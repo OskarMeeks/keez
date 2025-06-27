@@ -25,9 +25,9 @@
 				
 				    <div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
 				        <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
-				            <button class="tab-button" onclick="showOptions('style')">Style</button>
-				            <button class="tab-button" onclick="showOptions('feel')">Feel</button>
-				            <button class="tab-button" onclick="showOptions('profile')">Profile</button>
+				            <button id="styleButton" class="tab-button active" onclick="showOptions('style', this)">Style</button>
+				            <button id="feelButton" class="tab-button" onclick="showOptions('feel', this)">Feel</button>
+				            <button id="profileButton" class="tab-button" onclick="showOptions('profile', this)">Profile</button>
 				        </div>
 				
 				        <div id="styleOptions" class="option-section">
@@ -64,7 +64,16 @@
 				    </div>
 				
 				    <script>
-				        function showOptions(optionType) {
+				        function showOptions(optionType, clickedButton) {
+				            // Remove 'active' class from all tab buttons
+				            const tabButtons = document.querySelectorAll('.tab-button');
+				            tabButtons.forEach(button => {
+				                button.classList.remove('active');
+				            });
+				
+				            // Add 'active' class to the clicked button
+				            clickedButton.classList.add('active');
+				
 				            // Hide all option sections
 				            const sections = document.querySelectorAll('.option-section');
 				            sections.forEach(section => {
@@ -94,9 +103,9 @@
 				            // This could involve changing CSS classes, updating content, etc.
 				        }
 				
-				        // Show 'style' options by default when the page loads
+				        // Show 'style' options by default and mark its button as active when the page loads
 				        document.addEventListener('DOMContentLoaded', () => {
-				            showOptions('style');
+				            showOptions('style', document.getElementById('styleButton'));
 				        });
 				    </script>
 				
@@ -111,6 +120,11 @@
 				
 				        .tab-button:hover {
 				            background-color: #e0e0e0;
+				        }
+				
+				        .tab-button.active {
+				            background-color: #d0d0d0; /* Different background for active button */
+				            border-bottom: 1px solid transparent; /* To "connect" it to the content box */
 				        }
 				
 				        .option-section {
