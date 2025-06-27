@@ -15,7 +15,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<div class="inner">
+							<div class="inner">
 				    <header class="align-center">
 				        <h2>Nunc Dignissim</h2>
 				        <p>Aliquam erat volutpat nam dui</p>
@@ -32,11 +32,11 @@
 				
 				        <div id="styleOptions" class="option-section">
 				            <div style="display: flex; gap: 10px;">
-				                <button style="background-color: #FF5733; color: black; border: none; cursor: pointer;" onclick="applyColor('#FF5733')">Coral Red</button>
-				                <button style="background-color: #33FF57; color: black; border: none; cursor: pointer;" onclick="applyColor('#33FF57')">Lime Green</button>
-				                <button style="background-color: #3357FF; color: black; border: none; cursor: pointer;" onclick="applyColor('#3357FF')">Royal Blue</button>
-				                <button style="background-color: #FF33F5; color: black; border: none; cursor: pointer;" onclick="applyColor('#FF33F5')">Fuchsia</button>
-				                <button style="background-color: #FFD700; color: black; border: none; cursor: pointer;" onclick="applyColor('#FFD700')">Gold</button>
+				                <button style="background-color: #FF5733; color: black; border: none; cursor: pointer; padding: 10px;">Coral Red</button>
+				                <button style="background-color: #33FF57; color: black; border: none; cursor: pointer; padding: 10px;">Lime Green</button>
+				                <button style="background-color: #3357FF; color: black; border: none; cursor: pointer; padding: 10px;">Royal Blue</button>
+				                <button style="background-color: #FF33F5; color: black; border: none; cursor: pointer; padding: 10px;">Fuchsia</button>
+				                <button style="background-color: #FFD700; color: black; border: none; cursor: pointer; padding: 10px;">Gold</button>
 				            </div>
 				        </div>
 				
@@ -60,6 +60,9 @@
 				    </div>
 				
 				    <script>
+				        // Variable to keep track of the last clicked button for color options
+				        let lastClickedColorButton = null;
+				
 				        function showOptions(optionType, clickedButton) {
 				            // Remove 'active' class from all tab buttons
 				            const tabButtons = document.querySelectorAll('.tab-button');
@@ -80,10 +83,20 @@
 				            document.getElementById(optionType + 'Options').style.display = 'block';
 				        }
 				
-				        function applyColor(color) {
+				        function applyColor(color, clickedColorButton) { // Added clickedColorButton parameter
+				            // Reset style of the previously clicked color button, if any
+				            if (lastClickedColorButton) {
+				                lastClickedColorButton.style.border = 'none'; // Reset border for the old button
+				            }
+				
+				            // Change the page background color
 				            document.body.style.backgroundColor = color;
 				            console.log(`Background color changed to: ${color}`);
 				            alert(`The page background is now ${color}!`);
+				
+				            // Apply a distinct style to the newly clicked color button
+				            clickedColorButton.style.border = '2px solid black'; // Example: add a black border
+				            lastClickedColorButton = clickedColorButton; // Update the last clicked color button
 				        }
 				
 				        function applyFeel() {
@@ -107,11 +120,13 @@
 				
 				    <style>
 				        .tab-button {
-				            padding: 0px 80px;
+				            flex-grow: 1; /* Make buttons take up equal space */
+				            padding: 10px 0; /* Adjust padding for full width without horizontal space */
 				            border: 1px solid #ccc;
 				            background-color: #f0f0f0;
 				            cursor: pointer;
 				            font-weight: bold;
+				            text-align: center; /* Center the text in the button */
 				        }
 				
 				        .tab-button:hover {
@@ -119,8 +134,9 @@
 				        }
 				
 				        .tab-button.active {
-				            background-color: #000; /* Different background for active button */
-				            border-bottom: 1px solid transparent; /* To "connect" it to the content box */
+				            background-color: #000;
+				            color: white; /* Text color for active button */
+				            border-bottom: 1px solid transparent;
 				        }
 				
 				        .option-section {
