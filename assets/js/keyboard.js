@@ -94,7 +94,7 @@ function getContrastColor(hexcolor) {
  * @param {string} optionType The ID prefix of the section to show (e.g., 'keystyle', 'feel').
  * @param {HTMLElement} clickedButton The button element that was clicked.
  */
-function showOptions(optionType, clickedButton) {
+window.showOptions = function(optionType, clickedButton) {
     // Remove 'active' class from all tab buttons
     const tabButtons = document.querySelectorAll('.tab-button');
     tabButtons.forEach(button => {
@@ -119,7 +119,7 @@ function showOptions(optionType, clickedButton) {
  * @param {string} color The hex color string (e.g., '#FF5733').
  * @param {HTMLElement} clickedColorButton The button element that was clicked.
  */
-function applyKeyColor(color, clickedColorButton) {
+window.applyKeyColor = function(color, clickedColorButton) {
     // Reset style of the previously clicked color button, if any
     if (lastClickedColorButton) {
         lastClickedColorButton.style.border = 'none';
@@ -138,7 +138,7 @@ function applyKeyColor(color, clickedColorButton) {
  * @param {string} fontName The font family name (e.g., 'Arial').
  * @param {HTMLElement} clickedFontButton The button element that was clicked.
  */
-function applyKeyFont(fontName, clickedFontButton) {
+window.applyKeyFont = function(fontName, clickedFontButton) {
     // Reset style of the previously clicked font button, if any
     if (lastClickedFontButton) {
         lastClickedFontButton.style.border = 'none';
@@ -153,13 +153,13 @@ function applyKeyFont(fontName, clickedFontButton) {
 }
 
 
-function applyFeel() {
+window.applyFeel = function() {
     const selectedFeel = document.getElementById('feelSelect').value;
     alert(`Applying "${selectedFeel}" feel!`);
     // Implement logic to change the page's "feel" (e.g., font, subtle animations, etc.)
 }
 
-function loadProfile() {
+window.loadProfile = function() {
     const selectedProfile = document.getElementById('profileSelect').value;
     alert(`Loading ${selectedProfile} settings!`);
     // Here you would implement logic to load specific settings based on the selected profile.
@@ -169,18 +169,18 @@ function loadProfile() {
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
     // Show 'keystyle' options by default and mark its button as active
-    showOptions('keystyle', document.getElementById('keystyleButton'));
+    window.showOptions('keystyle', document.getElementById('keystyleButton'));
 
     // Set initial active state for default key color button
     const defaultColorButton = document.querySelector('.color-button[onclick*="#FFD700"]');
     if (defaultColorButton) {
-        applyKeyColor('#FFD700', defaultColorButton); // Call the function to set state and style
+        window.applyKeyColor('#FFD700', defaultColorButton); // Call the function to set state and style
     }
 
     // Set initial active state for default key font button
     const defaultFontButton = document.querySelector('.font-button[onclick*="Arial"]');
     if (defaultFontButton) {
-        applyKeyFont('Arial', defaultFontButton); // Call the function to set state and style
+        window.applyKeyFont('Arial', defaultFontButton); // Call the function to set state and style
     }
 
     // Generate initial keyboard preview
