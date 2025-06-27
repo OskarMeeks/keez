@@ -2515,7 +2515,7 @@
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
-	button,
+	
 	.button {
 		-moz-appearance: none;
 		-webkit-appearance: none;
