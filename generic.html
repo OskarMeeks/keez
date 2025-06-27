@@ -28,32 +28,34 @@
 
 		<!-- Three -->
 			<section id="three" class="wrapper">
-<div class="inner">
-    <header class="align-center">
-        <h2>Nunc Dignissim</h2>
-        <p>Aliquam erat volutpat nam dui</p>
-    </header>
-
-    ---
-
-    <h3>Paint Options</h3>
-    <div style="display: flex; gap: 10px; margin-bottom: 20px;">
-        <button style="background-color: #FF5733; color: white; padding: 10px; border: none; cursor: pointer;" onclick="applyColor('#FF5733')">Coral Red</button>
-        <button style="background-color: #33FF57; color: white; padding: 10px; border: none; cursor: pointer;" onclick="applyColor('#33FF57')">Lime Green</button>
-        <button style="background-color: #3357FF; color: white; padding: 10px; border: none; cursor: pointer;" onclick="applyColor('#3357FF')">Royal Blue</button>
-        <button style="background-color: #FF33F5; color: white; padding: 10px; border: none; cursor: pointer;" onclick="applyColor('#FF33F5')">Fuchsia</button>
-        <button style="background-color: #FFD700; color: black; padding: 10px; border: none; cursor: pointer;" onclick="applyColor('#FFD700')">Gold</button>
-    </div>
-
-    ---
-
-    <h3>Profile Selection</h3>
-    <select id="profileSelect" style="margin-bottom: 20px;">
-        <option value="profile1">Profile 1: Classic</option>
-        <option value="profile2">Profile 2: Modern</option>
-        <option value="profile3">Profile 3: Artistic</option>
-    </select>
-    	<button onclick="loadProfile()">Load Profile</button>
+				<div class="inner">
+				    <header class="align-center">
+				        <h2>Nunc Dignissim</h2>
+				        <p>Aliquam erat volutpat nam dui</p>
+				    </header>
+				
+				    ---
+				
+				    <div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
+				        <h3>Paint Options</h3>
+				        <div style="display: flex; gap: 10px;">
+				            <button style="background-color: #FF5733; color: white; padding: 10px; border: none; cursor: pointer;" onclick="applyColor('#FF5733')">Coral Red</button>
+				            <button style="background-color: #33FF57; color: white; padding: 10px; border: none; cursor: pointer;" onclick="applyColor('#33FF57')">Lime Green</button>
+				            <button style="background-color: #3357FF; color: white; padding: 10px; border: none; cursor: pointer;" onclick="applyColor('#3357FF')">Royal Blue</button>
+				            <button style="background-color: #FF33F5; color: white; padding: 10px; border: none; cursor: pointer;" onclick="applyColor('#FF33F5')">Fuchsia</button>
+				            <button style="background-color: #FFD700; color: black; padding: 10px; border: none; cursor: pointer;" onclick="applyColor('#FFD700')">Gold</button>
+				        </div>
+				    </div>
+				
+				    <div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
+				        <h3>Profile Selection</h3>
+				        <select id="profileSelect" style="margin-bottom: 20px;">
+				            <option value="profile1">Profile 1: Classic</option>
+				            <option value="profile2">Profile 2: Modern</option>
+				            <option value="profile3">Profile 3: Artistic</option>
+				        </select>
+				        <button onclick="loadProfile()">Load Profile</button>
+				    </div>
 </div>
 			</section>
 
