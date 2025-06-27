@@ -15,7 +15,7 @@
 
 		<!-- Header -->
 			<header id="header">
-							<div class="inner">
+				<div class="inner">
 				    <header class="align-center">
 				        <h2>Nunc Dignissim</h2>
 				        <p>Aliquam erat volutpat nam dui</p>
@@ -26,13 +26,23 @@
 				    <div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
 				        <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
 				            <button id="keystyleButton" class="tab-button active" onclick="showOptions('keystyle', this)">Keys Style</button>
-					    <button id="typestyleButton" class="tab-button active" onclick="showOptions('typestyle', this)">Type Style</button>
+				            <button id="typestyleButton" class="tab-button" onclick="showOptions('typestyle', this)">Type Style</button>
 				            <button id="feelButton" class="tab-button" onclick="showOptions('feel', this)">Feel</button>
 				            <button id="profileButton" class="tab-button" onclick="showOptions('profile', this)">Profile</button>
 				        </div>
 				
-				        <div id="KeystyleOptions" class="option-section">
-				            <div style="display: flex; gap: 10px;">
+				        <div id="keystyleOptions" class="option-section">
+				            <h3>Keys Style Options</h3> <div style="display: flex; gap: 10px;">
+				                <button style="background-color: #FF5733; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyColor('#FF5733', this)">Coral Red</button>
+				                <button style="background-color: #33FF57; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyColor('#33FF57', this)">Lime Green</button>
+				                <button style="background-color: #3357FF; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyColor('#3357FF', this)">Royal Blue</button>
+				                <button style="background-color: #FF33F5; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyColor('#FF33F5', this)">Fuchsia</button>
+				                <button style="background-color: #FFD700; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyColor('#FFD700', this)">Gold</button>
+				            </div>
+				        </div>
+				
+				        <div id="typestyleOptions" class="option-section" style="display: none;">
+				            <h3>Type Style Options</h3> <div style="display: flex; gap: 10px;">
 				                <button style="background-color: #FF5733; color: black; border: none; cursor: pointer; padding: 10px;">Coral Red</button>
 				                <button style="background-color: #33FF57; color: black; border: none; cursor: pointer; padding: 10px;">Lime Green</button>
 				                <button style="background-color: #3357FF; color: black; border: none; cursor: pointer; padding: 10px;">Royal Blue</button>
@@ -40,19 +50,9 @@
 				                <button style="background-color: #FFD700; color: black; border: none; cursor: pointer; padding: 10px;">Gold</button>
 				            </div>
 				        </div>
-					    
-					<div id="typestyleOptions" class="option-section" style="display: none;>
-				            <div style="display: flex; gap: 10px;">
-				                <button style="background-color: #FF5733; color: black; border: none; cursor: pointer; padding: 10px;">Coral Red</button>
-				                <button style="background-color: #33FF57; color: black; border: none; cursor: pointer; padding: 10px;">Lime Green</button>
-				                <button style="background-color: #3357FF; color: black; border: none; cursor: pointer; padding: 10px;">Royal Blue</button>
-				                <button style="background-color: #FF33F5; color: black; border: none; cursor: pointer; padding: 10px;">Fuchsia</button>
-				                <button style="background-color: #FFD700; color: black; border: none; cursor: pointer; padding: 10px;">Gold</button>
-				            </div>
-				        </div>
-					    
+				
 				        <div id="feelOptions" class="option-section" style="display: none;">
-				            <select id="feelSelect">
+				            <h3>Feel Options</h3> <select id="feelSelect">
 				                <option value="calm">Calm</option>
 				                <option value="energetic">Energetic</option>
 				                <option value="cozy">Cozy</option>
@@ -61,7 +61,7 @@
 				        </div>
 				
 				        <div id="profileOptions" class="option-section" style="display: none;">
-				            <select id="profileSelect" style="margin-bottom: 20px;">
+				            <h3>Profile Selection</h3> <select id="profileSelect" style="margin-bottom: 20px;">
 				                <option value="profile1">Profile 1: Classic</option>
 				                <option value="profile2">Profile 2: Modern</option>
 				                <option value="profile3">Profile 3: Artistic</option>
@@ -91,10 +91,11 @@
 				            });
 				
 				            // Show the selected option section
+				            // Ensure the ID matches the optionType parameter (e.g., 'keystyle' -> 'keystyleOptions')
 				            document.getElementById(optionType + 'Options').style.display = 'block';
 				        }
 				
-				        function applyColor(color, clickedColorButton) { // Added clickedColorButton parameter
+				        function applyColor(color, clickedColorButton) {
 				            // Reset style of the previously clicked color button, if any
 				            if (lastClickedColorButton) {
 				                lastClickedColorButton.style.border = 'none'; // Reset border for the old button
@@ -123,21 +124,21 @@
 				            // This could involve changing CSS classes, updating content, etc.
 				        }
 				
-				        // Show 'style' options by default and mark its button as active when the page loads
+				        // Show 'keystyle' options by default and mark its button as active when the page loads
 				        document.addEventListener('DOMContentLoaded', () => {
-				            showOptions('style', document.getElementById('styleButton'));
+				            showOptions('keystyle', document.getElementById('keystyleButton'));
 				        });
 				    </script>
 				
 				    <style>
 				        .tab-button {
-				            flex-grow: 1; /* Make buttons take up equal space */
-				            padding: 0px 10px; /* Adjust padding for full width without horizontal space */
+				            flex-grow: 1;
+				            padding: 10px 0px; /* Adjusted padding to better utilize full width */
 				            border: 1px solid #ccc;
 				            background-color: #f0f0f0;
 				            cursor: pointer;
 				            font-weight: bold;
-				            text-align: center; /* Center the text in the button */
+				            text-align: center;
 				        }
 				
 				        .tab-button:hover {
@@ -146,7 +147,7 @@
 				
 				        .tab-button.active {
 				            background-color: #000;
-				            color: white; /* Text color for active button */
+				            color: white;
 				            border-bottom: 1px solid transparent;
 				        }
 				
