@@ -92,28 +92,25 @@ function generateKeyboardPreview() {
         keyButton.style.top = `${keyConfig.yposition * (KEY_SIZE + KEY_GAP)}px`;
 
         // --- NEW: Create and position text divs for each text object ---
-      keyConfig.texts.forEach(textObj => {
-    const textDiv = document.createElement('div');
-    textDiv.textContent = textObj.value;
-    textDiv.className = 'key-text-label';
-    textDiv.style.position = 'absolute';
+        keyConfig.texts.forEach(textObj => {
 
-    textDiv.style.fontFamily = textObj.font || currentKeyFont;
-    textDiv.style.color = getContrastColor(textObj.color || currentKeyColor);
 
-    // Position by percentage from JSON
-    textDiv.style.left = `${textObj.x}%`;
-    textDiv.style.top = `${textObj.y}%`;
-
-    // Center text exactly at this point and offset by xOffset/yOffset in pixels for visual adjustment
-    textDiv.style.transform = `translate(calc(-50% + ${textObj.xOffset}px), calc(-50% + ${textObj.yOffset}px))`;
-
-    textDiv.style.textAlign = 'center';
-    textDiv.style.whiteSpace = 'nowrap';
-    textDiv.style.fontSize = `${textObj.size || 16}px`;
-
-    keyButton.appendChild(textDiv);
-});
+            const textDiv = document.createElement('div');
+            textDiv.textContent = textObj.value;
+            textDiv.className = 'key-text-label'; // Apply a class for styling
+            textDiv.style.position = 'absolute';
+        textDiv.style.left = '50%';
+                textDiv.style.top = '50%';
+                textDiv.style.transform = `translate(calc(-50% + ${textObj.xOffset}px), calc(-50% + ${textObj.yOffset}px))`;
+            textDiv.style.fontFamily = textObj.font || currentKeyFont; // Use textObj font or current default
+            textDiv.style.color = getContrastColor(textObj.color || currentKeyColor); // Use textObj color for contrast calculation
+            textDiv.style.left = `${textObj.x}%`;
+            textDiv.style.top = `${textObj.y}%`;
+            textDiv.style.textAlign = 'center';
+            textDiv.style.whiteSpace = 'nowrap'; // Prevent text wrapping
+            textDiv.style.fontSize = `${textObj.size || 16}px`; // Use textObj.size or default
+            keyButton.appendChild(textDiv);
+     });
 
 
         // Update max dimensions for container sizing
