@@ -126,4 +126,146 @@ function getContrastColor(hexcolor) {
     const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
 
     // Use white for dark backgrounds, black for light backgrounds
-    return
+    return luminance > 0.5 ? 'black' : 'white';
+}
+
+/**
+ * Sets the global brush to be applied to keys.
+ * @param {string} property The CSS property to change (e.g., 'backgroundColor', 'fontFamily').
+ * @param {string} value The value to set the property to (e.g., '#FF0000', 'Verdana').
+ */
+window.setBrush = function(property, value) {
+    currentBrushProperty = property;
+    currentBrushValue = value;
+    // You could add visual feedback here to show which brush is active
+    console.log(`Brush set to: Property=${currentBrushProperty}, Value=${currentBrushValue}`);
+};
+
+/**
+ * Applies the current brush to a specific key identified by its code.
+ * Updates the JSON and regenerates the keyboard preview.
+ * @param {string} keyCode The 'code' property of the key to update.
+ */
+function applyBrushToKey(keyCode) {
+    if (!currentBrushProperty || !currentBrushValue) {
+        console.warn("No brush property or value set. Select a color or font first!");
+        return;
+    }
+
+    const keyToUpdate = keyboardConfig.keys.find(key => key.code === keyCode);
+
+    if (keyToUpdate) {
+        // Update the key's property in the JSON configuration
+        if (currentBrushProperty === 'backgroundColor') {
+            keyToUpdate.color = currentBrushValue;
+        } else if (currentBrushProperty === 'fontFamily') {
+            keyToUpdate.font = currentBrushValue;
+        }
+        // Add more else if blocks here for other properties if needed (e.g., 'textColor', 'borderColor')
+
+        console.log(`Applied ${currentBrushValue} to ${currentBrushProperty} of key: ${keyToUpdate.text}`);
+        generateKeyboardPreview(); // Re-render the keyboard to show the change
+    } else {
+        console.error(`Key with code ${keyCode} not found in configuration.`);
+    }
+}
+
+/**
+ * Handles tab switching (Style, Feel, Profile).
+ * @param {string} optionType The ID prefix of the section to show (e.g., 'keystyle', 'feel').
+ * @param {HTMLElement} clickedButton The button element that was clicked.
+ */
+window.showOptions = function(optionType, clickedButton) {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(button => {
+        button.classList.remove('active');
+    });
+    clickedButton.classList.add('active');
+    const sections = document.querySelectorAll('.option-section');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+    document.getElementById(optionType + 'Options').style.display = 'block';
+}
+
+/**
+ * Applies the selected color to the keyboard keys. This now primarily sets the brush.
+ * @param {string} color The hex color string (e.g., '#FF5733').
+ * @param {HTMLElement} clickedColorButton The button element that was clicked.
+ */
+window.applyKeyColor = function(color, clickedColorButton) {
+    if (lastClickedColorButton) {
+        lastClickedColorButton.style.border = 'none';
+    }
+    setBrush('backgroundColor', color); // Set the brush for background color
+    if (clickedColorButton) {
+        clickedColorButton.style.border = '2px solid black';
+        lastClickedColorButton = clickedColorButton;
+    }
+    // No need to call generateKeyboardPreview here; it's called when a key is clicked
+};
+
+/**
+ * Applies the selected font to the keyboard keys. This now primarily sets the brush.
+ * @param {string} fontName The font family name (e.g., 'Arial').
+ * @param {HTMLElement} clickedFontButton The button element that was clicked.
+ */
+window.applyKeyFont = function(fontName, clickedFontButton) {
+    if (lastClickedFontButton) {
+        lastClickedFontButton.style.border = 'none';
+    }
+    setBrush('fontFamily', fontName); // Set the brush for font family
+    if (clickedFontButton) {
+        clickedFontButton.style.border = '2px solid black';
+        lastClickedFontButton = clickedFontButton;
+    }
+    // No need to call generateKeyboardPreview here; it's called when a key is clicked
+};
+
+
+window.applyFeel = function() {
+    const selectedFeel = document.getElementById('feelSelect').value;
+    alert(`Applying "${selectedFeel}" feel!`);
+}
+
+window.loadProfile = function() {
+    const selectedProfile = document.getElementById('profileSelect').value;
+    alert(`Loading ${selectedProfile} settings!`);
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+    window.showOptions('keystyle', document.getElementById('keystyleButton'));
+
+    // --- Initial setup of the brush and keyboard ---
+    if (keyboardConfig.keys.length > 0) {
+        const firstKey = keyboardConfig.keys[0];
+
+        // Set initial color brush based on the first key's color
+        if (firstKey.color) {
+            currentKeyColor = firstKey.color; // Keep for fallback/global state
+            setBrush('backgroundColor', firstKey.color);
+            const defaultColorButton = document.querySelector(`.color-button[onclick*="${firstKey.color.toUpperCase()}"]`);
+            if (defaultColorButton) {
+                defaultColorButton.style.border = '2px solid black';
+                lastClickedColorButton = defaultColorButton;
+            }
+        }
+
+        // Set initial font brush based on the first key's font
+        if (firstKey.font) {
+            currentKeyFont = firstKey.font; // Keep for fallback/global state
+            // IMPORTANT: Calling setBrush here will overwrite the property set by color.
+            // If you want to retain both active, you'd need a more complex brush system.
+            // For now, the last set brush (font in this case) will be active.
+            setBrush('fontFamily', firstKey.font);
+            const defaultFontButton = document.querySelector(`.font-button[onclick*="${firstKey.font}"]`);
+            if (defaultFontButton) {
+                defaultFontButton.style.border = '2px solid black';
+                lastClickedFontButton = defaultFontButton;
+            }
+        }
+    }
+    // Generate initial keyboard preview
+    generateKeyboardPreview();
+});
