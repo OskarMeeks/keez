@@ -13,7 +13,7 @@ let selectedKeyElement = null; // Stores the DOM element of the currently select
 
 
 // JSON configuration for the keyboard layout
-const keyboardConfig = {
+const keyboardConfig80 = {
     "keys": [
         // Row 1 (Top Row - Function Keys, now at yposition: 0)
         {"text": "Esc", "code": "Escape", "xposition": 0, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
@@ -117,6 +117,80 @@ const keyboardConfig = {
         {"text": "▲", "code": "ArrowUp", "xposition": 15, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
         // Dedicated Down Arrow key for standard TKL layout (now at yposition: 5)
         {"text": "▼", "code": "ArrowDown", "xposition": 15, "yposition": 5, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1}
+    ]
+};
+const keyboardConfig = {
+    "keys": [
+        // Row 1 (Number Row - now the top physical row, so yposition: 0)
+        {"text": "`", "code": "Backquote", "xposition": 0, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "1", "code": "Digit1", "xposition": 1, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "2", "code": "Digit2", "xposition": 2, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "3", "code": "Digit3", "xposition": 3, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "4", "code": "Digit4", "xposition": 4, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "5", "code": "Digit5", "xposition": 5, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "6", "code": "Digit6", "xposition": 6, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "7", "code": "Digit7", "xposition": 7, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "8", "code": "Digit8", "xposition": 8, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "9", "code": "Digit9", "xposition": 9, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "0", "code": "Digit0", "xposition": 10, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "-", "code": "Minus", "xposition": 11, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "=", "code": "Equal", "xposition": 12, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "Backspace", "code": "Backspace", "xposition": 13, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 2}, // Standard Backspace size
+
+        // Row 2 (QWERTY Row - now yposition: 1)
+        {"text": "Tab", "code": "Tab", "xposition": 0, "yposition": 1, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.5}, // Tab is 1.5u
+        {"text": "Q", "code": "KeyQ", "xposition": 1.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "W", "code": "KeyW", "xposition": 2.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "E", "code": "KeyE", "xposition": 3.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "R", "code": "KeyR", "xposition": 4.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "T", "code": "KeyT", "xposition": 5.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "Y", "code": "KeyY", "xposition": 6.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "U", "code": "KeyU", "xposition": 7.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "I", "code": "KeyI", "xposition": 8.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "O", "code": "KeyO", "xposition": 9.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "P", "code": "KeyP", "xposition": 10.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "[", "code": "BracketLeft", "xposition": 11.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "]", "code": "BracketRight", "xposition": 12.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "\\", "code": "Backslash", "xposition": 13.5, "yposition": 1, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.5}, // Backslash 1.5u
+
+        // Row 3 (ASDF Row - now yposition: 2)
+        {"text": "Caps", "code": "CapsLock", "xposition": 0, "yposition": 2, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.75}, // Caps Lock is 1.75u
+        {"text": "A", "code": "KeyA", "xposition": 1.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "S", "code": "KeyS", "xposition": 2.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "D", "code": "KeyD", "xposition": 3.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "F", "code": "KeyF", "xposition": 4.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "G", "code": "KeyG", "xposition": 5.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "H", "code": "KeyH", "xposition": 6.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "J", "code": "KeyJ", "xposition": 7.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "K", "code": "KeyK", "xposition": 8.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "L", "code": "KeyL", "xposition": 9.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": ";", "code": "Semicolon", "xposition": 10.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "'", "code": "Quote", "xposition": 11.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "Enter", "code": "Enter", "xposition": 12.75, "yposition": 2, "color": "#C0C0C0", "font": "Arial", "widthRatio": 2.25}, // Enter is 2.25u
+
+        // Row 4 (ZXCV Row - now yposition: 3)
+        {"text": "Shift", "code": "ShiftLeft", "xposition": 0, "yposition": 3, "color": "#C0C0C0", "font": "Arial", "widthRatio": 2.25}, // Left Shift is 2.25u
+        {"text": "Z", "code": "KeyZ", "xposition": 2.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "X", "code": "KeyX", "xposition": 3.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "C", "code": "KeyC", "xposition": 4.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "V", "code": "KeyV", "xposition": 5.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "B", "code": "KeyB", "xposition": 6.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "N", "code": "KeyN", "xposition": 7.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "M", "code": "KeyM", "xposition": 8.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": ",", "code": "Comma", "xposition": 9.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": ".", "code": "Period", "xposition": 10.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "/", "code": "Slash", "xposition": 11.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+        {"text": "Shift", "code": "ShiftRight", "xposition": 12.25, "yposition": 3, "color": "#C0C0C0", "font": "Arial", "widthRatio": 2.75}, // Right Shift is 2.75u
+
+        // Row 5 (Bottom Row - now yposition: 4)
+        {"text": "Ctrl", "code": "ControlLeft", "xposition": 0, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
+        {"text": "Win", "code": "MetaLeft", "xposition": 1.25, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
+        {"text": "Alt", "code": "AltLeft", "xposition": 2.5, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
+        {"text": "Space", "code": "Space", "xposition": 4, "yposition": 4, "color": "#E0E0E0", "font": "Arial", "widthRatio": 6.25}, // Spacebar is 6.25u
+        {"text": "Alt", "code": "AltRight", "xposition": 10.25, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
+        {"text": "Fn", "code": "Fn", "xposition": 11.5, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25}, // Function key
+        {"text": "Ctrl", "code": "ControlRight", "xposition": 12.75, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25}
+        // Removed arrow keys and navigation cluster as they are not present on a standard 60%
     ]
 };
 
