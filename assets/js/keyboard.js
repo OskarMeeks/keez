@@ -66,8 +66,8 @@ function generateKeyboardPreview() {
 
     // Set container to relative positioning to allow absolute positioning of keys
     keyboardContainer.style.position = 'relative';
-    keyboardContainer.style.width = 'fit-content'; // Or a fixed width that accommodates all keys
-    keyboardContainer.style.height = 'fit-content'; // Or a fixed height
+//    keyboardContainer.style.width = 'fit-content'; // Or a fixed width that accommodates all keys
+//    keyboardContainer.style.height = 'fit-content'; // Or a fixed height
 
     keyboardConfig.keys.forEach(keyConfig => {
         const keyButton = document.createElement('button');
