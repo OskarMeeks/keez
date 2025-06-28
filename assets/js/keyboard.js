@@ -221,20 +221,20 @@ function generateKeyboardPreview() {
 
         // --- New: Set background image based on widthRatio ---
         if (keyConfig.widthRatio === 1) {
-            keyButton.style.backgroundImage =  IMAGE10;
+            keyButton.style.backgroundImage =  `url(${IMAGE10})`;
         } else if (keyConfig.widthRatio === 1.5) {
-            keyButton.style.backgroundImage =  IMAGE15;
+            keyButton.style.backgroundImage =  `url(${IMAGE15})`;
         } else if (keyConfig.widthRatio === 2) {
-            keyButton.style.backgroundImage =  IMAGE10;
+            keyButton.style.backgroundImage =  `url(${IMAGE10})`;
         } else if (keyConfig.widthRatio === 2.25) {
-            keyButton.style.backgroundImage =  IMAGE10;
+            keyButton.style.backgroundImage =  `url(${IMAGE10})`;
         } else if (keyConfig.widthRatio === 2.75) {
-            keyButton.style.backgroundImage =  IMAGE10;
+            keyButton.style.backgroundImage =  `url(${IMAGE10})`;
         } else if (keyConfig.widthRatio === 6.25) {
-            keyButton.style.backgroundImage =  IMAGE10;
+            keyButton.style.backgroundImage =  `url(${IMAGE10})`;
         } else {
             // Default image if no specific widthRatio matches, or for other ratios
-            keyButton.style.backgroundImage =  IMAGE10;
+            keyButton.style.backgroundImage =  `url(${IMAGE10})`;
         }
         keyButton.style.backgroundSize = 'cover'; // Ensure image covers the key
         keyButton.style.backgroundPosition = 'center'; // Center the image
