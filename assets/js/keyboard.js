@@ -113,7 +113,7 @@ function generateKeyboardPreview() {
             // For simplicity, let's assume x and y are 0-100 values for percentage placement
             textDiv.style.left = `${textObj.x}%`;
             textDiv.style.top = `${textObj.y}%`;
-            textDiv.style.transform = 'translate(-50%, -50%)'; // Center text within its position
+        //    textDiv.style.transform = 'translate(-50%, -50%)'; // Center text within its position
 
             // Further styling for text alignment, font size etc. can be added here or in CSS
             textDiv.style.textAlign = 'center';
