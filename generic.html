@@ -100,20 +100,6 @@
                 grid-column: 3; /* Move to the third column */
                 grid-row: 2;
             }
-
-            /* --- START OF NEW/MODIFIED CSS FOR DROPDOWN POSITIONING --- */
-            .type-style-section label {
-                display: inline-block; /* Makes labels behave like text, but allows width/height */
-                margin-right: 5px; /* Adds a small space between the label and the dropdown */
-                vertical-align: middle; /* Helps align the label text with the dropdown */
-            }
-
-            .type-style-section select {
-                display: inline-block; /* Makes dropdowns behave like text, allowing them to sit next to labels */
-                vertical-align: middle; /* Helps align the dropdown with the label text */
-                width: auto; /* Allow the select to size based on content, not full width */
-            }
-            /* --- END OF NEW/MODIFIED CSS --- */
         </style>
     </head>
     <body class="subpage">
@@ -131,7 +117,7 @@
             <div class="inner">
                 <h3 style="text-align: center; margin-top: 30px;">Keyboard Preview</h3>
                 <div id="keyboardPreview" style="margin-top: 10px; border: 1px solid #ccc; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #f9f9f9; border-radius: 8px; margin-bottom: 200px;">
-                    </div>
+                </div>
 
                 <div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
                     <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
@@ -169,134 +155,4 @@
                                 <label for="tl-font">Font:</label>
                                 <select id="tl-font">
                                     <option value="Arial">Arial</option>
-                                    <option value="Verdana">Verdana</option>
-                                    <option value="Courier New">Courier New</option>
-                                </select>
-                                <label for="tl-x">X Pos:</label>
-                                <input type="number" id="tl-x" value="0">
-                                <label for="tl-y">Y Pos:</label>
-                                <input type="number" id="tl-y" value="0">
-                            </div>
-
-                            <div class="type-style-section top-right">
-                                <h4>Top Right</h4>
-                                <label for="tr-color">Color:</label>
-                                <select id="tr-color">
-                                    <option value="#000000">Black</option>
-                                    <option value="#FF0000">Red</option>
-                                    <option value="#0000FF">Blue</option>
-                                </select>
-                                <label for="tr-font">Font:</label>
-                                <select id="tr-font">
-                                    <option value="Arial">Arial</option>
-                                    <option value="Verdana">Verdana</option>
-                                    <option value="Courier New">Courier New</option>
-                                </select>
-                                <label for="tr-x">X Pos:</label>
-                                <input type="number" id="tr-x" value="0">
-                                <label for="tr-y">Y Pos:</label>
-                                <input type="number" id="tr-y" value="0">
-                            </div>
-
-                            <div class="type-style-section bottom-left">
-                                <h4>Bottom Left</h4>
-                                <label for="bl-color">Color:</label>
-                                <select id="bl-color">
-                                    <option value="#000000">Black</option>
-                                    <option value="#FF0000">Red</option>
-                                    <option value="#0000FF">Blue</option>
-                                </select><br><br>
-                                <label for="bl-font">Font:</label>
-                                <select id="bl-font">
-                                    <option value="Arial">Arial</option>
-                                    <option value="Verdana">Verdana</option>
-                                    <option value="Courier New">Courier New</option>
-                                </select>
-                                <label for="bl-x">X Pos:</label>
-                                <input type="number" id="bl-x" value="0">
-                                <label for="bl-y">Y Pos:</label>
-                                <input type="number" id="bl-y" value="0">
-                            </div>
-
-                            <div class="type-style-section bottom-right">
-                                <h4>Bottom Right</h4>
-                                <label for="br-color">Color:</label>
-                                <select id="br-color">
-                                    <option value="#000000">Black</option>
-                                    <option value="#FF0000">Red</option>
-                                    <option value="#0000FF">Blue</option>
-                                </select>
-                                <label for="br-font">Font:</label>
-                                <select id="br-font">
-                                    <option value="Arial">Arial</option>
-                                    <option value="Verdana">Verdana</option>
-                                    <option value="Courier New">Courier New</option>
-                                </select>
-                                <label for="br-x">X Pos:</label>
-                                <input type="number" id="br-x" value="0">
-                                <label for="br-y">Y Pos:</label>
-                                <input type="number" id="br-y" value="0">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="feelOptions" class="option-section" style="display: none;">
-                        <h3>Feel Options</h3> <select id="feelSelect">
-                            <option value="calm">Calm</option>
-                            <option value="energetic">Energetic</option>
-                            <option value="cozy">Cozy</option>
-                        </select>
-                        <button onclick="applyFeel()">Apply Feel</button>
-                    </div>
-
-                    <div id="profileOptions" class="option-section" style="display: none;">
-                        <h3>Profile Selection</h3> <select id="profileSelect" style="margin-bottom: 20px;">
-                            <option value="profile1">Profile 1: Classic</option>
-                            <option value="profile2">Profile 2: Modern</option>
-                            <option value="profile3">Profile 3: Artistic</option>
-                        </select>
-                        <button onclick="loadProfile()">Load Profile</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer id="footer">
-            <div class="inner">
-
-                <h4>Get in touch</h4>
-
-                <form action="#" method="post">
-
-                    <div class="field half first">
-                        <label for="name">Name</label>
-                        <input name="name" id="name" type="text" placeholder="Name">
-                    </div>
-                    <div class="field half">
-                        <label for="email">Email</label>
-                        <input name="email" id="email" type="email" placeholder="Email">
-                    </div>
-                    <div class="field">
-                        <label for="message">Message</label>
-                        <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
-                    </div>
-                    <ul class="actions">
-                        <li><input value="Send Message" class="button alt" type="submit"></li>
-                    </ul>
-                </form>
-
-                <div class="copyright">
-                    &copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
-                </div>
-
-            </div>
-        </footer>
-
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/skel.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script src="assets/js/keyboard.js"></script>
-
-    </body>
-</html>
+                                    <option value="Verdana">Ver
