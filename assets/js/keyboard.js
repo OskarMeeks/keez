@@ -187,9 +187,10 @@ const keyboardConfig = {
         {"text": "Win", "code": "MetaLeft", "xposition": 1.25, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
         {"text": "Alt", "code": "AltLeft", "xposition": 2.5, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
         {"text": "Space", "code": "Space", "xposition": 3.75, "yposition": 4, "color": "#E0E0E0", "font": "Arial", "widthRatio": 6.25}, // Spacebar is 6.25u
-        {"text": "Alt", "code": "AltRight", "xposition": 10.25, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
-        {"text": "Fn", "code": "Fn", "xposition": 11.5, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25}, // Function key
-        {"text": "Ctrl", "code": "ControlRight", "xposition": 12.75, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25}
+        {"text": "Alt", "code": "AltRight", "xposition": 10, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
+        {"text": "Win", "code": "MetaRight", "xposition": 11.25, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
+        {"text": "Fn", "code": "Fn", "xposition": 12.5, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25}, // Function key
+        {"text": "Ctrl", "code": "ControlRight", "xposition": 13.75, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25}
         // Removed arrow keys and navigation cluster as they are not present on a standard 60%
     ]
 };
