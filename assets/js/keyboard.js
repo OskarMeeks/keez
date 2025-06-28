@@ -239,6 +239,21 @@ function generateKeyboardPreview() {
         maxX = Math.max(maxX, keyConfig.xposition * (KEY_SIZE + KEY_GAP) + actualKeyWidth);
         maxY = Math.max(maxY, keyConfig.yposition * (KEY_SIZE + KEY_GAP) + KEY_SIZE);
 
+keyButton.style.paddingLeft = '0px';
+keyButton.style.paddingRight = '0px';
+keyButton.style.paddingBottom = '0px';
+keyButton.style.paddingTop = '0px';
+keyButton.style.borderTopWidth = '0px';
+keyButton.style.borderTopStyle = 'solid'; // Still 'solid' even with 0 width, but often implies no border visually
+keyButton.style.borderRightWidth = '0px';
+keyButton.style.borderRightStyle = 'solid';
+keyButton.style.borderBottomWidth = '0px';
+keyButton.style.borderBottomStyle = 'solid';
+keyButton.style.borderLeftWidth = '0px';
+keyButton.style.borderLeftStyle = 'solid';
+}
+
+                                
         keyButton.addEventListener('click', () => {
             applyBrushToKey(keyButton.dataset.keyCode);
         });
