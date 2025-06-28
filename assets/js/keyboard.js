@@ -9,7 +9,7 @@ let lastClickedFontButton = null;
 // JSON configuration for the keyboard layout
 const keyboardConfig = {
   "keys": [
-    {"text": "Q", "code": "KeyQ", "xposition": 0, "yposition": 0, "color": "#E0E0E0", "font": "Arial"}, // Added font property for demonstration
+    {"text": "Q", "code": "KeyQ", "xposition": 0, "yposition": 0, "color": "#000", "font": "Arial"}, // Added font property for demonstration
     {"text": "W", "code": "KeyW", "xposition": 1, "yposition": 0, "color": "#E0E0E0", "font": "Arial"},
     {"text": "E", "code": "KeyE", "xposition": 2, "yposition": 0, "color": "#E0E0E0", "font": "Arial"},
     {"text": "R", "code": "KeyR", "xposition": 3, "yposition": 0, "color": "#E0E0E0", "font": "Arial"},
