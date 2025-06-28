@@ -47,25 +47,26 @@
             /* Type Style Section Layout */
             .type-style-grid {
                 display: grid;
-                grid-template-columns: 1fr 1fr; /* Two equal columns */
+                /* Adjusted columns to make quadrants narrower and create space for the larger center image */
+                grid-template-columns: 0.8fr 2fr 0.8fr; /* Left, Center (for image), Right */
                 grid-template-rows: auto auto; /* Two rows, height based on content */
                 gap: 20px; /* Space between grid items */
                 position: relative;
                 padding: 20px;
                 border: 1px solid #ddd;
                 border-radius: 8px;
+                align-items: center; /* Vertically align items in the grid */
             }
 
             .type-style-section {
                 border: 1px dashed #ccc;
                 padding: 15px;
                 border-radius: 5px;
-                max-height: 150px; /* Make quadrants more concise */
-                overflow-y: auto; /* Add scroll if content overflows */
+                /* Removed max-height and overflow-y to prevent individual quadrant scrollbars */
             }
 
             .type-style-center-image {
-                grid-column: 1 / 3; /* Span across both columns */
+                grid-column: 2; /* Place in the middle column */
                 grid-row: 1 / 3; /* Span across both rows */
                 display: flex;
                 justify-content: center;
@@ -74,19 +75,19 @@
             }
 
             .type-style-center-image img {
-                max-width: 450px; /* Make the image 3x larger (150px * 3) */
+                max-width: 450px; /* Make the image larger, roughly 3x the original 150px */
                 height: auto;
                 opacity: 0.7; /* Make the image slightly transparent */
             }
 
-            /* Positioning for sections */
+            /* Positioning for sections relative to the grid */
             .top-left {
                 grid-column: 1;
                 grid-row: 1;
             }
 
             .top-right {
-                grid-column: 2;
+                grid-column: 3; /* Move to the third column */
                 grid-row: 1;
             }
 
@@ -96,7 +97,7 @@
             }
 
             .bottom-right {
-                grid-column: 2;
+                grid-column: 3; /* Move to the third column */
                 grid-row: 2;
             }
         </style>
