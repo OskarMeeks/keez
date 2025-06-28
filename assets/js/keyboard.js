@@ -92,36 +92,28 @@ function generateKeyboardPreview() {
         keyButton.style.top = `${keyConfig.yposition * (KEY_SIZE + KEY_GAP)}px`;
 
         // --- NEW: Create and position text divs for each text object ---
-        keyConfig.texts.forEach(textObj => {
-            const textDiv = document.createElement('div');
-            textDiv.textContent = textObj.value;
-            textDiv.className = 'key-text-label'; // Apply a class for styling
-            textDiv.style.position = 'absolute';
-                textDiv.style.left = '50%';
-                textDiv.style.top = '50%';
+      keyConfig.texts.forEach(textObj => {
+    const textDiv = document.createElement('div');
+    textDiv.textContent = textObj.value;
+    textDiv.className = 'key-text-label';
+    textDiv.style.position = 'absolute';
 
-// Use translate(-50%, -50%) to center the text, then add xOffset and yOffset in px as additional translation
+    textDiv.style.fontFamily = textObj.font || currentKeyFont;
+    textDiv.style.color = getContrastColor(textObj.color || currentKeyColor);
 
-                textDiv.style.transform = `translate(calc(-50% + ${textObj.xOffset}px), calc(-50% + ${textObj.yOffset}px))`;
-            // Apply font and color from the individual text object
-            textDiv.style.fontFamily = textObj.font || currentKeyFont; // Use textObj font or current default
-            textDiv.style.color = getContrastColor(textObj.color || currentKeyColor); // Use textObj color for contrast calculation
+    // Position by percentage from JSON
+    textDiv.style.left = `${textObj.x}%`;
+    textDiv.style.top = `${textObj.y}%`;
 
-            // Position the text div relative to the keyButton
-            // Assuming x and y are percentages or relative units within the keycap
-            // You might need to adjust these calculations based on your JSON's x/y meaning
-            // For simplicity, let's assume x and y are 0-100 values for percentage placement
-            textDiv.style.left = `${textObj.x}%`;
-            textDiv.style.top = `${textObj.y}%`;
-        //    textDiv.style.transform = 'translate(-50%, -50%)'; // Center text within its position
+    // Center text exactly at this point and offset by xOffset/yOffset in pixels for visual adjustment
+    textDiv.style.transform = `translate(calc(-50% + ${textObj.xOffset}px), calc(-50% + ${textObj.yOffset}px))`;
 
-            // Further styling for text alignment, font size etc. can be added here or in CSS
-            textDiv.style.textAlign = 'center';
-            textDiv.style.whiteSpace = 'nowrap'; // Prevent text wrapping
-            textDiv.style.fontSize = `${textObj.size || 16}px`; // Use textObj.size or default
+    textDiv.style.textAlign = 'center';
+    textDiv.style.whiteSpace = 'nowrap';
+    textDiv.style.fontSize = `${textObj.size || 16}px`;
 
-            keyButton.appendChild(textDiv);
-        });
+    keyButton.appendChild(textDiv);
+});
 
 
         // Update max dimensions for container sizing
