@@ -69,7 +69,7 @@ function generateKeyboardPreview() {
         keyButton.className = 'keyboard-key'; // Apply base key styling
 
         // Apply dynamic styles from current state
-        keyButton.style.backgroundColor = currentKeyColor;
+        keyButton.style.backgroundColor = keyConfig.color
         keyButton.style.fontFamily = currentKeyFont;
         keyButton.style.color = getContrastColor(currentKeyColor); // Ensure text is readable
 
