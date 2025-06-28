@@ -2,8 +2,8 @@
     "keys": [
         {
             "texts": [
-                {"value": "`", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "~", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "`", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "~", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -11,8 +11,8 @@
         },
         {
             "texts": [
-                {"value": "1", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "!", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "1", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "!", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -20,8 +20,8 @@
         },
         {
             "texts": [
-                {"value": "2", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "@", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "2", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "@", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -29,8 +29,8 @@
         },
         {
             "texts": [
-                {"value": "3", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "#", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "3", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "#", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -38,8 +38,8 @@
         },
         {
             "texts": [
-                {"value": "4", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "$", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "4", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "$", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -47,8 +47,8 @@
         },
         {
             "texts": [
-                {"value": "5", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "%", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "5", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "%", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -56,8 +56,8 @@
         },
         {
             "texts": [
-                {"value": "6", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "^", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "6", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "^", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -65,8 +65,8 @@
         },
         {
             "texts": [
-                {"value": "7", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "&", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "7", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "&", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -74,8 +74,8 @@
         },
         {
             "texts": [
-                {"value": "8", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "*", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "8", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "*", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -83,8 +83,8 @@
         },
         {
             "texts": [
-                {"value": "9", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "(", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "9", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "(", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -92,8 +92,8 @@
         },
         {
             "texts": [
-                {"value": "0", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": ")", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "0", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": ")", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -101,8 +101,8 @@
         },
         {
             "texts": [
-                {"value": "-", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "_", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "-", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "_", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -110,8 +110,8 @@
         },
         {
             "texts": [
-                {"value": "=", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "+", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "=", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "+", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -119,20 +119,19 @@
         },
         {
             "texts": [
-                {"value": "Backspace", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"}
+                {"value": "Backspace", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
             ],
             "code": "Backspace", "xposition": 13, "yposition": 0, "widthRatio": 2
         },
-
         {
             "texts": [
-                {"value": "Tab", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"}
+                {"value": "Tab", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
             ],
             "code": "Tab", "xposition": 0, "yposition": 1, "widthRatio": 1.5
         },
         {
             "texts": [
-                {"value": "Q", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "Q", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -141,7 +140,7 @@
         },
         {
             "texts": [
-                {"value": "W", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "W", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -150,7 +149,7 @@
         },
         {
             "texts": [
-                {"value": "E", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "E", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -159,7 +158,7 @@
         },
         {
             "texts": [
-                {"value": "R", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "R", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -168,7 +167,7 @@
         },
         {
             "texts": [
-                {"value": "T", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "T", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -177,7 +176,7 @@
         },
         {
             "texts": [
-                {"value": "Y", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "Y", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -186,7 +185,7 @@
         },
         {
             "texts": [
-                {"value": "U", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "U", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -195,7 +194,7 @@
         },
         {
             "texts": [
-                {"value": "I", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "I", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -204,7 +203,7 @@
         },
         {
             "texts": [
-                {"value": "O", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "O", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -213,7 +212,7 @@
         },
         {
             "texts": [
-                {"value": "P", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "P", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -222,8 +221,8 @@
         },
         {
             "texts": [
-                {"value": "[", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "{", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "[", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "{", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -231,8 +230,8 @@
         },
         {
             "texts": [
-                {"value": "]", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "}", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "]", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "}", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -240,23 +239,22 @@
         },
         {
             "texts": [
-                {"value": "\\", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"},
-                {"value": "|", "xOffset": 0, "yOffset": -0.3, "color": "#C0C0C0", "font": "Arial"},
+                {"value": "\\", "xOffset": 50, "yOffset": 20, "color": "#C0C0C0", "font": "Arial"},
+                {"value": "|", "xOffset": 20, "yOffset": 20, "color": "#C0C0C0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"}
             ],
             "code": "Backslash", "xposition": 13.5, "yposition": 1, "widthRatio": 1.5
         },
-
         {
             "texts": [
-                {"value": "Caps", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"}
+                {"value": "Caps", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
             ],
             "code": "CapsLock", "xposition": 0, "yposition": 2, "widthRatio": 1.75
         },
         {
             "texts": [
-                {"value": "A", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "A", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -265,7 +263,7 @@
         },
         {
             "texts": [
-                {"value": "S", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "S", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -274,7 +272,7 @@
         },
         {
             "texts": [
-                {"value": "D", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "D", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -283,7 +281,7 @@
         },
         {
             "texts": [
-                {"value": "F", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "F", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -292,7 +290,7 @@
         },
         {
             "texts": [
-                {"value": "G", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "G", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -301,7 +299,7 @@
         },
         {
             "texts": [
-                {"value": "H", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "H", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -310,7 +308,7 @@
         },
         {
             "texts": [
-                {"value": "J", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "J", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -319,7 +317,7 @@
         },
         {
             "texts": [
-                {"value": "K", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "K", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -328,7 +326,7 @@
         },
         {
             "texts": [
-                {"value": "L", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "L", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -337,8 +335,8 @@
         },
         {
             "texts": [
-                {"value": ";", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": ":", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": ";", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": ":", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -346,8 +344,8 @@
         },
         {
             "texts": [
-                {"value": "'", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "\"", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "'", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "\"", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -355,20 +353,19 @@
         },
         {
             "texts": [
-                {"value": "Enter", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"}
+                {"value": "Enter", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
             ],
             "code": "Enter", "xposition": 12.75, "yposition": 2, "widthRatio": 2.25
         },
-
         {
             "texts": [
-                {"value": "Shift", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"}
+                {"value": "Shift", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
             ],
             "code": "ShiftLeft", "xposition": 0, "yposition": 3, "widthRatio": 2.25
         },
         {
             "texts": [
-                {"value": "Z", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "Z", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -377,7 +374,7 @@
         },
         {
             "texts": [
-                {"value": "X", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "X", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -386,7 +383,7 @@
         },
         {
             "texts": [
-                {"value": "C", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "C", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -395,7 +392,7 @@
         },
         {
             "texts": [
-                {"value": "V", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "V", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -404,7 +401,7 @@
         },
         {
             "texts": [
-                {"value": "B", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "B", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -413,7 +410,7 @@
         },
         {
             "texts": [
-                {"value": "N", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "N", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -422,7 +419,7 @@
         },
         {
             "texts": [
-                {"value": "M", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "M", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
@@ -431,8 +428,8 @@
         },
         {
             "texts": [
-                {"value": ",", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "<", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": ",", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "<", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -440,8 +437,8 @@
         },
         {
             "texts": [
-                {"value": ".", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": ">", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": ".", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": ">", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -449,8 +446,8 @@
         },
         {
             "texts": [
-                {"value": "/", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "?", "xOffset": 0, "yOffset": -0.3, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "/", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
+                {"value": "?", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
                 {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
             ],
@@ -458,57 +455,57 @@
         },
         {
             "texts": [
-                {"value": "Shift", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"}
+                {"value": "Shift", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
             ],
             "code": "ShiftRight", "xposition": 12.25, "yposition": 3, "widthRatio": 2.75
         },
-
         {
             "texts": [
-                {"value": "Ctrl", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"}
+                {"value": "Ctrl", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
             ],
             "code": "ControlLeft", "xposition": 0, "yposition": 4, "widthRatio": 1.25
         },
         {
             "texts": [
-                {"value": "Win", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"}
+                {"value": "Win", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
             ],
             "code": "MetaLeft", "xposition": 1.25, "yposition": 4, "widthRatio": 1.25
         },
         {
             "texts": [
-                {"value": "Alt", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"}
+                {"value": "Alt", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
             ],
             "code": "AltLeft", "xposition": 2.5, "yposition": 4, "widthRatio": 1.25
         },
         {
             "texts": [
-                {"value": "Space", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {"value": "Space", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"}
             ],
             "code": "Space", "xposition": 3.75, "yposition": 4, "widthRatio": 6.25
         },
         {
             "texts": [
-                {"value": "Alt", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"}
+                {"value": "Alt", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
             ],
             "code": "AltRight", "xposition": 10, "yposition": 4, "widthRatio": 1.25
         },
         {
             "texts": [
-                {"value": "Win", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"}
+                {"value": "Win", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
             ],
             "code": "MetaRight", "xposition": 11.25, "yposition": 4, "widthRatio": 1.25
         },
         {
             "texts": [
-                {"value": "Fn", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"}
+                {"value": "Fn", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
             ],
             "code": "Fn", "xposition": 12.5, "yposition": 4, "widthRatio": 1.25
         },
         {
             "texts": [
-                {"value": "Ctrl", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"}
+                {"value": "Ctrl", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
             ],
-            "code": "ControlRight", "xposition": 13.75, "yposition": 4, "widthRatio": 1.25}
+            "code": "ControlRight", "xposition": 13.75, "yposition": 4, "widthRatio": 1.25
+        }
     ]
 }
