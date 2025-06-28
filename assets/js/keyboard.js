@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.showOptions('keystyle', document.getElementById('keystyleButton'));
 
     // --- Load keyboard configuration from JSON ---
-    fetch('keyboard_config.json')
+    fetch('assets/keyboard_config.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
