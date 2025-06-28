@@ -197,6 +197,7 @@ const keyboardConfig = {
 
 const KEY_SIZE = 60; // Standard key width/height in pixels
 const KEY_GAP = 8; // Gap between keys in pixels
+const DEFAULT_KEY_IMAGE = 'images/keycap.png'; // Make sure this path is correct!
 
 /**
  * Generates and renders the keyboard preview based on the current configuration.
@@ -217,7 +218,9 @@ function generateKeyboardPreview() {
         keyButton.textContent = keyConfig.text;
         keyButton.className = 'keyboard-key'; // Apply base key styling
         keyButton.dataset.keyCode = keyConfig.code;
+        keyButton.style.backgroundImage = `url(${keyConfig.image})`
 
+        
         keyButton.style.backgroundColor = keyConfig.color || currentKeyColor;
         keyButton.style.fontFamily = keyConfig.font || currentKeyFont;
         keyButton.style.color = getContrastColor(keyButton.style.backgroundColor);
