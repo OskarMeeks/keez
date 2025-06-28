@@ -222,14 +222,14 @@ function generateKeyboardPreview() {
         keyButton.style.color = getContrastColor(keyButton.style.backgroundColor);
 
         // --- NEW: Apply width and height based on KEY_SIZE and widthRatio ---
-        const actualKeyWidth = (keyConfig.widthRatio * KEY_SIZE) + ((keyConfig.widthRatio - 1) * KEY_GAP);
+        const actualKeyWidth = (keyConfig.widthRatio * KEY_SIZE));
         keyButton.style.width = `${actualKeyWidth}px`;
         keyButton.style.height = `${KEY_SIZE}px`; // Height is always KEY_SIZE
 
         // Position the key using xposition and yposition
         keyButton.style.position = 'absolute';
-        keyButton.style.left = `${keyConfig.xposition * (KEY_SIZE + KEY_GAP)}px`;
-        keyButton.style.top = `${keyConfig.yposition * (KEY_SIZE + KEY_GAP)}px`;
+        keyButton.style.left = `${keyConfig.xposition * KEY_SIZE}px`;
+        keyButton.style.top = `${keyConfig.yposition * KEY_SIZE}px`;
 
         // Update max dimensions for container sizing
         maxX = Math.max(maxX, keyConfig.xposition * (KEY_SIZE + KEY_GAP) + actualKeyWidth);
