@@ -100,6 +100,20 @@
                 grid-column: 3; /* Move to the third column */
                 grid-row: 2;
             }
+
+            /* --- START OF NEW/MODIFIED CSS FOR DROPDOWN POSITIONING --- */
+            .type-style-section label {
+                display: inline-block; /* Makes labels behave like text, but allows width/height */
+                margin-right: 5px; /* Adds a small space between the label and the dropdown */
+                vertical-align: middle; /* Helps align the label text with the dropdown */
+            }
+
+            .type-style-section select {
+                display: inline-block; /* Makes dropdowns behave like text, allowing them to sit next to labels */
+                vertical-align: middle; /* Helps align the dropdown with the label text */
+                width: auto; /* Allow the select to size based on content, not full width */
+            }
+            /* --- END OF NEW/MODIFIED CSS --- */
         </style>
     </head>
     <body class="subpage">
@@ -248,41 +262,41 @@
         </section>
 
         <footer id="footer">
-                <div class="inner">
+            <div class="inner">
 
-                    <h4>Get in touch</h4>
+                <h4>Get in touch</h4>
 
-                    <form action="#" method="post">
+                <form action="#" method="post">
 
-                        <div class="field half first">
-                            <label for="name">Name</label>
-                            <input name="name" id="name" type="text" placeholder="Name">
-                        </div>
-                        <div class="field half">
-                            <label for="email">Email</label>
-                            <input name="email" id="email" type="email" placeholder="Email">
-                        </div>
-                        <div class="field">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
-                        </div>
-                        <ul class="actions">
-                            <li><input value="Send Message" class="button alt" type="submit"></li>
-                        </ul>
-                    </form>
-
-                    <div class="copyright">
-                        &copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+                    <div class="field half first">
+                        <label for="name">Name</label>
+                        <input name="name" id="name" type="text" placeholder="Name">
                     </div>
+                    <div class="field half">
+                        <label for="email">Email</label>
+                        <input name="email" id="email" type="email" placeholder="Email">
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+                    </div>
+                    <ul class="actions">
+                        <li><input value="Send Message" class="button alt" type="submit"></li>
+                    </ul>
+                </form>
 
+                <div class="copyright">
+                    &copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
                 </div>
-            </footer>
+
+            </div>
+        </footer>
 
         <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/skel.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
-            <script src="assets/js/keyboard.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/keyboard.js"></script>
 
     </body>
 </html>
