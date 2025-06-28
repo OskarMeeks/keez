@@ -218,7 +218,7 @@ function generateKeyboardPreview() {
         keyButton.textContent = keyConfig.text;
         keyButton.className = 'keyboard-key'; // Apply base key styling
         keyButton.dataset.keyCode = keyConfig.code;
-        keyButton.style.backgroundImage = `url(${keyConfig.image})`
+        keyButton.style.backgroundImage = `url(${DEFAULT_KEY_IMAGE})`
 
         
         keyButton.style.backgroundColor = keyConfig.color || currentKeyColor;
