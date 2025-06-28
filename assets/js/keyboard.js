@@ -96,7 +96,7 @@ function generateKeyboardPreview() {
             const textDiv = document.createElement('div');
             textDiv.textContent = textObj.value;
             textDiv.className = 'key-text-label'; // Apply a class for styling
-            textDiv.style.position = 'absolute';
+      //      textDiv.style.position = 'absolute';
 
             // Apply font and color from the individual text object
             textDiv.style.fontFamily = textObj.font || currentKeyFont; // Use textObj font or current default
