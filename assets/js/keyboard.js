@@ -175,8 +175,8 @@
             });
 
             // Set container dimensions
-            keyboardContainer.style.width = `${maxX + KEY_GAP}px`; // Add gap for last column
-            keyboardContainer.style.height = `${maxY + KEY_GAP}px`; // Add gap for last row
+      //      keyboardContainer.style.width = `${maxX + KEY_GAP}px`; // Add gap for last column
+      //      keyboardContainer.style.height = `${maxY + KEY_GAP}px`; // Add gap for last row
         }
 
         /**
