@@ -277,6 +277,7 @@ function generateKeyboardPreview() {
 
         keyboardContainer.appendChild(keyButton);
     });
+}
 function getContrastColor(hexcolor) {
     if (!hexcolor) return 'black'; // Handle cases where color might be undefined
 
@@ -372,6 +373,7 @@ window.applyKeyColor = function(color, clickedColorButton) {
     }
     // No need to call generateKeyboardPreview here; it's called when a key is clicked
 };
+
 
 /**
  * Applies the selected font to the keyboard keys. This now primarily sets the brush.
