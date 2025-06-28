@@ -11,6 +11,13 @@
                 overflow-y: scroll; /* Add vertical scrollbar to the body */
             }
 
+            /* Ensure header content is not fixed */
+            #header {
+                position: relative; /* Change from fixed if it was fixed by main.css */
+                width: 100%;
+                padding: 0; /* Adjust padding as needed, if any default padding makes it stick */
+            }
+
             .tab-button {
                 flex-grow: 1;
                 padding: 10px 0px;
@@ -40,9 +47,9 @@
             /* Type Style Section Layout */
             .type-style-grid {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto auto;
-                gap: 20px;
+                grid-template-columns: 1fr 1fr; /* Two equal columns */
+                grid-template-rows: auto auto; /* Two rows, height based on content */
+                gap: 20px; /* Space between grid items */
                 position: relative;
                 padding: 20px;
                 border: 1px solid #ddd;
@@ -102,7 +109,7 @@
                     </header>
 
                     <h3 style="text-align: center; margin-top: 30px;">Keyboard Preview</h3>
-                        <div id="keyboardPreview" style="margin-top: 10px; border: 1px solid #ccc; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #f9f9f9; border-radius: 8px; margin-bottom: 300px;">
+                        <div id="keyboardPreview" style="margin-top: 10px; border: 1px solid #ccc; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #f9f9f9; border-radius: 8px; margin-bottom: 50px;">
                             </div>
 
                     <div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
