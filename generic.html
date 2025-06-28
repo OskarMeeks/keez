@@ -1,148 +1,285 @@
 <!DOCTYPE HTML>
-<!--
-	Projection by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
-	<head>
-		<title>Generic - Projection by TEMPLATED</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="subpage">
+    <head>
+        <title>Generic - Projection by TEMPLATED</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            /* Custom styles for scrollbar and type style section */
+            body {
+                overflow-y: scroll; /* Add vertical scrollbar to the body */
+            }
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-				    <header class="align-center">
-				        <h2>Nunc Dignissim</h2>
-				        <p>Aliquam erat volutpat nam dui</p>
-				    </header>
-				
-				     <h3 style="text-align: center; margin-top: 30px;">Keyboard Preview</h3>
-					    <div id="keyboardPreview" style="margin-top: 10px; border: 1px solid #ccc; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #f9f9f9; border-radius: 8px; margin-bottom: 300px;">
-					        <!-- Keyboard will be generated here by JavaScript -->
-					    </div>
-				
-				    <div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
-				        <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
-				            <button id="keystyleButton" class="tab-button active" onclick="showOptions('keystyle', this)">Keys Style</button>
-				            <button id="typestyleButton" class="tab-button" onclick="showOptions('typestyle', this)">Type Style</button>
-				            <button id="feelButton" class="tab-button" onclick="showOptions('feel', this)">Feel</button>
-				            <button id="profileButton" class="tab-button" onclick="showOptions('profile', this)">Profile</button>
-				        </div>
-				
-				        <div id="keystyleOptions" class="option-section">
-				            <h3>Keys Style Options</h3> <div style="display: flex; gap: 10px;">
-				                <button style="background-color: #FF5733; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyKeyColor('#FF5733', this)">Coral Red</button>
-				                <button style="background-color: #33FF57; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyKeyColor('#33FF57', this)">Lime Green</button>
-				                <button style="background-color: #3357FF; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyKeyColor('#3357FF', this)">Royal Blue</button>
-				                <button style="background-color: #FF33F5; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyKeyColor('#FF33F5', this)">Fuchsia</button>
-				                <button style="background-color: #FFD700; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyKeyColor('#FFD700', this)">Gold</button>
-				            </div>
-				        </div>
-				
-				        <div id="typestyleOptions" class="option-section" style="display: none;">
-				            <h3>Type Style Options</h3> <div style="display: flex; gap: 10px;">
-				                <button style="background-color: #FF5733; color: black; border: none; cursor: pointer; padding: 10px;">Coral Red</button>
-				                <button style="background-color: #33FF57; color: black; border: none; cursor: pointer; padding: 10px;">Lime Green</button>
-				                <button style="background-color: #3357FF; color: black; border: none; cursor: pointer; padding: 10px;">Royal Blue</button>
-				                <button style="background-color: #FF33F5; color: black; border: none; cursor: pointer; padding: 10px;">Fuchsia</button>
-				                <button style="background-color: #FFD700; color: black; border: none; cursor: pointer; padding: 10px;">Gold</button>
-						<img src="images/keycap.png"/>
-				            </div>
-				        </div>
-				
-				        <div id="feelOptions" class="option-section" style="display: none;">
-				            <h3>Feel Options</h3> <select id="feelSelect">
-				                <option value="calm">Calm</option>
-				                <option value="energetic">Energetic</option>
-				                <option value="cozy">Cozy</option>
-				            </select>
-				            <button onclick="applyFeel()">Apply Feel</button>
-				        </div>
-				
-				        <div id="profileOptions" class="option-section" style="display: none;">
-				            <h3>Profile Selection</h3> <select id="profileSelect" style="margin-bottom: 20px;">
-				                <option value="profile1">Profile 1: Classic</option>
-				                <option value="profile2">Profile 2: Modern</option>
-				                <option value="profile3">Profile 3: Artistic</option>
-				            </select>
-				            <button onclick="loadProfile()">Load Profile</button>
-				        </div>
-				    </div>
-		
-				
-				    <style>
-				        .tab-button {
-				            flex-grow: 1;
-				            padding: 10px 0px; /* Adjusted padding to better utilize full width */
-				            border: 1px solid #ccc;
-				            background-color: #f0f0f0;
-				            cursor: pointer;
-				            font-weight: bold;
-				            text-align: center;
-				        }
-				
-				        .tab-button:hover {
-				            background-color: #e0e0e0;
-				        }
-				
-				        .tab-button.active {
-				            background-color: #000;
-				            color: white;
-				            border-bottom: 1px solid transparent;
-				        }
-				
-				        .option-section {
-				            padding-top: 15px;
-				            border-top: 1px solid #eee;
-				            margin-top: 15px;
-				        }
-				    </style>
-				</div>
-			</section>
+            /* Ensure header content is not fixed */
+            #header {
+                position: relative; /* Change from fixed if it was fixed by main.css */
+                width: 100%;
+                padding: 0; /* Adjust padding as needed, if any default padding makes it stick */
+            }
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
+            .tab-button {
+                flex-grow: 1;
+                padding: 10px 0px;
+                border: 1px solid #ccc;
+                background-color: #f0f0f0;
+                cursor: pointer;
+                font-weight: bold;
+                text-align: center;
+            }
 
-					<h4>Get in touch</h4>
+            .tab-button:hover {
+                background-color: #e0e0e0;
+            }
 
-					<form action="#" method="post">
+            .tab-button.active {
+                background-color: #000;
+                color: white;
+                border-bottom: 1px solid transparent;
+            }
 
-						<div class="field half first">
-							<label for="name">Name</label>
-							<input name="name" id="name" type="text" placeholder="Name">
-						</div>
-						<div class="field half">
-							<label for="email">Email</label>
-							<input name="email" id="email" type="email" placeholder="Email">
-						</div>
-						<div class="field">
-							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
-						</div>
-						<ul class="actions">
-							<li><input value="Send Message" class="button alt" type="submit"></li>
-						</ul>
-					</form>
+            .option-section {
+                padding-top: 15px;
+                border-top: 1px solid #eee;
+                margin-top: 15px;
+            }
 
-					<div class="copyright">
-						&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
-					</div>
+            /* Type Style Section Layout */
+            .type-style-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr; /* Two equal columns */
+                grid-template-rows: auto auto; /* Two rows, height based on content */
+                gap: 20px; /* Space between grid items */
+                position: relative;
+                padding: 20px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+            }
 
-				</div>
-			</footer>
+            .type-style-section {
+                border: 1px dashed #ccc;
+                padding: 15px;
+                border-radius: 5px;
+            }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/keyboard.js"></script>
+            .type-style-center-image {
+                grid-column: 1 / 3; /* Span across both columns */
+                grid-row: 1 / 3; /* Span across both rows */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1; /* Ensure image is behind the section content if content overflows */
+            }
 
-	</body>
+            .type-style-center-image img {
+                max-width: 150px;
+                height: auto;
+                opacity: 0.7; /* Make the image slightly transparent */
+            }
+
+            /* Positioning for sections */
+            .top-left {
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+            .top-right {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            .bottom-left {
+                grid-column: 1;
+                grid-row: 2;
+            }
+
+            .bottom-right {
+                grid-column: 2;
+                grid-row: 2;
+            }
+        </style>
+    </head>
+    <body class="subpage">
+
+        <header id="header">
+            <div class="inner">
+                <header class="align-center">
+                    <h2>Nunc Dignissim</h2>
+                    <p>Aliquam erat volutpat nam dui</p>
+                </header>
+            </div>
+        </header>
+
+        <section id="main" class="wrapper">
+            <div class="inner">
+                <h3 style="text-align: center; margin-top: 30px;">Keyboard Preview</h3>
+                <div id="keyboardPreview" style="margin-top: 10px; border: 1px solid #ccc; padding: 20px; display: flex; flex-direction: column; align-items: center; background-color: #f9f9f9; border-radius: 8px; margin-bottom: 50px;">
+                    </div>
+
+                <div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
+                    <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
+                        <button id="keystyleButton" class="tab-button active" onclick="showOptions('keystyle', this)">Keys Style</button>
+                        <button id="typestyleButton" class="tab-button" onclick="showOptions('typestyle', this)">Type Style</button>
+                        <button id="feelButton" class="tab-button" onclick="showOptions('feel', this)">Feel</button>
+                        <button id="profileButton" class="tab-button" onclick="showOptions('profile', this)">Profile</button>
+                    </div>
+
+                    <div id="keystyleOptions" class="option-section">
+                        <h3>Keys Style Options</h3> <div style="display: flex; gap: 10px;">
+                            <button style="background-color: #FF5733; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyKeyColor('#FF5733', this)">Coral Red</button>
+                            <button style="background-color: #33FF57; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyKeyColor('#33FF57', this)">Lime Green</button>
+                            <button style="background-color: #3357FF; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyKeyColor('#3357FF', this)">Royal Blue</button>
+                            <button style="background-color: #FF33F5; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyKeyColor('#FF33F5', this)">Fuchsia</button>
+                            <button style="background-color: #FFD700; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyKeyColor('#FFD700', this)">Gold</button>
+                        </div>
+                    </div>
+
+                    <div id="typestyleOptions" class="option-section" style="display: none;">
+                        <h3>Type Style Options</h3>
+                        <div class="type-style-grid">
+                            <div class="type-style-center-image">
+                                <img src="images/keycap.png" alt="Keycap" />
+                            </div>
+
+                            <div class="type-style-section top-left">
+                                <h4>Top Left</h4>
+                                <label for="tl-color">Color:</label>
+                                <select id="tl-color">
+                                    <option value="#000000">Black</option>
+                                    <option value="#FF0000">Red</option>
+                                    <option value="#0000FF">Blue</option>
+                                </select><br><br>
+                                <label for="tl-font">Font:</label>
+                                <select id="tl-font">
+                                    <option value="Arial">Arial</option>
+                                    <option value="Verdana">Verdana</option>
+                                    <option value="Courier New">Courier New</option>
+                                </select><br><br>
+                                <label for="tl-x">X Pos:</label>
+                                <input type="number" id="tl-x" value="0">
+                                <label for="tl-y">Y Pos:</label>
+                                <input type="number" id="tl-y" value="0">
+                            </div>
+
+                            <div class="type-style-section top-right">
+                                <h4>Top Right</h4>
+                                <label for="tr-color">Color:</label>
+                                <select id="tr-color">
+                                    <option value="#000000">Black</option>
+                                    <option value="#FF0000">Red</option>
+                                    <option value="#0000FF">Blue</option>
+                                </select><br><br>
+                                <label for="tr-font">Font:</label>
+                                <select id="tr-font">
+                                    <option value="Arial">Arial</option>
+                                    <option value="Verdana">Verdana</option>
+                                    <option value="Courier New">Courier New</option>
+                                </select><br><br>
+                                <label for="tr-x">X Pos:</label>
+                                <input type="number" id="tr-x" value="0">
+                                <label for="tr-y">Y Pos:</label>
+                                <input type="number" id="tr-y" value="0">
+                            </div>
+
+                            <div class="type-style-section bottom-left">
+                                <h4>Bottom Left</h4>
+                                <label for="bl-color">Color:</label>
+                                <select id="bl-color">
+                                    <option value="#000000">Black</option>
+                                    <option value="#FF0000">Red</option>
+                                    <option value="#0000FF">Blue</option>
+                                </select><br><br>
+                                <label for="bl-font">Font:</label>
+                                <select id="bl-font">
+                                    <option value="Arial">Arial</option>
+                                    <option value="Verdana">Verdana</option>
+                                    <option value="Courier New">Courier New</option>
+                                </select><br><br>
+                                <label for="bl-x">X Pos:</label>
+                                <input type="number" id="bl-x" value="0">
+                                <label for="bl-y">Y Pos:</label>
+                                <input type="number" id="bl-y" value="0">
+                            </div>
+
+                            <div class="type-style-section bottom-right">
+                                <h4>Bottom Right</h4>
+                                <label for="br-color">Color:</label>
+                                <select id="br-color">
+                                    <option value="#000000">Black</option>
+                                    <option value="#FF0000">Red</option>
+                                    <option value="#0000FF">Blue</option>
+                                </select><br><br>
+                                <label for="br-font">Font:</label>
+                                <select id="br-font">
+                                    <option value="Arial">Arial</option>
+                                    <option value="Verdana">Verdana</option>
+                                    <option value="Courier New">Courier New</option>
+                                </select><br><br>
+                                <label for="br-x">X Pos:</label>
+                                <input type="number" id="br-x" value="0">
+                                <label for="br-y">Y Pos:</label>
+                                <input type="number" id="br-y" value="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="feelOptions" class="option-section" style="display: none;">
+                        <h3>Feel Options</h3> <select id="feelSelect">
+                            <option value="calm">Calm</option>
+                            <option value="energetic">Energetic</option>
+                            <option value="cozy">Cozy</option>
+                        </select>
+                        <button onclick="applyFeel()">Apply Feel</button>
+                    </div>
+
+                    <div id="profileOptions" class="option-section" style="display: none;">
+                        <h3>Profile Selection</h3> <select id="profileSelect" style="margin-bottom: 20px;">
+                            <option value="profile1">Profile 1: Classic</option>
+                            <option value="profile2">Profile 2: Modern</option>
+                            <option value="profile3">Profile 3: Artistic</option>
+                        </select>
+                        <button onclick="loadProfile()">Load Profile</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+                <div class="inner">
+
+                    <h4>Get in touch</h4>
+
+                    <form action="#" method="post">
+
+                        <div class="field half first">
+                            <label for="name">Name</label>
+                            <input name="name" id="name" type="text" placeholder="Name">
+                        </div>
+                        <div class="field half">
+                            <label for="email">Email</label>
+                            <input name="email" id="email" type="email" placeholder="Email">
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+                        </div>
+                        <ul class="actions">
+                            <li><input value="Send Message" class="button alt" type="submit"></li>
+                        </ul>
+                    </form>
+
+                    <div class="copyright">
+                        &copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+                    </div>
+
+                </div>
+            </footer>
+
+        <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/skel.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+            <script src="assets/js/keyboard.js"></script>
+
+    </body>
 </html>
