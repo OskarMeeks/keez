@@ -197,8 +197,8 @@ const keyboardConfig = {
 
 const KEY_SIZE = 60; // Standard key width/height in pixels
 const KEY_GAP = 8; // Gap between keys in pixels
-const DEFAULT_KEY_IMAGE = 'images/keycap.png'; // Make sure this path is correct!
-
+const IMAGE10 = 'images/keycap.png'; // Make sure this path is correct!
+const IMAGE15 = 'images/1.5.png'; // Make sure this path is correct!
 /**
  * Generates and renders the keyboard preview based on the current configuration.
  */
@@ -218,14 +218,32 @@ function generateKeyboardPreview() {
         keyButton.textContent = keyConfig.text;
         keyButton.className = 'keyboard-key'; // Apply base key styling
         keyButton.dataset.keyCode = keyConfig.code;
-        keyButton.style.backgroundImage = `url(${DEFAULT_KEY_IMAGE})`
 
-        
+        // --- New: Set background image based on widthRatio ---
+        if (keyConfig.widthRatio === 1) {
+            keyButton.style.backgroundImage = `url(${images/keycap.png})`;
+        } else if (keyConfig.widthRatio === 1.5) {
+            keyButton.style.backgroundImage = `url(${images/1.5.png})`;
+        } else if (keyConfig.widthRatio === 2) {
+            keyButton.style.backgroundImage = `url(${IMAGE_2U})`;
+        } else if (keyConfig.widthRatio === 2.25) {
+            keyButton.style.backgroundImage = `url(${IMAGE_2_25U})`;
+        } else if (keyConfig.widthRatio === 2.75) {
+            keyButton.style.backgroundImage = `url(${IMAGE_2_75U})`;
+        } else if (keyConfig.widthRatio === 6.25) {
+            keyButton.style.backgroundImage = `url(${IMAGE_6_25U})`;
+        } else {
+            // Default image if no specific widthRatio matches, or for other ratios
+            keyButton.style.backgroundImage = `url(${IMAGE_1U})`;
+        }
+        keyButton.style.backgroundSize = 'cover'; // Ensure image covers the key
+        keyButton.style.backgroundPosition = 'center'; // Center the image
+
         keyButton.style.backgroundColor = keyConfig.color || currentKeyColor;
         keyButton.style.fontFamily = keyConfig.font || currentKeyFont;
         keyButton.style.color = getContrastColor(keyButton.style.backgroundColor);
 
-        // --- NEW: Apply width and height based on KEY_SIZE and widthRatio ---
+        // --- Apply width and height based on KEY_SIZE and widthRatio ---
         const actualKeyWidth = (keyConfig.widthRatio * KEY_SIZE);
         keyButton.style.width = `${actualKeyWidth}px`;
         keyButton.style.height = `${KEY_SIZE}px`; // Height is always KEY_SIZE
@@ -236,43 +254,29 @@ function generateKeyboardPreview() {
         keyButton.style.top = `${keyConfig.yposition * KEY_SIZE}px`;
 
         // Update max dimensions for container sizing
-        maxX = Math.max(maxX, keyConfig.xposition * (KEY_SIZE + KEY_GAP) + actualKeyWidth);
-        maxY = Math.max(maxY, keyConfig.yposition * (KEY_SIZE + KEY_GAP) + KEY_SIZE);
+        maxX = Math.max(maxX, keyConfig.xposition * KEY_SIZE + actualKeyWidth);
+        maxY = Math.max(maxY, keyConfig.yposition * KEY_SIZE + KEY_SIZE);
 
-keyButton.style.paddingLeft = '0px';
-keyButton.style.paddingRight = '0px';
-keyButton.style.paddingBottom = '0px';
-keyButton.style.paddingTop = '0px';
-keyButton.style.borderTopWidth = '0px';
-keyButton.style.borderTopStyle = 'solid'; // Still 'solid' even with 0 width, but often implies no border visually
-keyButton.style.borderRightWidth = '0px';
-keyButton.style.borderRightStyle = 'solid';
-keyButton.style.borderBottomWidth = '0px';
-keyButton.style.borderBottomStyle = 'solid';
-keyButton.style.borderLeftWidth = '0px';
-keyButton.style.borderLeftStyle = 'solid';
+        // Styling for padding and border as previously fixed
+        keyButton.style.paddingLeft = '0px';
+        keyButton.style.paddingRight = '0px';
+        keyButton.style.paddingBottom = '0px';
+        keyButton.style.paddingTop = '0px';
+        keyButton.style.borderTopWidth = '0px';
+        keyButton.style.borderTopStyle = 'solid';
+        keyButton.style.borderRightWidth = '0px';
+        keyButton.style.borderRightStyle = 'solid';
+        keyButton.style.borderBottomWidth = '0px';
+        keyButton.style.borderBottomStyle = 'solid';
+        keyButton.style.borderLeftWidth = '0px';
+        keyButton.style.borderLeftStyle = 'solid';
 
-
-                                
         keyButton.addEventListener('click', () => {
-            applyBrushToKey(keyButton.dataset.keyCode);
+            applyBrushToKey(keyButton.dataset.keyCode); // Assuming applyBrushToKey handles styling
         });
 
         keyboardContainer.appendChild(keyButton);
     });
-
-    // Set the container's dimensions to fit the laid-out keys precisely
-    // Add padding to account for the border of the keyboardPreview div
-   // const containerPadding = 25; // This should match the padding set in CSS
-  //  keyboardContainer.style.width = `${maxX + 2 * containerPadding}px`;
-    //keyboardContainer.style.height = `${maxY + 2 * containerPadding}px`;
-}
-
-/**
- * Determines a contrasting color for text based on a background color.
- * @param {string} hexcolor The hex color string (e.g., "#RRGGBB").
- * @returns {string} "black" or "white" for optimal contrast.
- */
 function getContrastColor(hexcolor) {
     if (!hexcolor) return 'black'; // Handle cases where color might be undefined
 
