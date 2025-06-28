@@ -54,8 +54,8 @@ const keyboardConfig = {
     ]
 };
 
-const KEY_SIZE = 60; // Approximate size of a key (width and height) in pixels
-const KEY_GAP = 8; // Gap between keys in pixels
+const KEY_SIZE = 200; // Approximate size of a key (width and height) in pixels
+const KEY_GAP = 2; // Gap between keys in pixels
 
 /**
  * Generates and renders the keyboard preview based on the current configuration.
