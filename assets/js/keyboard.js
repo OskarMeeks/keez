@@ -251,7 +251,7 @@ keyButton.style.borderBottomWidth = '0px';
 keyButton.style.borderBottomStyle = 'solid';
 keyButton.style.borderLeftWidth = '0px';
 keyButton.style.borderLeftStyle = 'solid';
-}
+
 
                                 
         keyButton.addEventListener('click', () => {
