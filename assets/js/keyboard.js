@@ -8,29 +8,48 @@ let lastClickedFontButton = null;
 
 // JSON configuration for the keyboard layout
 const keyboardConfig = {
-    "rows": [
-        {
-            "keys": [
-                {"text": "Q", "code": "KeyQ"}, {"text": "W", "code": "KeyW"}, {"text": "E", "code": "KeyE"}, {"text": "R", "code": "KeyR"}, {"text": "T", "code": "KeyT"}, {"text": "Y", "code": "KeyY"}, {"text": "U", "code": "KeyU"}, {"text": "I", "code": "KeyI"}, {"text": "O", "code": "KeyO"}, {"text": "P", "code": "KeyP"}
-            ]
-        },
-        {
-            "keys": [
-                {"text": "A", "code": "KeyA"}, {"text": "S", "code": "KeyS"}, {"text": "D", "code": "KeyD"}, {"text": "F", "code": "KeyF"}, {"text": "G", "code": "KeyG"}, {"text": "H", "code": "KeyH"}, {"text": "J", "code": "KeyJ"}, {"text": "K", "code": "KeyK"}, {"text": "L", "code": "KeyL"}
-            ]
-        },
-        {
-            "keys": [
-                {"text": "Shift", "code": "ShiftLeft", "widthClass": "key-large"}, {"text": "Z", "code": "KeyZ"}, {"text": "X", "code": "KeyX"}, {"text": "C", "code": "KeyC"}, {"text": "V", "code": "KeyV"}, {"text": "B", "code": "KeyB"}, {"text": "N", "code": "KeyN"}, {"text": "M", "code": "KeyM"}, {"text": "Shift", "code": "ShiftRight", "widthClass": "key-large"}
-            ]
-        },
-        {
-            "keys": [
-                {"text": "Ctrl", "code": "ControlLeft", "widthClass": "key-medium"}, {"text": "Alt", "code": "AltLeft", "widthClass": "key-medium"}, {"text": "Space", "code": "Space", "widthClass": "key-extra-large"}, {"text": "Alt", "code": "AltRight", "widthClass": "key-medium"}, {"text": "Ctrl", "code": "ControlRight", "widthClass": "key-medium"}
-            ]
-        }
-    ]
+  "keys": [
+    {"text": "Q", "code": "KeyQ", "xposition": 0, "yposition": 0, "color": "#E0E0E0"},
+    {"text": "W", "code": "KeyW", "xposition": 1, "yposition": 0, "color": "#E0E0E0"},
+    {"text": "E", "code": "KeyE", "xposition": 2, "yposition": 0, "color": "#E0E0E0"},
+    {"text": "R", "code": "KeyR", "xposition": 3, "yposition": 0, "color": "#E0E0E0"},
+    {"text": "T", "code": "KeyT", "xposition": 4, "yposition": 0, "color": "#E0E0E0"},
+    {"text": "Y", "code": "KeyY", "xposition": 5, "yposition": 0, "color": "#E0E0E0"},
+    {"text": "U", "code": "KeyU", "xposition": 6, "yposition": 0, "color": "#E0E0E0"},
+    {"text": "I", "code": "KeyI", "xposition": 7, "yposition": 0, "color": "#E0E0E0"},
+    {"text": "O", "code": "KeyO", "xposition": 8, "yposition": 0, "color": "#E0E0E0"},
+    {"text": "P", "code": "KeyP", "xposition": 9, "yposition": 0, "color": "#E0E0E0"},
+
+    {"text": "A", "code": "KeyA", "xposition": 0.5, "yposition": 1, "color": "#E0E0E0"},
+    {"text": "S", "code": "KeyS", "xposition": 1.5, "yposition": 1, "color": "#E0E0E0"},
+    {"text": "D", "code": "KeyD", "xposition": 2.5, "yposition": 1, "color": "#E0E0E0"},
+    {"text": "F", "code": "KeyF", "xposition": 3.5, "yposition": 1, "color": "#E0E0E0"},
+    {"text": "G", "code": "KeyG", "xposition": 4.5, "yposition": 1, "color": "#E0E0E0"},
+    {"text": "H", "code": "KeyH", "xposition": 5.5, "yposition": 1, "color": "#E0E0E0"},
+    {"text": "J", "code": "KeyJ", "xposition": 6.5, "yposition": 1, "color": "#E0E0E0"},
+    {"text": "K", "code": "KeyK", "xposition": 7.5, "yposition": 1, "color": "#E0E0E0"},
+    {"text": "L", "code": "KeyL", "xposition": 8.5, "yposition": 1, "color": "#E0E0E0"},
+
+    {"text": "Shift", "code": "ShiftLeft", "xposition": 0, "yposition": 2, "color": "#C0C0C0", "widthClass": "key-large"},
+    {"text": "Z", "code": "KeyZ", "xposition": 1.5, "yposition": 2, "color": "#E0E0E0"},
+    {"text": "X", "code": "KeyX", "xposition": 2.5, "yposition": 2, "color": "#E0E0E0"},
+    {"text": "C", "code": "KeyC", "xposition": 3.5, "yposition": 2, "color": "#E0E0E0"},
+    {"text": "V", "code": "KeyV", "xposition": 4.5, "yposition": 2, "color": "#E0E0E0"},
+    {"text": "B", "code": "KeyB", "xposition": 5.5, "yposition": 2, "color": "#E0E0E0"},
+    {"text": "N", "code": "KeyN", "xposition": 6.5, "yposition": 2, "color": "#E0E0E0"},
+    {"text": "M", "code": "KeyM", "xposition": 7.5, "yposition": 2, "color": "#E0E0E0"},
+    {"text": "Shift", "code": "ShiftRight", "xposition": 9, "yposition": 2, "color": "#C0C0C0", "widthClass": "key-large"},
+
+    {"text": "Ctrl", "code": "ControlLeft", "xposition": 0, "yposition": 3, "color": "#C0C0C0", "widthClass": "key-medium"},
+    {"text": "Alt", "code": "AltLeft", "xposition": 1.5, "yposition": 3, "color": "#C0C0C0", "widthClass": "key-medium"},
+    {"text": "Space", "code": "Space", "xposition": 4, "yposition": 3, "color": "#E0E0E0", "widthClass": "key-extra-large"},
+    {"text": "Alt", "code": "AltRight", "xposition": 6.5, "yposition": 3, "color": "#C0C0C0", "widthClass": "key-medium"},
+    {"text": "Ctrl", "code": "ControlRight", "xposition": 8, "yposition": 3, "color": "#C0C0C0", "widthClass": "key-medium"}
+  ]
 };
+
+const KEY_SIZE = 60; // Approximate size of a key (width and height) in pixels
+const KEY_GAP = 8; // Gap between keys in pixels
 
 /**
  * Generates and renders the keyboard preview based on the current configuration.
@@ -39,31 +58,50 @@ function generateKeyboardPreview() {
     const keyboardContainer = document.getElementById('keyboardPreview');
     keyboardContainer.innerHTML = ''; // Clear existing keyboard
 
-    keyboardConfig.rows.forEach(rowConfig => {
-        const rowDiv = document.createElement('div');
-        rowDiv.style.display = 'flex';
-        rowDiv.style.gap = '8px';
-        rowDiv.style.marginBottom = '8px';
+    // Set container to relative positioning to allow absolute positioning of keys
+    keyboardContainer.style.position = 'relative';
+    keyboardContainer.style.width = 'fit-content'; // Or a fixed width that accommodates all keys
+    keyboardContainer.style.height = 'fit-content'; // Or a fixed height
 
-        rowConfig.keys.forEach(keyConfig => {
-            const keyButton = document.createElement('button');
-            keyButton.textContent = keyConfig.text;
-            keyButton.className = 'keyboard-key'; // Apply base key styling
+    keyboardConfig.keys.forEach(keyConfig => {
+        const keyButton = document.createElement('button');
+        keyButton.textContent = keyConfig.text;
+        keyButton.className = 'keyboard-key'; // Apply base key styling
 
-            // Apply dynamic styles from current state
-            keyButton.style.backgroundColor = currentKeyColor;
-            keyButton.style.fontFamily = currentKeyFont;
-            keyButton.style.color = getContrastColor(currentKeyColor); // Ensure text is readable
+        // Apply dynamic styles from current state
+        keyButton.style.backgroundColor = currentKeyColor;
+        keyButton.style.fontFamily = currentKeyFont;
+        keyButton.style.color = getContrastColor(currentKeyColor); // Ensure text is readable
 
-            // Apply specific width for certain keys (e.g., Shift, Space)
-            if (keyConfig.widthClass) {
-                keyButton.classList.add(keyConfig.widthClass);
-            }
+        // Apply specific width for certain keys (e.g., Shift, Space)
+        if (keyConfig.widthClass) {
+            keyButton.classList.add(keyConfig.widthClass);
+        }
 
-            rowDiv.appendChild(keyButton);
-        });
-        keyboardContainer.appendChild(rowDiv);
+        // Position the key using xposition and yposition
+        keyButton.style.position = 'absolute';
+        keyButton.style.left = `${keyConfig.xposition * (KEY_SIZE + KEY_GAP)}px`;
+        keyButton.style.top = `${keyConfig.yposition * (KEY_SIZE + KEY_GAP)}px`;
+
+        keyboardContainer.appendChild(keyButton);
     });
+}
+
+
+function setbrush(brsh, aspct1, aspct2) {
+brush = brsh;
+aspect1 = aspct1;
+aspect2 = aspct2;
+}
+function update(clickedkey){
+    if(aspect2 == "none")
+    {
+    myJSON["myObject"][clickedkey][aspect1] = brush;
+    }
+    else{
+    myJSON["myObject"][clickedkey][aspect1][aspect2] = brush;
+    }
+        selectedkey = clickedkey;
 }
 
 /**
