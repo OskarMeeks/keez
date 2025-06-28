@@ -6,6 +6,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <style>
+
+              /* Styling for individual options */
+  option[value="red"] {
+    color: white; /* Text color for better contrast */
+    background-color: #FF0000; /* Red */
+  }
+
+  option[value="green"] {
+    color: white;
+    background-color: #008000; /* Green */
+  }
+
+  option[value="blue"] {
+    color: white;
+    background-color: #0000FF; /* Blue */
+  }
+
+  option[value="orange"] {
+    color: black; /* Text color for better contrast */
+    background-color: #FFA500; /* Orange */
+  }
+
+  option[value="purple"] {
+    color: white;
+    background-color: #800080; /* Purple */
+  }
+
+
+            
             /* Custom styles for scrollbar and type style section */
             body {
                 overflow-y: scroll; /* Add vertical scrollbar to the body */
@@ -150,8 +179,8 @@
                                     <label for="tl-color" style="flex: 1;">Color:</label>
                                     <select id="tl-color" style="flex: 1;">
                                         <option value="#000000">Black</option>
-                                        <option value="#FF0000">Red</option>
-                                        <option value="#0000FF">Blue</option>
+                                        <option value="#FF0000">red</option>
+                                        <option value="#0000FF">glue</option>
                                 </select>
                                   </div>
                                 <label for="tl-font">Font:</label>
@@ -190,9 +219,9 @@
                                 <h4>Bottom Left</h4>
                                 <label for="bl-color">Color:</label>
                                 <select id="bl-color">
-                                    <option value="#000000">Black</option>
-                                    <option value="#FF0000">Red</option>
-                                    <option value="#0000FF">Blue</option>
+                                    <option value="#blue"></option>
+                                    <option value="#green"></option>
+                                    <option value="red"></option>
                                 </select>
                                 <label for="bl-font">Font:</label>
                                 <select id="bl-font">
