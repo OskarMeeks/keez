@@ -186,7 +186,7 @@ const keyboardConfig = {
         {"text": "Ctrl", "code": "ControlLeft", "xposition": 0, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
         {"text": "Win", "code": "MetaLeft", "xposition": 1.25, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
         {"text": "Alt", "code": "AltLeft", "xposition": 2.5, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
-        {"text": "Space", "code": "Space", "xposition": 4, "yposition": 4, "color": "#E0E0E0", "font": "Arial", "widthRatio": 6.25}, // Spacebar is 6.25u
+        {"text": "Space", "code": "Space", "xposition": 3.75, "yposition": 4, "color": "#E0E0E0", "font": "Arial", "widthRatio": 6.25}, // Spacebar is 6.25u
         {"text": "Alt", "code": "AltRight", "xposition": 10.25, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
         {"text": "Fn", "code": "Fn", "xposition": 11.5, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25}, // Function key
         {"text": "Ctrl", "code": "ControlRight", "xposition": 12.75, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25}
