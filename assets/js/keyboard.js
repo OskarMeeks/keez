@@ -1,441 +1,387 @@
-// Global variables to store current key styles
-let currentKeyColor = '#FFD700'; // Default gold - This will be overridden
-let currentKeyFont = 'Arial'; // Default font - This will be overridden if font is in JSON
+        // Global variables to store current key styles
+        let currentKeyColor = '#FFD700'; // Default gold - This will be overridden
+        let currentKeyFont = 'Arial'; // Default font - This will be overridden if font is in JSON
 
-// Track last clicked buttons for color and font to manage active state
-let lastClickedColorButton = null;
-let lastClickedFontButton = null;
+        // Track last clicked buttons for color and font to manage active state
+        let lastClickedColorButton = null;
+        let lastClickedFontButton = null;
 
-// --- NEW GLOBAL BRUSH VARIABLES ---
-let currentBrushProperty = ''; // Stores the CSS property to change (e.g., 'backgroundColor', 'fontFamily')
-let currentBrushValue = '';    // Stores the value to apply (e.g., '#FF0000', 'Verdana')
-let selectedKeyElement = null; // Stores the DOM element of the currently selected key
+        // --- NEW GLOBAL BRUSH VARIABLES ---
+        let currentBrushProperty = ''; // Stores the CSS property to change (e.g., 'backgroundColor', 'fontFamily')
+        let currentBrushValue = '';    // Stores the value to apply (e.g., '#FF0000', 'Verdana')
+
+        // JSON configuration for the keyboard layout
+        // Using keyboardConfig for the 60% layout as it's the one referenced later.
+        const keyboardConfig = {
+            "keys": [
+                // Row 1 (Number Row - now the top physical row, so yposition: 0)
+                {"text": "`", "code": "Backquote", "xposition": 0, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "1", "code": "Digit1", "xposition": 1, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "2", "code": "Digit2", "xposition": 2, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "3", "code": "Digit3", "xposition": 3, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "4", "code": "Digit4", "xposition": 4, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "5", "code": "Digit5", "xposition": 5, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "6", "code": "Digit6", "xposition": 6, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "7", "code": "Digit7", "xposition": 7, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "8", "code": "Digit8", "xposition": 8, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "9", "code": "Digit9", "xposition": 9, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "0", "code": "Digit0", "xposition": 10, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "-", "code": "Minus", "xposition": 11, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "=", "code": "Equal", "xposition": 12, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "Backspace", "code": "Backspace", "xposition": 13, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 2}, // Standard Backspace size
+
+                // Row 2 (QWERTY Row - now yposition: 1)
+                {"text": "Tab", "code": "Tab", "xposition": 0, "yposition": 1, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.5}, // Tab is 1.5u
+                {"text": "Q", "code": "KeyQ", "xposition": 1.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "W", "code": "KeyW", "xposition": 2.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "E", "code": "KeyE", "xposition": 3.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "R", "code": "KeyR", "xposition": 4.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "T", "code": "KeyT", "xposition": 5.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "Y", "code": "KeyY", "xposition": 6.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "U", "code": "KeyU", "xposition": 7.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "I", "code": "KeyI", "xposition": 8.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "O", "code": "KeyO", "xposition": 9.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "P", "code": "KeyP", "xposition": 10.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "[", "code": "BracketLeft", "xposition": 11.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "]", "code": "BracketRight", "xposition": 12.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "\\", "code": "Backslash", "xposition": 13.5, "yposition": 1, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.5}, // Backslash 1.5u
+
+                // Row 3 (ASDF Row - now yposition: 2)
+                {"text": "Caps", "code": "CapsLock", "xposition": 0, "yposition": 2, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.75}, // Caps Lock is 1.75u
+                {"text": "A", "code": "KeyA", "xposition": 1.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "S", "code": "KeyS", "xposition": 2.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "D", "code": "KeyD", "xposition": 3.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "F", "code": "KeyF", "xposition": 4.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "G", "code": "KeyG", "xposition": 5.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "H", "code": "KeyH", "xposition": 6.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "J", "code": "KeyJ", "xposition": 7.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "K", "code": "KeyK", "xposition": 8.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "L", "code": "KeyL", "xposition": 9.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": ";", "code": "Semicolon", "xposition": 10.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "'", "code": "Quote", "xposition": 11.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "Enter", "code": "Enter", "xposition": 12.75, "yposition": 2, "color": "#C0C0C0", "font": "Arial", "widthRatio": 2.25}, // Enter is 2.25u
+
+                // Row 4 (ZXCV Row - now yposition: 3)
+                {"text": "Shift", "code": "ShiftLeft", "xposition": 0, "yposition": 3, "color": "#C0C0C0", "font": "Arial", "widthRatio": 2.25}, // Left Shift is 2.25u
+                {"text": "Z", "code": "KeyZ", "xposition": 2.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "X", "code": "KeyX", "xposition": 3.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "C", "code": "KeyC", "xposition": 4.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "V", "code": "KeyV", "xposition": 5.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "B", "code": "KeyB", "xposition": 6.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "N", "code": "KeyN", "xposition": 7.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "M", "code": "KeyM", "xposition": 8.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": ",", "code": "Comma", "xposition": 9.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": ".", "code": "Period", "xposition": 10.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "/", "code": "Slash", "xposition": 11.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
+                {"text": "Shift", "code": "ShiftRight", "xposition": 12.25, "yposition": 3, "color": "#C0C0C0", "font": "Arial", "widthRatio": 2.75}, // Right Shift is 2.75u
+
+                // Row 5 (Bottom Row - now yposition: 4)
+                {"text": "Ctrl", "code": "ControlLeft", "xposition": 0, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
+                {"text": "Win", "code": "MetaLeft", "xposition": 1.25, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
+                {"text": "Alt", "code": "AltLeft", "xposition": 2.5, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
+                {"text": "Space", "code": "Space", "xposition": 3.75, "yposition": 4, "color": "#E0E0E0", "font": "Arial", "widthRatio": 6.25}, // Spacebar is 6.25u
+                {"text": "Alt", "code": "AltRight", "xposition": 10, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
+                {"text": "Win", "code": "MetaRight", "xposition": 11.25, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
+                {"text": "Fn", "code": "Fn", "xposition": 12.5, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25}, // Function key
+                {"text": "Ctrl", "code": "ControlRight", "xposition": 13.75, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25}
+            ]
+        };
+
+        const KEY_SIZE = 60; // Standard key width/height in pixels
+        const KEY_GAP = 8; // Gap between keys in pixels (used for visual spacing in positions)
+        const IMAGE10 = 'images/keycap.png'; // Path to your 1u keycap image
+        const IMAGE15 = 'images/1.5.png'; // Path to your 1.5u keycap image
+
+        /**
+         * Generates and renders the keyboard preview based on the current configuration.
+         */
+        function generateKeyboardPreview() {
+            const keyboardContainer = document.getElementById('keyboardPreview');
+            keyboardContainer.innerHTML = ''; // Clear existing keyboard
+
+            // Set container to relative positioning to allow absolute positioning of keys
+            keyboardContainer.style.position = 'relative';
+
+            // Calculate max X and Y to determine the container's required size
+            let maxX = 0;
+            let maxY = 0;
+
+            keyboardConfig.keys.forEach(keyConfig => {
+                const keyButton = document.createElement('button');
+                keyButton.textContent = keyConfig.text;
+                keyButton.className = 'keyboard-key'; // Apply base key styling
+                keyButton.dataset.keyCode = keyConfig.code;
+
+                // --- Set background image based on widthRatio ---
+                let imageUrl;
+                if (keyConfig.widthRatio === 1) {
+                    imageUrl = IMAGE10;
+                } else if (keyConfig.widthRatio === 1.5) {
+                    imageUrl = IMAGE15;
+                } else {
+                    // Default for other ratios like 2, 2.25, 2.75, 6.25
+                    // You might want to have specific images for these larger keys
+                    imageUrl = IMAGE10;
+                }
+                keyButton.style.backgroundImage = `url(${imageUrl})`;
+                keyButton.style.backgroundSize = 'cover'; // Ensure image covers the key
+                keyButton.style.backgroundPosition = 'center'; // Center the image
+
+                // --- Apply color filter to the image ---
+                // We make the button background transparent so the filtered image is visible.
+                keyButton.style.backgroundColor = 'transparent';
+                if (keyConfig.color) {
+                    keyButton.style.filter = `
+                        sepia(100%)
+                        saturate(200%)
+                        brightness(70%)
+                        hue-rotate(${getHueRotateDegree(keyConfig.color)}deg)
+                    `;
+                    // If your base image is black, you might need:
+                    // `invert(1) sepia(100%) saturate(200%) brightness(70%) hue-rotate(${getHueRotateDegree(keyConfig.color)}deg)`
+                } else {
+                    keyButton.style.filter = 'none'; // No filter if no color is set
+                }
 
 
-// JSON configuration for the keyboard layout
-const keyboardConfig80 = {
-    "keys": [
-        // Row 1 (Top Row - Function Keys, now at yposition: 0)
-        {"text": "Esc", "code": "Escape", "xposition": 0, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "F1", "code": "F1", "xposition": 1.5, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "F2", "code": "F2", "xposition": 2.5, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "F3", "code": "F3", "xposition": 3.5, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "F4", "code": "F4", "xposition": 4.5, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "F5", "code": "F5", "xposition": 5.5, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "F6", "code": "F6", "xposition": 6.5, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "F7", "code": "F7", "xposition": 7.5, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "F8", "code": "F8", "xposition": 8.5, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "F9", "code": "F9", "xposition": 9.5, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "F10", "code": "F10", "xposition": 10.5, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "F11", "code": "F11", "xposition": 11.5, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "F12", "code": "F12", "xposition": 12.5, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "PrtSc", "code": "PrintScreen", "xposition": 13.75, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "ScrLk", "code": "ScrollLock", "xposition": 14.75, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "Pause", "code": "Pause", "xposition": 15.75, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
+                keyButton.style.fontFamily = keyConfig.font || currentKeyFont;
+                // Text color should contrast with the applied image color
+                keyButton.style.color = getContrastColor(keyConfig.color || currentKeyColor);
 
-        // Row 2 (Number Row, now at yposition: 1)
-        {"text": "`", "code": "Backquote", "xposition": 0, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "1", "code": "Digit1", "xposition": 1, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "2", "code": "Digit2", "xposition": 2, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "3", "code": "Digit3", "xposition": 3, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "4", "code": "Digit4", "xposition": 4, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "5", "code": "Digit5", "xposition": 5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "6", "code": "Digit6", "xposition": 6, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "7", "code": "Digit7", "xposition": 7, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "8", "code": "Digit8", "xposition": 8, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "9", "code": "Digit9", "xposition": 9, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "0", "code": "Digit0", "xposition": 10, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "-", "code": "Minus", "xposition": 11, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "=", "code": "Equal", "xposition": 12, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "Backspace", "code": "Backspace", "xposition": 13, "yposition": 1, "color": "#C0C0C0", "font": "Arial", "widthRatio": 2},
+                // --- Apply width and height based on KEY_SIZE and widthRatio ---
+                const actualKeyWidth = (keyConfig.widthRatio * KEY_SIZE);
+                keyButton.style.width = `${actualKeyWidth}px`;
+                keyButton.style.height = `${KEY_SIZE}px`; // Height is always KEY_SIZE
 
-        // Row 3 (QWERTY Row, now at yposition: 2)
-        {"text": "Tab", "code": "Tab", "xposition": 0, "yposition": 2, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.5},
-        {"text": "Q", "code": "KeyQ", "xposition": 1.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "W", "code": "KeyW", "xposition": 2.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "E", "code": "KeyE", "xposition": 3.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "R", "code": "KeyR", "xposition": 4.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "T", "code": "KeyT", "xposition": 5.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "Y", "code": "KeyY", "xposition": 6.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "U", "code": "KeyU", "xposition": 7.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "I", "code": "KeyI", "xposition": 8.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "O", "code": "KeyO", "xposition": 9.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "P", "code": "KeyP", "xposition": 10.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "[", "code": "BracketLeft", "xposition": 11.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "]", "code": "BracketRight", "xposition": 12.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "\\", "code": "Backslash", "xposition": 13.5, "yposition": 2, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.5},
+                // Position the key using xposition and yposition
+                keyButton.style.position = 'absolute';
+                // Add KEY_GAP to positioning for visual spacing
+                keyButton.style.left = `${keyConfig.xposition * (KEY_SIZE + KEY_GAP)}px`;
+                keyButton.style.top = `${keyConfig.yposition * (KEY_SIZE + KEY_GAP)}px`;
 
-        // Row 4 (ASDF Row, now at yposition: 3)
-        {"text": "Caps", "code": "CapsLock", "xposition": 0, "yposition": 3, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.75},
-        {"text": "A", "code": "KeyA", "xposition": 1.75, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "S", "code": "KeyS", "xposition": 2.75, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "D", "code": "KeyD", "xposition": 3.75, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "F", "code": "KeyF", "xposition": 4.75, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "G", "code": "KeyG", "xposition": 5.75, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "H", "code": "KeyH", "xposition": 6.75, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "J", "code": "KeyJ", "xposition": 7.75, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "K", "code": "KeyK", "xposition": 8.75, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "L", "code": "KeyL", "xposition": 9.75, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": ";", "code": "Semicolon", "xposition": 10.75, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "'", "code": "Quote", "xposition": 11.75, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "Enter", "code": "Enter", "xposition": 12.75, "yposition": 3, "color": "#C0C0C0", "font": "Arial", "widthRatio": 2.25},
+                // Update max dimensions for container sizing
+                maxX = Math.max(maxX, keyConfig.xposition * (KEY_SIZE + KEY_GAP) + actualKeyWidth);
+                maxY = Math.max(maxY, keyConfig.yposition * (KEY_SIZE + KEY_GAP) + KEY_SIZE);
 
-        // Row 5 (ZXCV Row, now at yposition: 4)
-        {"text": "Shift", "code": "ShiftLeft", "xposition": 0, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 2.25},
-        {"text": "Z", "code": "KeyZ", "xposition": 2.25, "yposition": 4, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "X", "code": "KeyX", "xposition": 3.25, "yposition": 4, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "C", "code": "KeyC", "xposition": 4.25, "yposition": 4, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "V", "code": "KeyV", "xposition": 5.25, "yposition": 4, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "B", "code": "KeyB", "xposition": 6.25, "yposition": 4, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "N", "code": "KeyN", "xposition": 7.25, "yposition": 4, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "M", "code": "KeyM", "xposition": 8.25, "yposition": 4, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": ",", "code": "Comma", "xposition": 9.25, "yposition": 4, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": ".", "code": "Period", "xposition": 10.25, "yposition": 4, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "/", "code": "Slash", "xposition": 11.25, "yposition": 4, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "Shift", "code": "ShiftRight", "xposition": 12.25, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 2.75},
+                // Styling for padding and border as previously fixed in CSS
+                keyButton.style.padding = '0px';
+                keyButton.style.border = '0px';
 
-        // Row 6 (Bottom Row, now at yposition: 5)
-        {"text": "Ctrl", "code": "ControlLeft", "xposition": 0, "yposition": 5, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
-        {"text": "Win", "code": "MetaLeft", "xposition": 1.25, "yposition": 5, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
-        {"text": "Alt", "code": "AltLeft", "xposition": 2.5, "yposition": 5, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
-        {"text": "Space", "code": "Space", "xposition": 4, "yposition": 5, "color": "#E0E0E0", "font": "Arial", "widthRatio": 6.25},
-        {"text": "Alt", "code": "AltRight", "xposition": 10.25, "yposition": 5, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
-        {"text": "Fn", "code": "Fn", "xposition": 11.5, "yposition": 5, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
-        {"text": "Ctrl", "code": "ControlRight", "xposition": 12.75, "yposition": 5, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
-        {"text": "◀", "code": "ArrowLeft", "xposition": 14, "yposition": 5, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "▶", "code": "ArrowRight", "xposition": 15, "yposition": 5, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
+                keyButton.addEventListener('click', () => {
+                    applyBrushToKey(keyButton.dataset.keyCode);
+                });
 
-        // Navigation Cluster (now at yposition: 1 and 2)
-        {"text": "Ins", "code": "Insert", "xposition": 14, "yposition": 1, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "Home", "code": "Home", "xposition": 15, "yposition": 1, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "PgUp", "code": "PageUp", "xposition": 16, "yposition": 1, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "Del", "code": "Delete", "xposition": 14, "yposition": 2, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "End", "code": "End", "xposition": 15, "yposition": 2, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        {"text": "PgDn", "code": "PageDown", "xposition": 16, "yposition": 2, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
+                keyboardContainer.appendChild(keyButton);
+            });
 
-        // Dedicated Up Arrow key for standard TKL layout (now at yposition: 4)
-        {"text": "▲", "code": "ArrowUp", "xposition": 15, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1},
-        // Dedicated Down Arrow key for standard TKL layout (now at yposition: 5)
-        {"text": "▼", "code": "ArrowDown", "xposition": 15, "yposition": 5, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1}
-    ]
-};
-const keyboardConfig = {
-    "keys": [
-        // Row 1 (Number Row - now the top physical row, so yposition: 0)
-        {"text": "`", "code": "Backquote", "xposition": 0, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "1", "code": "Digit1", "xposition": 1, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "2", "code": "Digit2", "xposition": 2, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "3", "code": "Digit3", "xposition": 3, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "4", "code": "Digit4", "xposition": 4, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "5", "code": "Digit5", "xposition": 5, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "6", "code": "Digit6", "xposition": 6, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "7", "code": "Digit7", "xposition": 7, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "8", "code": "Digit8", "xposition": 8, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "9", "code": "Digit9", "xposition": 9, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "0", "code": "Digit0", "xposition": 10, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "-", "code": "Minus", "xposition": 11, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "=", "code": "Equal", "xposition": 12, "yposition": 0, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "Backspace", "code": "Backspace", "xposition": 13, "yposition": 0, "color": "#C0C0C0", "font": "Arial", "widthRatio": 2}, // Standard Backspace size
-
-        // Row 2 (QWERTY Row - now yposition: 1)
-        {"text": "Tab", "code": "Tab", "xposition": 0, "yposition": 1, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.5}, // Tab is 1.5u
-        {"text": "Q", "code": "KeyQ", "xposition": 1.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "W", "code": "KeyW", "xposition": 2.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "E", "code": "KeyE", "xposition": 3.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "R", "code": "KeyR", "xposition": 4.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "T", "code": "KeyT", "xposition": 5.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "Y", "code": "KeyY", "xposition": 6.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "U", "code": "KeyU", "xposition": 7.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "I", "code": "KeyI", "xposition": 8.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "O", "code": "KeyO", "xposition": 9.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "P", "code": "KeyP", "xposition": 10.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "[", "code": "BracketLeft", "xposition": 11.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "]", "code": "BracketRight", "xposition": 12.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "\\", "code": "Backslash", "xposition": 13.5, "yposition": 1, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.5}, // Backslash 1.5u
-
-        // Row 3 (ASDF Row - now yposition: 2)
-        {"text": "Caps", "code": "CapsLock", "xposition": 0, "yposition": 2, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.75}, // Caps Lock is 1.75u
-        {"text": "A", "code": "KeyA", "xposition": 1.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "S", "code": "KeyS", "xposition": 2.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "D", "code": "KeyD", "xposition": 3.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "F", "code": "KeyF", "xposition": 4.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "G", "code": "KeyG", "xposition": 5.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "H", "code": "KeyH", "xposition": 6.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "J", "code": "KeyJ", "xposition": 7.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "K", "code": "KeyK", "xposition": 8.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "L", "code": "KeyL", "xposition": 9.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": ";", "code": "Semicolon", "xposition": 10.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "'", "code": "Quote", "xposition": 11.75, "yposition": 2, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "Enter", "code": "Enter", "xposition": 12.75, "yposition": 2, "color": "#C0C0C0", "font": "Arial", "widthRatio": 2.25}, // Enter is 2.25u
-
-        // Row 4 (ZXCV Row - now yposition: 3)
-        {"text": "Shift", "code": "ShiftLeft", "xposition": 0, "yposition": 3, "color": "#C0C0C0", "font": "Arial", "widthRatio": 2.25}, // Left Shift is 2.25u
-        {"text": "Z", "code": "KeyZ", "xposition": 2.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "X", "code": "KeyX", "xposition": 3.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "C", "code": "KeyC", "xposition": 4.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "V", "code": "KeyV", "xposition": 5.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "B", "code": "KeyB", "xposition": 6.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "N", "code": "KeyN", "xposition": 7.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "M", "code": "KeyM", "xposition": 8.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": ",", "code": "Comma", "xposition": 9.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": ".", "code": "Period", "xposition": 10.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "/", "code": "Slash", "xposition": 11.25, "yposition": 3, "color": "#E0E0E0", "font": "Arial", "widthRatio": 1},
-        {"text": "Shift", "code": "ShiftRight", "xposition": 12.25, "yposition": 3, "color": "#C0C0C0", "font": "Arial", "widthRatio": 2.75}, // Right Shift is 2.75u
-
-        // Row 5 (Bottom Row - now yposition: 4)
-        {"text": "Ctrl", "code": "ControlLeft", "xposition": 0, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
-        {"text": "Win", "code": "MetaLeft", "xposition": 1.25, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
-        {"text": "Alt", "code": "AltLeft", "xposition": 2.5, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
-        {"text": "Space", "code": "Space", "xposition": 3.75, "yposition": 4, "color": "#E0E0E0", "font": "Arial", "widthRatio": 6.25}, // Spacebar is 6.25u
-        {"text": "Alt", "code": "AltRight", "xposition": 10, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
-        {"text": "Win", "code": "MetaRight", "xposition": 11.25, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25},
-        {"text": "Fn", "code": "Fn", "xposition": 12.5, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25}, // Function key
-        {"text": "Ctrl", "code": "ControlRight", "xposition": 13.75, "yposition": 4, "color": "#C0C0C0", "font": "Arial", "widthRatio": 1.25}
-        // Removed arrow keys and navigation cluster as they are not present on a standard 60%
-    ]
-};
-
-const KEY_SIZE = 60; // Standard key width/height in pixels
-const KEY_GAP = 8; // Gap between keys in pixels
-const IMAGE10 = 'images/keycap.png'; // Make sure this path is correct!
-const IMAGE15 = 'images/1.5.png'; // Make sure this path is correct!
-/**
- * Generates and renders the keyboard preview based on the current configuration.
- */
-function generateKeyboardPreview() {
-    const keyboardContainer = document.getElementById('keyboardPreview');
-    keyboardContainer.innerHTML = ''; // Clear existing keyboard
-
-    // Set container to relative positioning to allow absolute positioning of keys
-    keyboardContainer.style.position = 'relative';
-
-    // Calculate max X and Y to determine the container's required size
-    let maxX = 0;
-    let maxY = 0;
-
-    keyboardConfig.keys.forEach(keyConfig => {
-        const keyButton = document.createElement('button');
-        keyButton.textContent = keyConfig.text;
-        keyButton.className = 'keyboard-key'; // Apply base key styling
-        keyButton.dataset.keyCode = keyConfig.code;
-
-        // --- New: Set background image based on widthRatio ---
-        if (keyConfig.widthRatio === 1) {
-            keyButton.style.backgroundImage =  `url(${IMAGE10})`;
-        } else if (keyConfig.widthRatio === 1.5) {
-            keyButton.style.backgroundImage =  `url(${IMAGE15})`;
-        } else if (keyConfig.widthRatio === 2) {
-            keyButton.style.backgroundImage =  `url(${IMAGE10})`;
-        } else if (keyConfig.widthRatio === 2.25) {
-            keyButton.style.backgroundImage =  `url(${IMAGE10})`;
-        } else if (keyConfig.widthRatio === 2.75) {
-            keyButton.style.backgroundImage =  `url(${IMAGE10})`;
-        } else if (keyConfig.widthRatio === 6.25) {
-            keyButton.style.backgroundImage =  `url(${IMAGE10})`;
-        } else {
-            // Default image if no specific widthRatio matches, or for other ratios
-            keyButton.style.backgroundImage =  `url(${IMAGE10})`;
+            // Set container dimensions
+            keyboardContainer.style.width = `${maxX + KEY_GAP}px`; // Add gap for last column
+            keyboardContainer.style.height = `${maxY + KEY_GAP}px`; // Add gap for last row
         }
-        keyButton.style.backgroundSize = 'cover'; // Ensure image covers the key
-        keyButton.style.backgroundPosition = 'center'; // Center the image
 
-        keyButton.style.backgroundColor = keyConfig.color || currentKeyColor;
-        keyButton.style.fontFamily = keyConfig.font || currentKeyFont;
-        keyButton.style.color = getContrastColor(keyButton.style.backgroundColor);
+        /**
+         * Calculates a contrasting color (black or white) for given hex background.
+         * @param {string} hexcolor The hex color string (e.g., '#RRGGBB').
+         * @returns {string} 'black' or 'white'.
+         */
+        function getContrastColor(hexcolor) {
+            if (!hexcolor) return 'black';
 
-        // --- Apply width and height based on KEY_SIZE and widthRatio ---
-        const actualKeyWidth = (keyConfig.widthRatio * KEY_SIZE);
-        keyButton.style.width = `${actualKeyWidth}px`;
-        keyButton.style.height = `${KEY_SIZE}px`; // Height is always KEY_SIZE
+            // Handle cases where color might be a CSS color name or malformed
+            if (!hexcolor.startsWith('#') || hexcolor.length !== 7) {
+                 // Try to convert well-known names or default
+                 if (hexcolor.toLowerCase() === "black") return "white";
+                 if (hexcolor.toLowerCase() === "white") return "black";
+                 // Fallback if not a hex or known name
+                 return 'black';
+            }
 
-        // Position the key using xposition and yposition
-        keyButton.style.position = 'absolute';
-        keyButton.style.left = `${keyConfig.xposition * KEY_SIZE}px`;
-        keyButton.style.top = `${keyConfig.yposition * KEY_SIZE}px`;
+            const r = parseInt(hexcolor.substr(1, 2), 16);
+            const g = parseInt(hexcolor.substr(3, 2), 16);
+            const b = parseInt(hexcolor.substr(5, 2), 16);
 
-        // Update max dimensions for container sizing
-        maxX = Math.max(maxX, keyConfig.xposition * KEY_SIZE + actualKeyWidth);
-        maxY = Math.max(maxY, keyConfig.yposition * KEY_SIZE + KEY_SIZE);
+            // Calculate luminance (Y = 0.2126*R + 0.7152*G + 0.0722*B)
+            const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
 
-        // Styling for padding and border as previously fixed
-        keyButton.style.paddingLeft = '0px';
-        keyButton.style.paddingRight = '0px';
-        keyButton.style.paddingBottom = '0px';
-        keyButton.style.paddingTop = '0px';
-        keyButton.style.borderTopWidth = '0px';
-        keyButton.style.borderTopStyle = 'solid';
-        keyButton.style.borderRightWidth = '0px';
-        keyButton.style.borderRightStyle = 'solid';
-        keyButton.style.borderBottomWidth = '0px';
-        keyButton.style.borderBottomStyle = 'solid';
-        keyButton.style.borderLeftWidth = '0px';
-        keyButton.style.borderLeftStyle = 'solid';
+            // Use white for dark backgrounds, black for light backgrounds
+            return luminance > 0.5 ? 'black' : 'white';
+        }
 
-        keyButton.addEventListener('click', () => {
-            applyBrushToKey(keyButton.dataset.keyCode); // Assuming applyBrushToKey handles styling
+        /**
+         * Helper function to get a rough hue-rotate degree from a hex color.
+         * This function converts hex to HSL (Hue, Saturation, Lightness) and returns the Hue.
+         * It's an approximation for filter usage.
+         * @param {string} hexcolor The hex color string (e.g., '#RRGGBB').
+         * @returns {number} Hue degree (0-360).
+         */
+        function getHueRotateDegree(hexcolor) {
+            if (!hexcolor || hexcolor.length !== 7) return 0;
+
+            const r = parseInt(hexcolor.substring(1, 3), 16) / 255;
+            const g = parseInt(hexcolor.substring(3, 5), 16) / 255;
+            const b = parseInt(hexcolor.substring(5, 7), 16) / 255;
+
+            let max = Math.max(r, g, b);
+            let min = Math.min(r, g, b);
+            let h = 0;
+            let delta = max - min;
+
+            if (delta === 0) h = 0; // achromatic
+            else if (max === r) h = ((g - b) / delta) % 6;
+            else if (max === g) h = (b - r) / delta + 2;
+            else h = (r - g) / delta + 4;
+
+            h = Math.round(h * 60);
+            if (h < 0) h += 360;
+
+            return h;
+        }
+
+        /**
+         * Sets the global brush to be applied to keys.
+         * @param {string} property The CSS property to change (e.g., 'backgroundColor', 'fontFamily').
+         * @param {string} value The value to set the property to (e.g., '#FF0000', 'Verdana').
+         */
+        window.setBrush = function(property, value) {
+            currentBrushProperty = property;
+            currentBrushValue = value;
+            console.log(`Brush set to: Property=${currentBrushProperty}, Value=${currentBrushValue}`);
+        };
+
+        /**
+         * Applies the current brush to a specific key identified by its code.
+         * Updates the JSON and regenerates the keyboard preview.
+         * @param {string} keyCode The 'code' property of the key to update.
+         */
+        function applyBrushToKey(keyCode) {
+            if (!currentBrushProperty || !currentBrushValue) {
+                console.warn("No brush property or value set. Select a color or font first!");
+                return;
+            }
+
+            const keyToUpdate = keyboardConfig.keys.find(key => key.code === keyCode);
+
+            if (keyToUpdate) {
+                // Update the key's property in the JSON configuration
+                if (currentBrushProperty === 'backgroundColor') {
+                    keyToUpdate.color = currentBrushValue;
+                } else if (currentBrushProperty === 'fontFamily') {
+                    keyToUpdate.font = currentBrushValue;
+                }
+
+                console.log(`Applied ${currentBrushValue} to ${currentBrushProperty} of key: ${keyToUpdate.text}`);
+                generateKeyboardPreview(); // Re-render the keyboard to show the change
+            } else {
+                console.error(`Key with code ${keyCode} not found in configuration.`);
+            }
+        }
+
+        /**
+         * Handles tab switching (Style, Feel, Profile).
+         * @param {string} optionType The ID prefix of the section to show (e.g., 'keystyle', 'feel').
+         * @param {HTMLElement} clickedButton The button element that was clicked.
+         */
+        window.showOptions = function(optionType, clickedButton) {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+            clickedButton.classList.add('active');
+
+            const sections = document.querySelectorAll('.option-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(optionType + 'Options').style.display = 'block';
+        }
+
+        /**
+         * Applies the selected color to the keyboard keys. This now primarily sets the brush.
+         * @param {string} color The hex color string (e.g., '#FF5733').
+         * @param {HTMLElement} clickedColorButton The button element that was clicked.
+         */
+        window.applyKeyColor = function(color, clickedColorButton) {
+            // Remove 'active' class from previously clicked color button
+            if (lastClickedColorButton) {
+                lastClickedColorButton.classList.remove('active');
+            }
+
+            setBrush('backgroundColor', color); // Set the brush for background color
+
+            // Add 'active' class to the newly clicked button
+            if (clickedColorButton) {
+                clickedColorButton.classList.add('active');
+                lastClickedColorButton = clickedColorButton;
+            }
+            // No need to call generateKeyboardPreview here; it's called when a key is clicked
+        };
+
+        /**
+         * Applies the selected font to the keyboard keys. This now primarily sets the brush.
+         * @param {string} fontName The font family name (e.g., 'Arial').
+         * @param {HTMLElement} clickedFontButton The button element that was clicked.
+         */
+        window.applyKeyFont = function(fontName, clickedFontButton) {
+            // Remove 'active' class from previously clicked font button
+            if (lastClickedFontButton) {
+                lastClickedFontButton.classList.remove('active');
+            }
+
+            setBrush('fontFamily', fontName); // Set the brush for font family
+
+            // Add 'active' class to the newly clicked button
+            if (clickedFontButton) {
+                clickedFontButton.classList.add('active');
+                lastClickedFontButton = clickedFontButton;
+            }
+            // No need to call generateKeyboardPreview here; it's called when a key is clicked
+        };
+
+        window.applyFeel = function() {
+            const selectedFeel = document.getElementById('feelSelect').value;
+            alert(`Applying "${selectedFeel}" feel!`);
+        }
+
+        window.loadProfile = function() {
+            const selectedProfile = document.getElementById('profileSelect').value;
+            alert(`Loading ${selectedProfile} settings!`);
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Show the Key Style options by default
+            window.showOptions('keystyle', document.getElementById('keystyleButton'));
+
+            // --- Initial setup of the brush and keyboard ---
+            if (keyboardConfig.keys.length > 0) {
+                const firstKey = keyboardConfig.keys[0];
+
+                // Set initial color brush based on the first key's color
+                // and activate the corresponding color button
+                if (firstKey.color) {
+                    currentKeyColor = firstKey.color;
+                    setBrush('backgroundColor', firstKey.color);
+                    // Find the color button and set it as active
+                    const defaultColorButton = document.querySelector(`.color-button[onclick*="'${firstKey.color.toUpperCase()}'"]`);
+                    if (defaultColorButton) {
+                        defaultColorButton.classList.add('active');
+                        lastClickedColorButton = defaultColorButton;
+                    }
+                }
+
+                // Set initial font brush based on the first key's font
+                // and activate the corresponding font button
+                if (firstKey.font) {
+                    currentKeyFont = firstKey.font;
+                    setBrush('fontFamily', firstKey.font); // This will be the active brush type
+                    // Find the font button and set it as active
+                    const defaultFontButton = document.querySelector(`.font-button[onclick*="'${firstKey.font}'"]`);
+                    if (defaultFontButton) {
+                        defaultFontButton.classList.add('active');
+                        lastClickedFontButton = defaultFontButton;
+                    }
+                }
+            }
+            // Generate initial keyboard preview
+            generateKeyboardPreview();
         });
-
-        keyboardContainer.appendChild(keyButton);
-    });
-}
-function getContrastColor(hexcolor) {
-    if (!hexcolor) return 'black'; // Handle cases where color might be undefined
-
-    // If a button is clicked, its border changes to black. If the button color is also black, it's not visible.
-    // So if the background color is black, return white, otherwise use luminance.
-    if (hexcolor.toLowerCase() === "#000000" || hexcolor.toLowerCase() === "black") {
-        return "white";
-    }
-    // Convert hex to RGB
-    const r = parseInt(hexcolor.substr(1, 2), 16);
-    const g = parseInt(hexcolor.substr(3, 2), 16);
-    const b = parseInt(hexcolor.substr(5, 2), 16);
-
-    // Calculate luminance (Y = 0.2126*R + 0.7152*G + 0.0722*B)
-    const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-
-    // Use white for dark backgrounds, black for light backgrounds
-    return luminance > 0.5 ? 'black' : 'white';
-}
-
-/**
- * Sets the global brush to be applied to keys.
- * @param {string} property The CSS property to change (e.g., 'backgroundColor', 'fontFamily').
- * @param {string} value The value to set the property to (e.g., '#FF0000', 'Verdana').
- */
-window.setBrush = function(property, value) {
-    currentBrushProperty = property;
-    currentBrushValue = value;
-    // You could add visual feedback here to show which brush is active
-    console.log(`Brush set to: Property=${currentBrushProperty}, Value=${currentBrushValue}`);
-};
-
-/**
- * Applies the current brush to a specific key identified by its code.
- * Updates the JSON and regenerates the keyboard preview.
- * @param {string} keyCode The 'code' property of the key to update.
- */
-function applyBrushToKey(keyCode) {
-    if (!currentBrushProperty || !currentBrushValue) {
-        console.warn("No brush property or value set. Select a color or font first!");
-        return;
-    }
-
-    const keyToUpdate = keyboardConfig.keys.find(key => key.code === keyCode);
-
-    if (keyToUpdate) {
-        // Update the key's property in the JSON configuration
-        if (currentBrushProperty === 'backgroundColor') {
-            keyToUpdate.color = currentBrushValue;
-        } else if (currentBrushProperty === 'fontFamily') {
-            keyToUpdate.font = currentBrushValue;
-        }
-        // Add more else if blocks here for other properties if needed (e.g., 'textColor', 'borderColor')
-
-        console.log(`Applied ${currentBrushValue} to ${currentBrushProperty} of key: ${keyToUpdate.text}`);
-        generateKeyboardPreview(); // Re-render the keyboard to show the change
-    } else {
-        console.error(`Key with code ${keyCode} not found in configuration.`);
-    }
-}
-
-/**
- * Handles tab switching (Style, Feel, Profile).
- * @param {string} optionType The ID prefix of the section to show (e.g., 'keystyle', 'feel').
- * @param {HTMLElement} clickedButton The button element that was clicked.
- */
-window.showOptions = function(optionType, clickedButton) {
-    const tabButtons = document.querySelectorAll('.tab-button');
-    tabButtons.forEach(button => {
-        button.classList.remove('active');
-    });
-    clickedButton.classList.add('active');
-    const sections = document.querySelectorAll('.option-section');
-    sections.forEach(section => {
-        section.style.display = 'none';
-    });
-    document.getElementById(optionType + 'Options').style.display = 'block';
-}
-
-/**
- * Applies the selected color to the keyboard keys. This now primarily sets the brush.
- * @param {string} color The hex color string (e.g., '#FF5733').
- * @param {HTMLElement} clickedColorButton The button element that was clicked.
- */
-window.applyKeyColor = function(color, clickedColorButton) {
-    if (lastClickedColorButton) {
-        lastClickedColorButton.style.border = 'none';
-    }
-    setBrush('backgroundColor', color); // Set the brush for background color
-    if (clickedColorButton) {
-        clickedColorButton.style.border = '2px solid black';
-        lastClickedColorButton = clickedColorButton;
-    }
-    // No need to call generateKeyboardPreview here; it's called when a key is clicked
-};
-
-
-/**
- * Applies the selected font to the keyboard keys. This now primarily sets the brush.
- * @param {string} fontName The font family name (e.g., 'Arial').
- * @param {HTMLElement} clickedFontButton The button element that was clicked.
- */
-window.applyKeyFont = function(fontName, clickedFontButton) {
-    if (lastClickedFontButton) {
-        lastClickedFontButton.style.border = 'none';
-    }
-    setBrush('fontFamily', fontName); // Set the brush for font family
-    if (clickedFontButton) {
-        clickedFontButton.style.border = '2px solid black';
-        lastClickedFontButton = clickedFontButton;
-    }
-    // No need to call generateKeyboardPreview here; it's called when a key is clicked
-};
-
-
-window.applyFeel = function() {
-    const selectedFeel = document.getElementById('feelSelect').value;
-    alert(`Applying "${selectedFeel}" feel!`);
-}
-
-window.loadProfile = function() {
-    const selectedProfile = document.getElementById('profileSelect').value;
-    alert(`Loading ${selectedProfile} settings!`);
-}
-
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', () => {
-    window.showOptions('keystyle', document.getElementById('keystyleButton'));
-
-    // --- Initial setup of the brush and keyboard ---
-    if (keyboardConfig.keys.length > 0) {
-        const firstKey = keyboardConfig.keys[0];
-
-        // Set initial color brush based on the first key's color
-        if (firstKey.color) {
-            currentKeyColor = firstKey.color; // Keep for fallback/global state
-            setBrush('backgroundColor', firstKey.color);
-            const defaultColorButton = document.querySelector(`.color-button[onclick*="${firstKey.color.toUpperCase()}"]`);
-            if (defaultColorButton) {
-                defaultColorButton.style.border = '2px solid black';
-                lastClickedColorButton = defaultColorButton;
-            }
-        }
-
-        // Set initial font brush based on the first key's font
-        if (firstKey.font) {
-            currentKeyFont = firstKey.font; // Keep for fallback/global state
-            // IMPORTANT: Calling setBrush here will overwrite the property set by color.
-            // If you want to retain both active, you'd need a more complex brush system.
-            // For now, the last set brush (font in this case) will be active.
-            setBrush('fontFamily', firstKey.font);
-            const defaultFontButton = document.querySelector(`.font-button[onclick*="${firstKey.font}"]`);
-            if (defaultFontButton) {
-                defaultFontButton.style.border = '2px solid black';
-                lastClickedFontButton = defaultFontButton;
-            }
-        }
-    }
-    // Generate initial keyboard preview
-    generateKeyboardPreview();
-});
