@@ -99,9 +99,11 @@ function generateKeyboardPreview() {
             textDiv.textContent = textObj.value;
             textDiv.className = 'key-text-label'; // Apply a class for styling
             textDiv.style.position = 'absolute';
-        textDiv.style.left = '50%';
-                textDiv.style.top = '50%';
-                textDiv.style.transform = `translate(calc(-50% + ${textObj.xOffset}px), calc(-50% + ${textObj.yOffset}px))`;
+                
+        textDiv.style.left = `${textObj.xOffset}%`;
+                textDiv.style.top = `${textObj.yOffset}%`;
+                
+                textDiv.style.transform = `translate(calc(-50% + 0px), calc(-50% + 0px))`;
             textDiv.style.fontFamily = textObj.font || currentKeyFont; // Use textObj font or current default
             textDiv.style.color = getContrastColor(textObj.color || currentKeyColor); // Use textObj color for contrast calculation
             textDiv.style.left = `${textObj.x}%`;
