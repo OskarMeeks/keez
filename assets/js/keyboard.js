@@ -1,6 +1,6 @@
 // Global variables to store current key styles
-let currentKeyColor = '#FFD700'; // Default gold
-let currentKeyFont = 'Arial'; // Default font
+let currentKeyColor = '#FFD700'; // Default gold - This will be overridden
+let currentKeyFont = 'Arial'; // Default font - This will be overridden if font is in JSON
 
 // Track last clicked buttons for color and font to manage active state
 let lastClickedColorButton = null;
@@ -9,42 +9,42 @@ let lastClickedFontButton = null;
 // JSON configuration for the keyboard layout
 const keyboardConfig = {
   "keys": [
-    {"text": "Q", "code": "KeyQ", "xposition": 0, "yposition": 0, "color": "#E0E0E0"},
-    {"text": "W", "code": "KeyW", "xposition": 1, "yposition": 0, "color": "#E0E0E0"},
-    {"text": "E", "code": "KeyE", "xposition": 2, "yposition": 0, "color": "#E0E0E0"},
-    {"text": "R", "code": "KeyR", "xposition": 3, "yposition": 0, "color": "#E0E0E0"},
-    {"text": "T", "code": "KeyT", "xposition": 4, "yposition": 0, "color": "#E0E0E0"},
-    {"text": "Y", "code": "KeyY", "xposition": 5, "yposition": 0, "color": "#E0E0E0"},
-    {"text": "U", "code": "KeyU", "xposition": 6, "yposition": 0, "color": "#E0E0E0"},
-    {"text": "I", "code": "KeyI", "xposition": 7, "yposition": 0, "color": "#E0E0E0"},
-    {"text": "O", "code": "KeyO", "xposition": 8, "yposition": 0, "color": "#E0E0E0"},
-    {"text": "P", "code": "KeyP", "xposition": 9, "yposition": 0, "color": "#E0E0E0"},
+    {"text": "Q", "code": "KeyQ", "xposition": 0, "yposition": 0, "color": "#E0E0E0", "font": "Arial"}, // Added font property for demonstration
+    {"text": "W", "code": "KeyW", "xposition": 1, "yposition": 0, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "E", "code": "KeyE", "xposition": 2, "yposition": 0, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "R", "code": "KeyR", "xposition": 3, "yposition": 0, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "T", "code": "KeyT", "xposition": 4, "yposition": 0, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "Y", "code": "KeyY", "xposition": 5, "yposition": 0, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "U", "code": "KeyU", "xposition": 6, "yposition": 0, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "I", "code": "KeyI", "xposition": 7, "yposition": 0, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "O", "code": "KeyO", "xposition": 8, "yposition": 0, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "P", "code": "KeyP", "xposition": 9, "yposition": 0, "color": "#E0E0E0", "font": "Arial"},
 
-    {"text": "A", "code": "KeyA", "xposition": 0.5, "yposition": 1, "color": "#E0E0E0"},
-    {"text": "S", "code": "KeyS", "xposition": 1.5, "yposition": 1, "color": "#E0E0E0"},
-    {"text": "D", "code": "KeyD", "xposition": 2.5, "yposition": 1, "color": "#E0E0E0"},
-    {"text": "F", "code": "KeyF", "xposition": 3.5, "yposition": 1, "color": "#E0E0E0"},
-    {"text": "G", "code": "KeyG", "xposition": 4.5, "yposition": 1, "color": "#E0E0E0"},
-    {"text": "H", "code": "KeyH", "xposition": 5.5, "yposition": 1, "color": "#E0E0E0"},
-    {"text": "J", "code": "KeyJ", "xposition": 6.5, "yposition": 1, "color": "#E0E0E0"},
-    {"text": "K", "code": "KeyK", "xposition": 7.5, "yposition": 1, "color": "#E0E0E0"},
-    {"text": "L", "code": "KeyL", "xposition": 8.5, "yposition": 1, "color": "#E0E0E0"},
+    {"text": "A", "code": "KeyA", "xposition": 0.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "S", "code": "KeyS", "xposition": 1.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "D", "code": "KeyD", "xposition": 2.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "F", "code": "KeyF", "xposition": 3.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "G", "code": "KeyG", "xposition": 4.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "H", "code": "KeyH", "xposition": 5.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "J", "code": "KeyJ", "xposition": 6.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "K", "code": "KeyK", "xposition": 7.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "L", "code": "KeyL", "xposition": 8.5, "yposition": 1, "color": "#E0E0E0", "font": "Arial"},
 
-    {"text": "Shift", "code": "ShiftLeft", "xposition": 0, "yposition": 2, "color": "#C0C0C0", "widthClass": "key-large"},
-    {"text": "Z", "code": "KeyZ", "xposition": 1.5, "yposition": 2, "color": "#E0E0E0"},
-    {"text": "X", "code": "KeyX", "xposition": 2.5, "yposition": 2, "color": "#E0E0E0"},
-    {"text": "C", "code": "KeyC", "xposition": 3.5, "yposition": 2, "color": "#E0E0E0"},
-    {"text": "V", "code": "KeyV", "xposition": 4.5, "yposition": 2, "color": "#E0E0E0"},
-    {"text": "B", "code": "KeyB", "xposition": 5.5, "yposition": 2, "color": "#E0E0E0"},
-    {"text": "N", "code": "KeyN", "xposition": 6.5, "yposition": 2, "color": "#E0E0E0"},
-    {"text": "M", "code": "KeyM", "xposition": 7.5, "yposition": 2, "color": "#E0E0E0"},
-    {"text": "Shift", "code": "ShiftRight", "xposition": 9, "yposition": 2, "color": "#C0C0C0", "widthClass": "key-large"},
+    {"text": "Shift", "code": "ShiftLeft", "xposition": 0, "yposition": 2, "color": "#C0C0C0", "widthClass": "key-large", "font": "Arial"},
+    {"text": "Z", "code": "KeyZ", "xposition": 1.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "X", "code": "KeyX", "xposition": 2.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "C", "code": "KeyC", "xposition": 3.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "V", "code": "KeyV", "xposition": 4.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "B", "code": "KeyB", "xposition": 5.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "N", "code": "KeyN", "xposition": 6.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "M", "code": "KeyM", "xposition": 7.5, "yposition": 2, "color": "#E0E0E0", "font": "Arial"},
+    {"text": "Shift", "code": "ShiftRight", "xposition": 9, "yposition": 2, "color": "#C0C0C0", "widthClass": "key-large", "font": "Arial"},
 
-    {"text": "Ctrl", "code": "ControlLeft", "xposition": 0, "yposition": 3, "color": "#C0C0C0", "widthClass": "key-medium"},
-    {"text": "Alt", "code": "AltLeft", "xposition": 1.5, "yposition": 3, "color": "#C0C0C0", "widthClass": "key-medium"},
-    {"text": "Space", "code": "Space", "xposition": 4, "yposition": 3, "color": "#E0E0E0", "widthClass": "key-extra-large"},
-    {"text": "Alt", "code": "AltRight", "xposition": 6.5, "yposition": 3, "color": "#C0C0C0", "widthClass": "key-medium"},
-    {"text": "Ctrl", "code": "ControlRight", "xposition": 8, "yposition": 3, "color": "#C0C0C0", "widthClass": "key-medium"}
+    {"text": "Ctrl", "code": "ControlLeft", "xposition": 0, "yposition": 3, "color": "#C0C0C0", "widthClass": "key-medium", "font": "Arial"},
+    {"text": "Alt", "code": "AltLeft", "xposition": 1.5, "yposition": 3, "color": "#C0C0C0", "widthClass": "key-medium", "font": "Arial"},
+    {"text": "Space", "code": "Space", "xposition": 4, "yposition": 3, "color": "#E0E0E0", "widthClass": "key-extra-large", "font": "Arial"},
+    {"text": "Alt", "code": "AltRight", "xposition": 6.5, "yposition": 3, "color": "#C0C0C0", "widthClass": "key-medium", "font": "Arial"},
+    {"text": "Ctrl", "code": "ControlRight", "xposition": 8, "yposition": 3, "color": "#C0C0C0", "widthClass": "key-medium", "font": "Arial"}
   ]
 };
 
@@ -87,21 +87,36 @@ function generateKeyboardPreview() {
     });
 }
 
+// Placeholder for brush/update functions - ensure they are defined if used elsewhere
+let brush;
+let aspect1;
+let aspect2;
+let myJSON = {"myObject": {}}; // Define myJSON if it's used globally
+let selectedkey;
 
 function setbrush(brsh, aspct1, aspct2) {
-brush = brsh;
-aspect1 = aspct1;
-aspect2 = aspct2;
+    brush = brsh;
+    aspect1 = aspct1;
+    aspect2 = aspct2;
 }
+
 function update(clickedkey){
-    if(aspect2 == "none")
-    {
-    myJSON["myObject"][clickedkey][aspect1] = brush;
+    if(aspect2 == "none") {
+        if (myJSON["myObject"][clickedkey]) { // Check if key exists
+            myJSON["myObject"][clickedkey][aspect1] = brush;
+        } else {
+            myJSON["myObject"][clickedkey] = {[aspect1]: brush}; // Create new key object if it doesn't exist
+        }
+    } else {
+        if (myJSON["myObject"][clickedkey] && myJSON["myObject"][clickedkey][aspect1]) { // Check nested properties
+            myJSON["myObject"][clickedkey][aspect1][aspect2] = brush;
+        } else if (myJSON["myObject"][clickedkey]) { // Create nested property if it doesn't exist
+            myJSON["myObject"][clickedkey][aspect1] = {[aspect2]: brush};
+        } else { // Create both key and nested property
+            myJSON["myObject"][clickedkey] = {[aspect1]: {[aspect2]: brush}};
+        }
     }
-    else{
-    myJSON["myObject"][clickedkey][aspect1][aspect2] = brush;
-    }
-        selectedkey = clickedkey;
+    selectedkey = clickedkey;
 }
 
 /**
@@ -167,8 +182,10 @@ window.applyKeyColor = function(color, clickedColorButton) {
     generateKeyboardPreview(); // Re-render keyboard with new color
 
     // Apply a distinct style to the newly clicked color button
-    clickedColorButton.style.border = '2px solid black';
-    lastClickedColorButton = clickedColorButton;
+    if (clickedColorButton) { // Only apply border if a button was clicked (not null from initial setup)
+        clickedColorButton.style.border = '2px solid black';
+        lastClickedColorButton = clickedColorButton;
+    }
 }
 
 /**
@@ -186,8 +203,10 @@ window.applyKeyFont = function(fontName, clickedFontButton) {
     generateKeyboardPreview(); // Re-render keyboard with new font
 
     // Apply a distinct style to the newly clicked font button
-    clickedFontButton.style.border = '2px solid black';
-    lastClickedFontButton = clickedFontButton;
+    if (clickedFontButton) { // Only apply border if a button was clicked (not null from initial setup)
+        clickedFontButton.style.border = '2px solid black';
+        lastClickedFontButton = clickedFontButton;
+    }
 }
 
 
@@ -209,18 +228,41 @@ document.addEventListener('DOMContentLoaded', () => {
     // Show 'keystyle' options by default and mark its button as active
     window.showOptions('keystyle', document.getElementById('keystyleButton'));
 
-    // Set initial active state for default key color button
-    const defaultColorButton = document.querySelector('.color-button[onclick*="#FFD700"]');
-    if (defaultColorButton) {
-        window.applyKeyColor('#FFD700', defaultColorButton); // Call the function to set state and style
+    // --- NEW: Set currentKeyColor and currentKeyFont from JSON ---
+    if (keyboardConfig.keys.length > 0) {
+        const firstKey = keyboardConfig.keys[0];
+
+        // Set initial currentKeyColor from the first key in JSON
+        if (firstKey.color) {
+            currentKeyColor = firstKey.color;
+            // Also try to find and "activate" the corresponding color button
+            const defaultColorButton = document.querySelector(`.color-button[onclick*="${firstKey.color.toUpperCase()}"]`);
+            if (defaultColorButton) {
+                // We call applyKeyColor but pass null for clickedColorButton initially
+                // because we just want to set the color, not mark a button as clicked yet.
+                // The applyKeyColor itself will handle setting lastClickedColorButton.
+                window.applyKeyColor(firstKey.color, defaultColorButton);
+            } else {
+                // If no matching button, just set the color globally
+                generateKeyboardPreview(); // Re-render with the default color
+            }
+        }
+
+        // Set initial currentKeyFont from the first key in JSON (if it exists)
+        if (firstKey.font) {
+            currentKeyFont = firstKey.font;
+            // Also try to find and "activate" the corresponding font button
+            const defaultFontButton = document.querySelector(`.font-button[onclick*="${firstKey.font}"]`);
+            if (defaultFontButton) {
+                // Similar to color, pass null for clickedFontButton initially
+                window.applyKeyFont(firstKey.font, defaultFontButton);
+            } else {
+                // If no matching button, just set the font globally
+                generateKeyboardPreview(); // Re-render with the default font
+            }
+        }
     }
 
-    // Set initial active state for default key font button
-    const defaultFontButton = document.querySelector('.font-button[onclick*="Arial"]');
-    if (defaultFontButton) {
-        window.applyKeyFont('Arial', defaultFontButton); // Call the function to set state and style
-    }
-
-    // Generate initial keyboard preview
+    // Ensure generateKeyboardPreview is called after initial setup
     generateKeyboardPreview();
 });
