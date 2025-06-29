@@ -19,7 +19,7 @@ const IMAGE10 = 'images/keycap.png'; // Path to your 1u keycap image
 const IMAGE15 = 'images/1.5.png'; // Path to your 1.5u keycap image
 
 // --- NEW GLOBAL SELECTION VARIABLES ---
-let isSelectionMode = false; // Flag to indicate if selection mode is active
+let isSelectionMode = true; // Flag to indicate if selection mode is active
 let selectedKeys = [];       // Array to store the 'code' of selected keys
 
 /**
