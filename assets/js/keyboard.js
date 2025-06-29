@@ -136,7 +136,7 @@ function generateKeyboardPreview() {
                 textDivSample.style.color = getContrastColor(textObj.color || currentKeyColor);
                 textDivSample.style.textAlign = 'center';
                 textDivSample.style.whiteSpace = 'nowrap';
-                textDivSample.style.fontSize = `${textObj.size || 16}px`;
+                textDivSample.style.fontSize = `${textObj.size * 6 || 16}px`;
 
         
                 sampleContainer.appendChild(textDivSample);
