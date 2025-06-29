@@ -2,510 +2,2107 @@
     "keys": [
         {
             "texts": [
-                {"value": "`", "xOffset": 70, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "~", "xOffset": 30, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "`",
+                    "xOffset": 70,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "~",
+                    "xOffset": 30,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Backquote", "xposition": 0, "yposition": 0, "widthRatio": 1
+            "code": "Backquote",
+            "xposition": 0,
+            "yposition": 0,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "1", "xOffset": 70, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "!", "xOffset": 30, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "1",
+                    "xOffset": 70,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "!",
+                    "xOffset": 30,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Digit1", "xposition": 1, "yposition": 0, "widthRatio": 1
+            "code": "Digit1",
+            "xposition": 1,
+            "yposition": 0,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "2", "xOffset": 70, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "@", "xOffset": 30, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "2",
+                    "xOffset": 70,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "@",
+                    "xOffset": 30,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Digit2", "xposition": 2, "yposition": 0, "widthRatio": 1
+            "code": "Digit2",
+            "xposition": 2,
+            "yposition": 0,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "3", "xOffset": 70, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "#", "xOffset": 30, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "3",
+                    "xOffset": 70,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "#",
+                    "xOffset": 30,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Digit3", "xposition": 3, "yposition": 0, "widthRatio": 1
+            "code": "Digit3",
+            "xposition": 3,
+            "yposition": 0,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "4", "xOffset": 70, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "$", "xOffset": 30, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "4",
+                    "xOffset": 70,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "$",
+                    "xOffset": 30,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Digit4", "xposition": 4, "yposition": 0, "widthRatio": 1
+            "code": "Digit4",
+            "xposition": 4,
+            "yposition": 0,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "5", "xOffset": 70, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "%", "xOffset": 30, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "5",
+                    "xOffset": 70,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "%",
+                    "xOffset": 30,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Digit5", "xposition": 5, "yposition": 0, "widthRatio": 1
+            "code": "Digit5",
+            "xposition": 5,
+            "yposition": 0,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "6", "xOffset": 70, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "^", "xOffset": 30, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "6",
+                    "xOffset": 70,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "^",
+                    "xOffset": 30,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Digit6", "xposition": 6, "yposition": 0, "widthRatio": 1
+            "code": "Digit6",
+            "xposition": 6,
+            "yposition": 0,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "7", "xOffset": 70, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "&", "xOffset": 30, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "7",
+                    "xOffset": 70,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "&",
+                    "xOffset": 30,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Digit7", "xposition": 7, "yposition": 0, "widthRatio": 1
+            "code": "Digit7",
+            "xposition": 7,
+            "yposition": 0,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "8", "xOffset": 70, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "*", "xOffset": 30, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "8",
+                    "xOffset": 70,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "*",
+                    "xOffset": 30,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Digit8", "xposition": 8, "yposition": 0, "widthRatio": 1
+            "code": "Digit8",
+            "xposition": 8,
+            "yposition": 0,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "9", "xOffset": 70, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "(", "xOffset": 30, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "9",
+                    "xOffset": 70,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "(",
+                    "xOffset": 30,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Digit9", "xposition": 9, "yposition": 0, "widthRatio": 1
+            "code": "Digit9",
+            "xposition": 9,
+            "yposition": 0,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "0", "xOffset": 70, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": ")", "xOffset": 30, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "0",
+                    "xOffset": 70,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": ")",
+                    "xOffset": 30,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Digit0", "xposition": 10, "yposition": 0, "widthRatio": 1
+            "code": "Digit0",
+            "xposition": 10,
+            "yposition": 0,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "-", "xOffset": 70, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "_", "xOffset": 30, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "-",
+                    "xOffset": 70,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "_",
+                    "xOffset": 30,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Minus", "xposition": 11, "yposition": 0, "widthRatio": 1
+            "code": "Minus",
+            "xposition": 11,
+            "yposition": 0,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "=", "xOffset": 70, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "+", "xOffset": 30, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "=",
+                    "xOffset": 70,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "+",
+                    "xOffset": 30,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Equal", "xposition": 12, "yposition": 0, "widthRatio": 1
+            "code": "Equal",
+            "xposition": 12,
+            "yposition": 0,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "Backspace", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
+                {
+                    "value": "Backspace",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#C0C0C0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Backspace", "xposition": 13, "yposition": 0, "widthRatio": 2
+            "code": "Backspace",
+            "xposition": 13,
+            "yposition": 0,
+            "widthRatio": 2
         },
         {
             "texts": [
-                {"value": "Tab", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
+                {
+                    "value": "Tab",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#C0C0C0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Tab", "xposition": 0, "yposition": 1, "widthRatio": 1.5
+            "code": "Tab",
+            "xposition": 0,
+            "yposition": 1,
+            "widthRatio": 1.5
         },
         {
             "texts": [
-                {"value": "Q", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "Q",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyQ", "xposition": 1.5, "yposition": 1, "widthRatio": 1
+            "code": "KeyQ",
+            "xposition": 1.5,
+            "yposition": 1,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "W", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "W",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyW", "xposition": 2.5, "yposition": 1, "widthRatio": 1
+            "code": "KeyW",
+            "xposition": 2.5,
+            "yposition": 1,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "E", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "E",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyE", "xposition": 3.5, "yposition": 1, "widthRatio": 1
+            "code": "KeyE",
+            "xposition": 3.5,
+            "yposition": 1,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "R", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "R",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyR", "xposition": 4.5, "yposition": 1, "widthRatio": 1
+            "code": "KeyR",
+            "xposition": 4.5,
+            "yposition": 1,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "T", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "T",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyT", "xposition": 5.5, "yposition": 1, "widthRatio": 1
+            "code": "KeyT",
+            "xposition": 5.5,
+            "yposition": 1,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "Y", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "Y",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyY", "xposition": 6.5, "yposition": 1, "widthRatio": 1
+            "code": "KeyY",
+            "xposition": 6.5,
+            "yposition": 1,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "U", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "U",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyU", "xposition": 7.5, "yposition": 1, "widthRatio": 1
+            "code": "KeyU",
+            "xposition": 7.5,
+            "yposition": 1,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "I", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "I",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyI", "xposition": 8.5, "yposition": 1, "widthRatio": 1
+            "code": "KeyI",
+            "xposition": 8.5,
+            "yposition": 1,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "O", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "O",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyO", "xposition": 9.5, "yposition": 1, "widthRatio": 1
+            "code": "KeyO",
+            "xposition": 9.5,
+            "yposition": 1,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "P", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "P",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyP", "xposition": 10.5, "yposition": 1, "widthRatio": 1
+            "code": "KeyP",
+            "xposition": 10.5,
+            "yposition": 1,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "[", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "{", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "[",
+                    "xOffset": 50,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "{",
+                    "xOffset": 20,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "BracketLeft", "xposition": 11.5, "yposition": 1, "widthRatio": 1
+            "code": "BracketLeft",
+            "xposition": 11.5,
+            "yposition": 1,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "]", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "}", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "]",
+                    "xOffset": 50,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "}",
+                    "xOffset": 20,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "BracketRight", "xposition": 12.5, "yposition": 1, "widthRatio": 1
+            "code": "BracketRight",
+            "xposition": 12.5,
+            "yposition": 1,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "\\", "xOffset": 50, "yOffset": 20, "color": "#C0C0C0", "font": "Arial"},
-                {"value": "|", "xOffset": 20, "yOffset": 20, "color": "#C0C0C0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#C0C0C0", "font": "Arial"}
+                {
+                    "value": "\\",
+                    "xOffset": 50,
+                    "yOffset": 20,
+                    "color": "#C0C0C0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "|",
+                    "xOffset": 20,
+                    "yOffset": 20,
+                    "color": "#C0C0C0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#C0C0C0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#C0C0C0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Backslash", "xposition": 13.5, "yposition": 1, "widthRatio": 1.5
+            "code": "Backslash",
+            "xposition": 13.5,
+            "yposition": 1,
+            "widthRatio": 1.5
         },
         {
             "texts": [
-                {"value": "Caps", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
+                {
+                    "value": "Caps",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#C0C0C0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "CapsLock", "xposition": 0, "yposition": 2, "widthRatio": 1.75
+            "code": "CapsLock",
+            "xposition": 0,
+            "yposition": 2,
+            "widthRatio": 1.75
         },
         {
             "texts": [
-                {"value": "A", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "A",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyA", "xposition": 1.75, "yposition": 2, "widthRatio": 1
+            "code": "KeyA",
+            "xposition": 1.75,
+            "yposition": 2,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "S", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "S",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyS", "xposition": 2.75, "yposition": 2, "widthRatio": 1
+            "code": "KeyS",
+            "xposition": 2.75,
+            "yposition": 2,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "D", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "D",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyD", "xposition": 3.75, "yposition": 2, "widthRatio": 1
+            "code": "KeyD",
+            "xposition": 3.75,
+            "yposition": 2,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "F", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "F",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyF", "xposition": 4.75, "yposition": 2, "widthRatio": 1
+            "code": "KeyF",
+            "xposition": 4.75,
+            "yposition": 2,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "G", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "G",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyG", "xposition": 5.75, "yposition": 2, "widthRatio": 1
+            "code": "KeyG",
+            "xposition": 5.75,
+            "yposition": 2,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "H", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "H",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyH", "xposition": 6.75, "yposition": 2, "widthRatio": 1
+            "code": "KeyH",
+            "xposition": 6.75,
+            "yposition": 2,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "J", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "J",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyJ", "xposition": 7.75, "yposition": 2, "widthRatio": 1
+            "code": "KeyJ",
+            "xposition": 7.75,
+            "yposition": 2,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "K", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "K",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyK", "xposition": 8.75, "yposition": 2, "widthRatio": 1
+            "code": "KeyK",
+            "xposition": 8.75,
+            "yposition": 2,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "L", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "L",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyL", "xposition": 9.75, "yposition": 2, "widthRatio": 1
+            "code": "KeyL",
+            "xposition": 9.75,
+            "yposition": 2,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": ";", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": ":", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": ";",
+                    "xOffset": 50,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": ":",
+                    "xOffset": 20,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Semicolon", "xposition": 10.75, "yposition": 2, "widthRatio": 1
+            "code": "Semicolon",
+            "xposition": 10.75,
+            "yposition": 2,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "'", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "\"", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "'",
+                    "xOffset": 50,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "\"",
+                    "xOffset": 20,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Quote", "xposition": 11.75, "yposition": 2, "widthRatio": 1
+            "code": "Quote",
+            "xposition": 11.75,
+            "yposition": 2,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "Enter", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
+                {
+                    "value": "Enter",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#C0C0C0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Enter", "xposition": 12.75, "yposition": 2, "widthRatio": 2.25
+            "code": "Enter",
+            "xposition": 12.75,
+            "yposition": 2,
+            "widthRatio": 2.25
         },
         {
             "texts": [
-                {"value": "Shift", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
+                {
+                    "value": "Shift",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#C0C0C0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "ShiftLeft", "xposition": 0, "yposition": 3, "widthRatio": 2.25
+            "code": "ShiftLeft",
+            "xposition": 0,
+            "yposition": 3,
+            "widthRatio": 2.25
         },
         {
             "texts": [
-                {"value": "Z", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "Z",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyZ", "xposition": 2.25, "yposition": 3, "widthRatio": 1
+            "code": "KeyZ",
+            "xposition": 2.25,
+            "yposition": 3,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "X", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "X",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyX", "xposition": 3.25, "yposition": 3, "widthRatio": 1
+            "code": "KeyX",
+            "xposition": 3.25,
+            "yposition": 3,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "C", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "C",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyC", "xposition": 4.25, "yposition": 3, "widthRatio": 1
+            "code": "KeyC",
+            "xposition": 4.25,
+            "yposition": 3,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "V", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "V",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyV", "xposition": 5.25, "yposition": 3, "widthRatio": 1
+            "code": "KeyV",
+            "xposition": 5.25,
+            "yposition": 3,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "B", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "B",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyB", "xposition": 6.25, "yposition": 3, "widthRatio": 1
+            "code": "KeyB",
+            "xposition": 6.25,
+            "yposition": 3,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "N", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "N",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyN", "xposition": 7.25, "yposition": 3, "widthRatio": 1
+            "code": "KeyN",
+            "xposition": 7.25,
+            "yposition": 3,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "M", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "M",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "KeyM", "xposition": 8.25, "yposition": 3, "widthRatio": 1
+            "code": "KeyM",
+            "xposition": 8.25,
+            "yposition": 3,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": ",", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "<", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": ",",
+                    "xOffset": 50,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "<",
+                    "xOffset": 20,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Comma", "xposition": 9.25, "yposition": 3, "widthRatio": 1
+            "code": "Comma",
+            "xposition": 9.25,
+            "yposition": 3,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": ".", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": ">", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": ".",
+                    "xOffset": 50,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": ">",
+                    "xOffset": 20,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Period", "xposition": 10.25, "yposition": 3, "widthRatio": 1
+            "code": "Period",
+            "xposition": 10.25,
+            "yposition": 3,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "/", "xOffset": 50, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "?", "xOffset": 20, "yOffset": 20, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"},
-                {"value": "", "xOffset": 0, "yOffset": 0, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "/",
+                    "xOffset": 50,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "?",
+                    "xOffset": 20,
+                    "yOffset": 20,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                },
+                {
+                    "value": "",
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Slash", "xposition": 11.25, "yposition": 3, "widthRatio": 1
+            "code": "Slash",
+            "xposition": 11.25,
+            "yposition": 3,
+            "widthRatio": 1
         },
         {
             "texts": [
-                {"value": "Shift", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
+                {
+                    "value": "Shift",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#C0C0C0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "ShiftRight", "xposition": 12.25, "yposition": 3, "widthRatio": 2.75
+            "code": "ShiftRight",
+            "xposition": 12.25,
+            "yposition": 3,
+            "widthRatio": 2.75
         },
         {
             "texts": [
-                {"value": "Ctrl", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
+                {
+                    "value": "Ctrl",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#C0C0C0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "ControlLeft", "xposition": 0, "yposition": 4, "widthRatio": 1.25
+            "code": "ControlLeft",
+            "xposition": 0,
+            "yposition": 4,
+            "widthRatio": 1.25
         },
         {
             "texts": [
-                {"value": "Win", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
+                {
+                    "value": "Win",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#C0C0C0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "MetaLeft", "xposition": 1.25, "yposition": 4, "widthRatio": 1.25
+            "code": "MetaLeft",
+            "xposition": 1.25,
+            "yposition": 4,
+            "widthRatio": 1.25
         },
         {
             "texts": [
-                {"value": "Alt", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
+                {
+                    "value": "Alt",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#C0C0C0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "AltLeft", "xposition": 2.5, "yposition": 4, "widthRatio": 1.25
+            "code": "AltLeft",
+            "xposition": 2.5,
+            "yposition": 4,
+            "widthRatio": 1.25
         },
         {
             "texts": [
-                {"value": "Space", "xOffset": 50, "yOffset": 50, "color": "#E0E0E0", "font": "Arial"}
+                {
+                    "value": "Space",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#E0E0E0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Space", "xposition": 3.75, "yposition": 4, "widthRatio": 6.25
+            "code": "Space",
+            "xposition": 3.75,
+            "yposition": 4,
+            "widthRatio": 6.25
         },
         {
             "texts": [
-                {"value": "Alt", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
+                {
+                    "value": "Alt",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#C0C0C0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "AltRight", "xposition": 10, "yposition": 4, "widthRatio": 1.25
+            "code": "AltRight",
+            "xposition": 10,
+            "yposition": 4,
+            "widthRatio": 1.25
         },
         {
             "texts": [
-                {"value": "Win", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
+                {
+                    "value": "Win",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#C0C0C0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "MetaRight", "xposition": 11.25, "yposition": 4, "widthRatio": 1.25
+            "code": "MetaRight",
+            "xposition": 11.25,
+            "yposition": 4,
+            "widthRatio": 1.25
         },
         {
             "texts": [
-                {"value": "Fn", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
+                {
+                    "value": "Fn",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#C0C0C0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "Fn", "xposition": 12.5, "yposition": 4, "widthRatio": 1.25
+            "code": "Fn",
+            "xposition": 12.5,
+            "yposition": 4,
+            "widthRatio": 1.25
         },
         {
             "texts": [
-                {"value": "Ctrl", "xOffset": 50, "yOffset": 50, "color": "#C0C0C0", "font": "Arial"}
+                {
+                    "value": "Ctrl",
+                    "xOffset": 50,
+                    "yOffset": 50,
+                    "color": "#C0C0C0",
+                    "font": "Arial",
+                    "size": 16
+                }
             ],
-            "code": "ControlRight", "xposition": 13.75, "yposition": 4, "widthRatio": 1.25
+            "code": "ControlRight",
+            "xposition": 13.75,
+            "yposition": 4,
+            "widthRatio": 1.25
         }
     ]
 }
