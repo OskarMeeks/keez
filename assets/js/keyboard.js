@@ -48,6 +48,7 @@ function generateKeyboardPreview() {
     let singleSelectedKeyConfig = null;
     if (isSelectionMode && selectedKeys.length === 1) {
         singleSelectedKeyConfig = keyboardConfig.keys.find(key => key.code === selectedKeys[0]);
+                console.warn("single key detected");
     }
 
     keyboardConfig.keys.forEach(keyConfig => {
@@ -119,7 +120,9 @@ function generateKeyboardPreview() {
 //EDIT HERE
         if (isSelectionMode && singleSelectedKeyConfig && keyConfig.code === singleSelectedKeyConfig.code) {
             // This key is the single selected one, add its text elements to sampleContainer
+                            console.warn("kids");
             keyConfig.texts.forEach(textObj => {
+                                            console.warn("kids2");
                 const textDivSample = document.createElement('div');
                 textDivSample.textContent = textObj.value;
                 textDivSample.className = 'key-text-label sample-text-label'; // Add a class for sample styling
