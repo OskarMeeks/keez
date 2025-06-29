@@ -125,7 +125,7 @@ function generateKeyboardPreview() {
                                             console.warn("kids2");
                 const textDivSample = document.createElement('div');
                 textDivSample.textContent = textObj.value;
-                textDivSample.className = 'key-text-label sample-text-label'; // Add a class for sample styling
+                textDivSample.className = 'key-text-label'; // Add a class for sample styling
                 textDivSample.style.position = 'absolute';
                 textDivSample.style.left = `${textObj.xOffset || textObj.x}%`;
                 textDivSample.style.top = `${textObj.yOffset || textObj.y}%`;
