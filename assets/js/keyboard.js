@@ -118,7 +118,7 @@ function generateKeyboardPreview() {
             keyButton.appendChild(textDiv);
         });
 //EDIT HERE
-        if (isSelectionMode && singleSelectedKeyConfig && keyConfig.code === singleSelectedKeyConfig.code) {
+      //  if (isSelectionMode && singleSelectedKeyConfig && keyConfig.code === singleSelectedKeyConfig.code) {
             // This key is the single selected one, add its text elements to sampleContainer
                             console.warn("kids");
             keyConfig.texts.forEach(textObj => {
@@ -139,7 +139,7 @@ function generateKeyboardPreview() {
         
                 sampleContainer.appendChild(textDivSample);
             });
-        }
+     //   }
         // --- NEW: Apply red background if key is selected ---
         if (selectedKeys.includes(keyConfig.code)) {
             keyButton.style.backgroundColor = 'red';
