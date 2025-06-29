@@ -29,8 +29,10 @@ function generateKeyboardPreview() {
     const keyboardContainer = document.getElementById('keyboardPreview');
     const sampleContainer = document.getElementById('sampleContainer');
     keyboardContainer.innerHTML = ''; // Clear existing keyboard
-    sampleContainer.innerHTML = ''; // Clear sample container on each re-render 
-
+    const textLabelsInSample = sampleContainer.querySelectorAll('.key-text-label');
+    textLabelsInSample.forEach(label => {
+        sampleContainer.removeChild(label); // Remove each text label
+    });
     // Set container to relative positioning to allow absolute positioning of keys
     keyboardContainer.style.position = 'relative';
 
