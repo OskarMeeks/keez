@@ -174,6 +174,28 @@ function generateKeyboardPreview() {
     sampleContainer.style.position = 'relative'; // Ensure text divs can be absolutely positioned within it
     sampleContainer.style.overflow = 'hidden';
 }
+window.updateTextPosition = function(textIndex, property, value) {
+    if (selectedKeys.length === 0) {
+        console.warn("No keys selected to update text position.");
+        return;
+    }
+
+    const numericValue = parseFloat(value);
+    if (isNaN(numericValue)) {
+        console.warn(`Invalid numeric value for ${property}: ${value}`);
+        return;
+    }
+
+    selectedKeys.forEach(keyCode => {
+        const keyToUpdate = keyboardConfig.keys.find(key => key.code === keyCode);
+        if (keyToUpdate && keyToUpdate.texts && keyToUpdate.texts[textIndex]) {
+            keyToUpdate.texts[textIndex][property] = numericValue;
+            console.log(`Updated key ${keyCode}, text ${textIndex} ${property} to ${numericValue}`);
+        }
+    });
+
+    generateKeyboardPreview(); // Re-render to show the updated positions
+};
 
 /**
  * Calculates a contrasting color (black or white) for given hex background.
