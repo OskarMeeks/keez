@@ -29,7 +29,7 @@ function generateKeyboardPreview() {
     const keyboardContainer = document.getElementById('keyboardPreview');
     const sampleContainer = document.getElementById('sampleContainer');
     keyboardContainer.innerHTML = ''; // Clear existing keyboard
-    sampleContainer.innerHTML = ''; // Clear sample container on each re-render
+    sampleContainer.innerHTML = ''; // Clear sample container on each re-render 
 
     // Set container to relative positioning to allow absolute positioning of keys
     keyboardContainer.style.position = 'relative';
