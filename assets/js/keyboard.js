@@ -169,8 +169,8 @@ function generateKeyboardPreview() {
     // keyboardContainer.style.height = `${maxY + KEY_GAP}px`; // Add gap for last row
 
     // Set sampleContainer dimensions to match a standard key
-    sampleContainer.style.width = `${KEY_SIZE}px`;
-    sampleContainer.style.height = `${KEY_SIZE}px`;
+    sampleContainer.style.width = `360px`;
+    sampleContainer.style.height = `360px`;
     sampleContainer.style.position = 'relative'; // Ensure text divs can be absolutely positioned within it
     sampleContainer.style.overflow = 'hidden';
 }
