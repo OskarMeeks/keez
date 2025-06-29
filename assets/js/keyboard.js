@@ -136,23 +136,7 @@ function generateKeyboardPreview() {
                 textDivSample.style.whiteSpace = 'nowrap';
                 textDivSample.style.fontSize = `${textObj.size || 16}px`;
 
-                // Set sample key background properties to match the selected key
-      //          sampleContainer.style.backgroundImage = `url(${imageUrl})`;
-               sampleContainer.style.backgroundSize = 'cover';
-                sampleContainer.style.backgroundPosition = 'center';
-                sampleContainer.style.backgroundColor = 'transparent';
-
-                if (keyConfig.texts[0] && keyConfig.texts[0].color) {
-                    sampleContainer.style.filter = `
-                        sepia(100%)
-                        saturate(200%)
-                        brightness(70%)
-                        hue-rotate(${getHueRotateDegree(keyConfig.texts[0].color)}deg)
-                    `;
-                } else {
-                    sampleContainer.style.filter = 'none';
-                }
-
+        
                 sampleContainer.appendChild(textDivSample);
             });
         }
