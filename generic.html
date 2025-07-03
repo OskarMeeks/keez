@@ -157,7 +157,6 @@
                     </div>
 
                     <div id="keystyleOptions" class="option-section">
-                        <h3>Keys Style Options</h3> <div style="display: flex; gap: 10px;">
                             <button style="background-color: #FF5733; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyKeyColor('#FF5733', this)">Coral Red</button>
                             <button style="background-color: #33FF57; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyKeyColor('#33FF57', this)">Lime Green</button>
                             <button style="background-color: #3357FF; color: black; border: none; cursor: pointer; padding: 10px;" onclick="applyKeyColor('#3357FF', this)">Royal Blue</button>
@@ -167,7 +166,6 @@
                     </div>
 
                     <div id="typestyleOptions" class="option-section" style="display: none;">
-                        <h3>Type Style Options</h3>
                         <div class="type-style-grid">
                             <button class="type-style-center-image" id="sampleContainer" style="width: 360px; height: 360px">
                                    <img src="images/sample.png" alt="Keycap" id="sampleContainer2"/>
@@ -203,15 +201,15 @@
                                         <option value="green"> </option>
                                         <option value="blue"> </option>
                                     </select>
-                                <label for="tr-font">Font:</label>
+                                <label for="tr-font" style="margin: 0 0 0 0;">Font:</label>
                                 <select id="tr-font">
                                     <option value="Arial">Arial</option>
                                     <option value="Verdana">Verdana</option>
                                     <option value="Courier New">Courier New</option>
                                 </select>
-                                <label for="t2-x">X Pos:</label>
+                                <label for="t2-x" style="margin: 0 0 0 0;">X Pos:</label>
                                 <input type="number" id="t2-x" value="0"  onchange="updateTextPosition(1, 'xOffset', this.value)">
-                                <label for="t2-y">Y Pos:</label>
+                                <label for="t2-y" style="margin: 0 0 0 0;">Y Pos:</label>
                                 <input type="number" id="t2-y" value="0" onchange="updateTextPosition(1, 'yOffset', this.value)">
                             </div>
 
@@ -223,15 +221,15 @@
                                         <option value="green"> </option>
                                         <option value="blue"> </option>
                                     </select>
-                                <label for="bl-font">Font:</label>
+                                <label for="bl-font" style="margin: 0 0 0 0;">Font:</label>
                                 <select id="bl-font">
                                     <option value="Arial">Arial</option>
                                     <option value="Verdana">Verdana</option>
                                     <option value="Courier New">Courier New</option>
                                 </select>
-                                <label for="t3-x">X Pos:</label>
+                                <label for="t3-x" style="margin: 0 0 0 0;">X Pos:</label>
                                 <input type="number" id="t3-x" value="0" onchange="updateTextPosition(2, 'xOffset', this.value)">
-                                <label for="t3-y">Y Pos:</label>
+                                <label for="t3-y" style="margin: 0 0 0 0;">Y Pos:</label>
                                 <input type="number" id="t3-y" value="0" onchange="updateTextPosition(2, 'yOffset', this.value)">
                             </div>
 
@@ -243,15 +241,15 @@
                                         <option value="green"> </option>
                                         <option value="blue"> </option>
                                     </select>
-                                <label for="br-font">Font:</label>
+                                <label for="br-font" style="margin: 0 0 0 0;">Font:</label>
                                 <select id="br-font">
                                     <option value="Arial">Arial</option>
                                     <option value="Verdana">Verdana</option>
                                     <option value="Courier New">Courier New</option>
                                 </select>
-                                <label for="t4-x">X Pos:</label>
+                                <label for="t4-x" style="margin: 0 0 0 0;">X Pos:</label>
                                 <input type="number" id="t4-x" value="0" onchange="updateTextPosition(3, 'xOffset', this.value)">
-                                <label for="t4-y">Y Pos:</label>
+                                <label for="t4-y" style="margin: 0 0 0 0;">Y Pos:</label>
                                 <input type="number" id="t4-y" value="0" onchange="updateTextPosition(3, 'yOffset', this.value)">
                             </div>
                         </div>
