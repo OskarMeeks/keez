@@ -1,30 +1,3 @@
-// Global variables to store current key styles
-let currentKeyColor = '#FFD700'; // Default gold - This will be overridden
-let currentKeyFont = 'Arial'; // Default font - This will be overridden if font is in JSON
-
-// Track last clicked buttons for color and font to manage active state
-let lastClickedColorButton = null;
-let lastClickedFontButton = null;
-
-// --- NEW GLOBAL BRUSH VARIABLES ---
-let currentBrushProperty = ''; // Stores the CSS property to change (e.g., 'backgroundColor', 'fontFamily')
-let currentBrushValue = '';    // Stores the value to apply (e.g., '#FF0000', 'Verdana')
-
-// Declare keyboardConfig as a mutable variable, it will be populated by the fetch call
-let keyboardConfig = {};
-
-const KEY_SIZE = 60; // Standard key width/height in pixels
-const KEY_GAP = 8; // Gap between keys in pixels (used for visual spacing in positions)
-const IMAGE10 = 'images/keycap.png'; // Path to your 1u keycap image
-const IMAGE15 = 'images/1.5.png'; // Path to your 1.5u keycap image
-
-// --- NEW GLOBAL SELECTION VARIABLES ---
-let isSelectionMode = true; // Flag to indicate if selection mode is active
-let selectedKeys = [];       // Array to store the 'code' of selected keys
-
-/**
- * Generates and renders the keyboard preview based on the current configuration.
- */
 
 
 // Global variables to store current key styles
