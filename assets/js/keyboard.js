@@ -25,6 +25,78 @@ let selectedKeys = [];       // Array to store the 'code' of selected keys
 /**
  * Generates and renders the keyboard preview based on the current configuration.
  */
+You're looking to update the text positioning input boxes in your UI to reflect the values of the currently selected key's text elements. This is a great improvement for a user interface that allows customization!
+
+Here's how you can modify your setexamples function to achieve this, along with some explanations:
+JavaScript
+
+// Global variables to store current key styles
+let currentKeyColor = '#FFD700'; // Default gold - This will be overridden
+let currentKeyFont = 'Arial'; // Default font - This will be overridden if font is in JSON
+
+// Track last clicked buttons for color and font to manage active state
+let lastClickedColorButton = null;
+let lastClickedFontButton = null;
+
+// --- NEW GLOBAL BRUSH VARIABLES ---
+let currentBrushProperty = ''; // Stores the CSS property to change (e.g., 'backgroundColor', 'fontFamily')
+let currentBrushValue = '';    // Stores the value to apply (e.g., '#FF0000', 'Verdana')
+
+// Declare keyboardConfig as a mutable variable, it will be populated by the fetch call
+let keyboardConfig = {};
+
+const KEY_SIZE = 60; // Standard key width/height in pixels
+const KEY_GAP = 8; // Gap between keys in pixels (used for visual spacing in positions)
+const IMAGE10 = 'images/keycap.png'; // Path to your 1u keycap image
+const IMAGE15 = 'images/1.5.png'; // Path to your 1.5u keycap image
+
+// --- NEW GLOBAL SELECTION VARIABLES ---
+let isSelectionMode = true; // Flag to indicate if selection mode is active
+let selectedKeys = [];        // Array to store the 'code' of selected keys
+
+/**
+ * Updates the text positioning input boxes with values from the single selected key.
+ * If no key or multiple keys are selected, the boxes are cleared or disabled.
+ */
+function setexamples() {
+    const xOffsetInput = document.getElementById('t1-x');
+    const yOffsetInput = document.getElementById('t1-y');
+    const fontSizeInput = document.getElementById('fontSizeInput');
+    const textValueInput = document.getElementById('textValueInput'); // Assuming you have a text input for value as well
+
+    // Clear previous values and disable inputs by default
+    xOffsetInput.value = '';
+    yOffsetInput.value = '';
+    fontSizeInput.value = '';
+    textValueInput.value = '';
+
+//    xOffsetInput.disabled = true;
+//    yOffsetInput.disabled = true;
+//    fontSizeInput.disabled = true;
+//    textValueInput.disabled = true;
+
+    if (selectedKeys.length === 1) {
+        const singleSelectedKeyConfig = keyboardConfig.keys.find(key => key.code === selectedKeys[0]);
+
+        if (singleSelectedKeyConfig && singleSelectedKeyConfig.texts && singleSelectedKeyConfig.texts.length > 0) {
+            // Assuming we are primarily interested in the first text element for these inputs
+            const firstText = singleSelectedKeyConfig.texts[0];
+
+            // Set values if they exist, otherwise keep them empty
+            xOffsetInput.value = firstText.xOffset !== undefined ? firstText.xOffset : (firstText.x !== undefined ? firstText.x : '');
+            yOffsetInput.value = firstText.yOffset !== undefined ? firstText.yOffset : (firstText.y !== undefined ? firstText.y : '');
+            fontSizeInput.value = firstText.size !== undefined ? firstText.size : '';
+            textValueInput.value = firstText.value !== undefined ? firstText.value : ''; // Set the text value
+
+            // Enable the inputs
+            xOffsetInput.disabled = false;
+            yOffsetInput.disabled = false;
+            fontSizeInput.disabled = false;
+            textValueInput.disabled = false;
+        }
+    }
+}
+
 function generateKeyboardPreview() {
     const keyboardContainer = document.getElementById('keyboardPreview');
     const sampleContainer = document.getElementById('sampleContainer');
@@ -293,6 +365,7 @@ function toggleKeySelection(keyCode) {
         selectedKeys.push(keyCode);
         console.log(`Selected key: ${keyCode}`);
     }
+    setexamples();
     generateKeyboardPreview(); // Re-render to update visual selection
 }
 
