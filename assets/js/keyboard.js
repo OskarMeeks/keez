@@ -193,12 +193,14 @@ function generateKeyboardPreview() {
                 textDivSample.style.left = `${textObj.xOffset || textObj.x}%`;
                 textDivSample.style.top = `${textObj.yOffset || textObj.y}%`;
                 textDivSample.style.transform = `translate(calc(-50% + 0px), calc(-50% + 0px))`;
-                textDivSample.style.fontFamily = textObj.font || currentKeyFont;
+                
+                textDivSample.style.fontFamily = textObj.font;
+                
                 textDivSample.style.color = getContrastColor(textObj.color || currentKeyColor);
                 textDivSample.style.textAlign = 'center';
                 textDivSample.style.whiteSpace = 'nowrap';
                 textDivSample.style.fontSize = `${textObj.size * 6 || 16}px`;
-
+                
         
                 sampleContainer.appendChild(textDivSample);
             });
