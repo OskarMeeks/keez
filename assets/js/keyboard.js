@@ -242,7 +242,7 @@ window.updateTextPosition = function(textIndex, property, value) {
         console.warn("No keys selected to update text position.");
         return;
     }
-    if(property == "xOffset" || property == "yOffset"){
+    if(property === "xOffset" || property === "yOffset"){
         const numericValue = parseFloat(value);
         if (isNaN(numericValue)) {
             console.warn(`Invalid numeric value for ${property}: ${value}`);
