@@ -33,8 +33,8 @@ function setexamples() {
   //  const textValueInput = document.getElementById('textValueInput'); // Assuming you have a text input for value as well
 
     // Clear previous values and disable inputs by default
- //   xOffsetInput.value = '';
-  //  yOffsetInput.value = '';
+    xOffsetInput.value = '';
+    yOffsetInput.value = '';
    // fontSizeInput.value = '';
  //   textValueInput.value = '';
 
