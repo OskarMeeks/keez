@@ -28,41 +28,40 @@ function setexamples() {
     const xOffsetInput = document.getElementById('t1-x');
     const yOffsetInput = document.getElementById('t1-y');
 
-            console.warn("idk");
   //  const fontSizeInput = document.getElementById('fontSizeInput');
   //  const textValueInput = document.getElementById('textValueInput'); // Assuming you have a text input for value as well
 
     // Clear previous values and disable inputs by default
     xOffsetInput.value = '';
     yOffsetInput.value = '';
-   // fontSizeInput.value = '';
- //   textValueInput.value = '';
+//    fontSizeInput.value = '';
+//   textValueInput.value = '';
 
-//    xOffsetInput.disabled = true;
+  //  xOffsetInput.disabled = true;
 //    yOffsetInput.disabled = true;
 //    fontSizeInput.disabled = true;
 //    textValueInput.disabled = true;
 
-    //if (selectedKeys.length === 1) {
-  //      const singleSelectedKeyConfig = keyboardConfig.keys.find(key => key.code === selectedKeys[0]);
+    if (selectedKeys.length === 1) {
+        const singleSelectedKeyConfig = keyboardConfig.keys.find(key => key.code === selectedKeys[0]);
 
-  //      if (singleSelectedKeyConfig && singleSelectedKeyConfig.texts && singleSelectedKeyConfig.texts.length > 0) {
+        if (singleSelectedKeyConfig && singleSelectedKeyConfig.texts && singleSelectedKeyConfig.texts.length > 0) {
             // Assuming we are primarily interested in the first text element for these inputs
-       //     const firstText = singleSelectedKeyConfig.texts[0];
+            const firstText = singleSelectedKeyConfig.texts[0];
 
-            // Set values if they exist, otherwise keep them empty
-       //     xOffsetInput.value = firstText.xOffset !== undefined ? firstText.xOffset : (firstText.x !== undefined ? firstText.x : '');
-          //  yOffsetInput.value = firstText.yOffset !== undefined ? firstText.yOffset : (firstText.y !== undefined ? firstText.y : '');
+             Set values if they exist, otherwise keep them empty
+            xOffsetInput.value = firstText.xOffset !== undefined ? firstText.xOffset : (firstText.x !== undefined ? firstText.x : '');
+            yOffsetInput.value = firstText.yOffset !== undefined ? firstText.yOffset : (firstText.y !== undefined ? firstText.y : '');
       //      fontSizeInput.value = firstText.size !== undefined ? firstText.size : '';
-          //  textValueInput.value = firstText.value !== undefined ? firstText.value : ''; // Set the text value
+      //      textValueInput.value = firstText.value !== undefined ? firstText.value : ''; // Set the text value
 
             // Enable the inputs
        //     xOffsetInput.disabled = false;
           //  yOffsetInput.disabled = false;
          //   fontSizeInput.disabled = false;
           //  textValueInput.disabled = false;
-   //     }
-  ////  }
+        }
+    }
 }
 
 function generateKeyboardPreview() {
