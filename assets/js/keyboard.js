@@ -42,6 +42,12 @@ function setexamples() {
     // Clear previous values and disable inputs by default
     xOffsetInput1.value = '';
     yOffsetInput1.value = '';
+        xOffsetInput2.value = '';
+    yOffsetInput2.value = '';
+        xOffsetInput3.value = '';
+    yOffsetInput3.value = '';
+        xOffsetInput4.value = '';
+    yOffsetInput4.value = '';
 //    fontSizeInput.value = '';
 //   textValueInput.value = '';
 
