@@ -25,15 +25,23 @@ let isSelectionMode = true; // Flag to indicate if selection mode is active
 let selectedKeys = [];        // Array to store the 'code' of selected keys
 
 function setexamples() {
-    const xOffsetInput = document.getElementById('t1-x');
-    const yOffsetInput = document.getElementById('t1-y');
+    const xOffsetInput1 = document.getElementById('t1-x');
+    const yOffsetInput1 = document.getElementById('t1-y');
 
+    const xOffsetInput2 = document.getElementById('t2-x');
+    const yOffsetInput2 = document.getElementById('t2-y');
+    
+    const xOffsetInput3 = document.getElementById('t3-x');
+    const yOffsetInput3 = document.getElementById('t3-y');
+    
+    const xOffsetInput4 = document.getElementById('t4-x');
+    const yOffsetInput4 = document.getElementById('t4-y');
   //  const fontSizeInput = document.getElementById('fontSizeInput');
   //  const textValueInput = document.getElementById('textValueInput'); // Assuming you have a text input for value as well
 
     // Clear previous values and disable inputs by default
-    xOffsetInput.value = '';
-    yOffsetInput.value = '';
+    xOffsetInput1.value = '';
+    yOffsetInput1.value = '';
 //    fontSizeInput.value = '';
 //   textValueInput.value = '';
 
@@ -46,19 +54,27 @@ function setexamples() {
         const singleSelectedKeyConfig = keyboardConfig.keys.find(key => key.code === selectedKeys[0]);
 
         if (singleSelectedKeyConfig && singleSelectedKeyConfig.texts && singleSelectedKeyConfig.texts.length > 0) {
-            // Assuming we are primarily interested in the first text element for these inputs
+            // Populate the first textbox pair (t1-x, t1-y)
             const firstText = singleSelectedKeyConfig.texts[0];
+            xOffsetInput1.value = firstText.xOffset !== undefined ? firstText.xOffset : (firstText.x !== undefined ? firstText.x : '');
+            yOffsetInput1.value = firstText.yOffset !== undefined ? firstText.yOffset : (firstText.y !== undefined ? firstText.y : '');
 
-            xOffsetInput.value = firstText.xOffset !== undefined ? firstText.xOffset : (firstText.x !== undefined ? firstText.x : '');
-            yOffsetInput.value = firstText.yOffset !== undefined ? firstText.yOffset : (firstText.y !== undefined ? firstText.y : '');
-      //      fontSizeInput.value = firstText.size !== undefined ? firstText.size : '';
-      //      textValueInput.value = firstText.value !== undefined ? firstText.value : ''; // Set the text value
-
-            // Enable the inputs
-       //     xOffsetInput.disabled = false;
-          //  yOffsetInput.disabled = false;
-         //   fontSizeInput.disabled = false;
-          //  textValueInput.disabled = false;
+            // Populate the remaining textbox pairs if more text elements exist
+            if (singleSelectedKeyConfig.texts.length > 1) {
+                const secondText = singleSelectedKeyConfig.texts[1];
+                xOffsetInput2.value = secondText.xOffset !== undefined ? secondText.xOffset : (secondText.x !== undefined ? secondText.x : '');
+                yOffsetInput2.value = secondText.yOffset !== undefined ? secondText.yOffset : (secondText.y !== undefined ? secondText.y : '');
+            }
+            if (singleSelectedKeyConfig.texts.length > 2) {
+                const thirdText = singleSelectedKeyConfig.texts[2];
+                xOffsetInput3.value = thirdText.xOffset !== undefined ? thirdText.xOffset : (thirdText.x !== undefined ? thirdText.x : '');
+                yOffsetInput3.value = thirdText.yOffset !== undefined ? thirdText.yOffset : (thirdText.y !== undefined ? thirdText.y : '');
+            }
+            if (singleSelectedKeyConfig.texts.length > 3) {
+                const fourthText = singleSelectedKeyConfig.texts[3];
+                xOffsetInput4.value = fourthText.xOffset !== undefined ? fourthText.xOffset : (fourthText.x !== undefined ? fourthText.x : '');
+                yOffsetInput4.value = fourthText.yOffset !== undefined ? fourthText.yOffset : (fourthText.y !== undefined ? fourthText.y : '');
+            }
         }
     }
 }
