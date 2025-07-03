@@ -236,6 +236,8 @@ function generateKeyboardPreview() {
     sampleContainer.style.overflow = 'hidden';
 }
 
+    let numericValue; // Declare numericValue outside the if/else block
+
 //can be used to update other things
 window.updateTextPosition = function(textIndex, property, value) {
     if (selectedKeys.length === 0) {
@@ -243,13 +245,13 @@ window.updateTextPosition = function(textIndex, property, value) {
         return;
     }
     if(property === "xOffset" || property === "yOffset"){
-        const numericValue = parseFloat(value);
+        numericValue = parseFloat(value);
         if (isNaN(numericValue)) {
             console.warn(`Invalid numeric value for ${property}: ${value}`);
             return;
         }
     }else{
-    const numericValue = value;
+    numericValue = value;
     }
     selectedKeys.forEach(keyCode => {
         const keyToUpdate = keyboardConfig.keys.find(key => key.code === keyCode);
