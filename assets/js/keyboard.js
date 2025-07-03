@@ -24,6 +24,7 @@ const IMAGE15 = 'images/1.5.png'; // Path to your 1.5u keycap image
 let isSelectionMode = true; // Flag to indicate if selection mode is active
 let selectedKeys = [];        // Array to store the 'code' of selected keys
 
+//this shows the current values of a key when selected
 function setexamples() {
     const xOffsetInput1 = document.getElementById('t1-x');
     const yOffsetInput1 = document.getElementById('t1-y');
@@ -241,13 +242,15 @@ window.updateTextPosition = function(textIndex, property, value) {
         console.warn("No keys selected to update text position.");
         return;
     }
-
-    const numericValue = parseFloat(value);
-    if (isNaN(numericValue)) {
-        console.warn(`Invalid numeric value for ${property}: ${value}`);
-        return;
+    if(property == xOffset || property == yOffset){
+        const numericValue = parseFloat(value);
+        if (isNaN(numericValue)) {
+            console.warn(`Invalid numeric value for ${property}: ${value}`);
+            return;
+        }
+    }else{
+    const numericValue = value;
     }
-
     selectedKeys.forEach(keyCode => {
         const keyToUpdate = keyboardConfig.keys.find(key => key.code === keyCode);
         if (keyToUpdate && keyToUpdate.texts && keyToUpdate.texts[textIndex]) {
