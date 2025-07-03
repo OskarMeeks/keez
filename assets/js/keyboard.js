@@ -61,8 +61,8 @@ function setexamples() {
           //  yOffsetInput.disabled = false;
          //   fontSizeInput.disabled = false;
           //  textValueInput.disabled = false;
-        }
-    }
+   //     }
+  ////  }
 }
 
 function generateKeyboardPreview() {
