@@ -25,10 +25,7 @@ let selectedKeys = [];       // Array to store the 'code' of selected keys
 /**
  * Generates and renders the keyboard preview based on the current configuration.
  */
-You're looking to update the text positioning input boxes in your UI to reflect the values of the currently selected key's text elements. This is a great improvement for a user interface that allows customization!
 
-Here's how you can modify your setexamples function to achieve this, along with some explanations:
-JavaScript
 
 // Global variables to store current key styles
 let currentKeyColor = '#FFD700'; // Default gold - This will be overridden
@@ -61,14 +58,14 @@ let selectedKeys = [];        // Array to store the 'code' of selected keys
 function setexamples() {
     const xOffsetInput = document.getElementById('t1-x');
     const yOffsetInput = document.getElementById('t1-y');
-    const fontSizeInput = document.getElementById('fontSizeInput');
-    const textValueInput = document.getElementById('textValueInput'); // Assuming you have a text input for value as well
+  //  const fontSizeInput = document.getElementById('fontSizeInput');
+  //  const textValueInput = document.getElementById('textValueInput'); // Assuming you have a text input for value as well
 
     // Clear previous values and disable inputs by default
     xOffsetInput.value = '';
     yOffsetInput.value = '';
-    fontSizeInput.value = '';
-    textValueInput.value = '';
+   // fontSizeInput.value = '';
+ //   textValueInput.value = '';
 
 //    xOffsetInput.disabled = true;
 //    yOffsetInput.disabled = true;
@@ -84,15 +81,15 @@ function setexamples() {
 
             // Set values if they exist, otherwise keep them empty
             xOffsetInput.value = firstText.xOffset !== undefined ? firstText.xOffset : (firstText.x !== undefined ? firstText.x : '');
-            yOffsetInput.value = firstText.yOffset !== undefined ? firstText.yOffset : (firstText.y !== undefined ? firstText.y : '');
+          //  yOffsetInput.value = firstText.yOffset !== undefined ? firstText.yOffset : (firstText.y !== undefined ? firstText.y : '');
             fontSizeInput.value = firstText.size !== undefined ? firstText.size : '';
-            textValueInput.value = firstText.value !== undefined ? firstText.value : ''; // Set the text value
+          //  textValueInput.value = firstText.value !== undefined ? firstText.value : ''; // Set the text value
 
             // Enable the inputs
-            xOffsetInput.disabled = false;
-            yOffsetInput.disabled = false;
-            fontSizeInput.disabled = false;
-            textValueInput.disabled = false;
+       //     xOffsetInput.disabled = false;
+          //  yOffsetInput.disabled = false;
+         //   fontSizeInput.disabled = false;
+          //  textValueInput.disabled = false;
         }
     }
 }
