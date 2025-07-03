@@ -49,7 +49,6 @@ function setexamples() {
             // Assuming we are primarily interested in the first text element for these inputs
             const firstText = singleSelectedKeyConfig.texts[0];
 
-             Set values if they exist, otherwise keep them empty
             xOffsetInput.value = firstText.xOffset !== undefined ? firstText.xOffset : (firstText.x !== undefined ? firstText.x : '');
             yOffsetInput.value = firstText.yOffset !== undefined ? firstText.yOffset : (firstText.y !== undefined ? firstText.y : '');
       //      fontSizeInput.value = firstText.size !== undefined ? firstText.size : '';
